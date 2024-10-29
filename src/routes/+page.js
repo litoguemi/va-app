@@ -1,11 +1,16 @@
-import Papa from 'papaparse'
-
+import Papa from 'papaparse';
+import { base } from '$app/paths';
 
 export const load = async ({ fetch }) => {
-    const responseFlights = await fetch('https://jan-to.github.io/WebDataVis/flights_part.csv', 
-      { headers: { 'Content-Type': 'text/csv' } })
-    let csvFlights = await responseFlights.text()
-    let parsedCsvFlights = Papa.parse(csvFlights, {header: true})
+  const responseJSON = await fetch(base + '/flights_part.json')
+  const dataJSON = await responseJSON.json()
 
-    return { flights: parsedCsvFlights.data }
+  const responseCSV = await fetch(base + '/flights_part.csv', {headers: {'Content-Type': 'text/csv'}})
+  let textCSV = await responseCSV.text()
+  let parsedCSV = Papa.parse(textCSV, {header: true})
+
+  return { 
+    flightsJSON: dataJSON,
+    flightsCSV: parsedCSV.data 
+  }
 }

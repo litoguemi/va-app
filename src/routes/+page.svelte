@@ -3,17 +3,17 @@
 <script>
     import { base } from '$app/paths';
     import { onMount } from 'svelte';
-
-    export let data;
-
+  
+    let flights = [];
+  
     onMount(async () => {
-        const response = await fetch("https://jan-to.github.io/WebDataVis/flights_part.csv")
-        flights = await response.json()
+      const response = await fetch(base + "/flights_part.json")
+      flights = await response.json()
     });
 </script>
 
 <ul>
-    {#each data.flights as flight}
-        <li>{flight.from_city}</li>
+    {#each flights as flight}
+        <li>From {flight.from_city} to {flight.to_city} </li>
     {/each}
 </ul>
