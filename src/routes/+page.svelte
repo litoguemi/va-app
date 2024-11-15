@@ -1,15 +1,11 @@
 <script>
     import Scatterplot from '../components/Scatterplot.svelte'; 
+    import Barchart from '../components/Barchart.svelte'; 
     import { base } from '$app/paths';
 
     let { data } = $props();
     
-    const flights = data.flights.map(d => ({
-        ...d,
-        price: parseFloat(d.price),        // Convert to number
-        distance: parseFloat(d.distance),   // Convert to number
-    }));
-
 </script>
 
-<Scatterplot datapoints={flights} x="price" y="distance" xLabel="Price (Euros)" yLabel="Distance (Km)"/>
+<Scatterplot datapoints={data.flights} x="price" y="distance" xLabel="Price (Euros)" yLabel="Distance (Km)"/>
+<Barchart datapoints={data.avgSpendingPlaces} x="place" y="total" xLabel="Visited Places" yLabel="Average Spendings (Euros)"/>
