@@ -1,4 +1,7 @@
 <script>
+
+    import '../css/style.css';
+
     import Scatterplot from '../components/Scatterplot.svelte'; 
     import Barchart from '../components/Barchart.svelte'; 
     import Piechart from '../components/Piechart.svelte'; 

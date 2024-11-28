@@ -9,8 +9,8 @@
 
     // Margins and SVG dimensions
     let margins = { left: 80, top: 30, bottom: 40, right: 30 };
-    const width = 800;
-    const height = 600;
+    const width = 600;
+    const height = 400;
 
     console.log('length:'+datapoints.length+ 'x:'+x+ ' y:'+y);
     
@@ -35,7 +35,7 @@
     {#each datapoints as datapoint}
         <circle cx={xScale(datapoint[x])} 
                 cy={yScale(datapoint[y])} 
-                r=5
+                r=3
                 fill="blue" 
         />
     {/each}

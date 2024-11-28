@@ -8,8 +8,8 @@
 
     // Margins and SVG dimensions
     let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 800;
-    const height = 600;
+    const width = 600;
+    const height = 400;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
     console.log('lengthPieDataPoints:'+datapoints.length);
