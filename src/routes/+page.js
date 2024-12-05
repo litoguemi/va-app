@@ -1,5 +1,6 @@
 import Papa from 'papaparse';
 import { base } from '$app/paths';
+export const ssr = false;
 
 export async function load ({ fetch }){
   

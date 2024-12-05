@@ -6,28 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<header> 
-			<h1>Travel Research</h1> 
-		</header>
-		<div class="container">
-			<div class="item item-summary"> 
-				<h3>summary of recent updates</h3>
-			</div>
-			<div class="item item-info"> 
-				<h3> colors, simbols meaning, etc</h3>
-			</div>
-			<div class="item item-main"> 
-				<div style="display: contents">
-					%sveltekit.body%
-				</div>
-			</div>
-			<div class="item item-tendency">
-				<h3> current tendency in an specific place</h3>
-			</div>
-			<div class="item item-raw"> 
-				<h3>additional raw data</h3>
-			</div>
-		</div>
+	<body data-sveltekit-preload-data="hover">		
+		%sveltekit.body%				
 	</body>
 </html>
