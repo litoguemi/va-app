@@ -4,14 +4,26 @@ header {
     text-align: center;
     margin-bottom: 20px;
 }
+
+.title {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; /* Center content vertically */ 
+    align-items: center; /* Center content horizontally */
+}
   
 .item {
-    background-color: #5ca99e;
-    padding: 1em;
-    font-weight: 700;
+    background-color: #5ca99e;   
     color: var(--clr-light);
     text-align: center;
     border: 1px solid black;    
+}
+
+.item-title {   
+    font-size: 1rem;
 }
 
 .container { 
@@ -22,22 +34,26 @@ header {
 } 
 
 .item-summary { 
-    grid-column: span 12; /* Span all 3 columns */    
+    grid-column: span 10; /* Span all 3 columns */    
     padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally (optional) */ 
+    gap: 1rem;
 } 
     
-.item-info { 
-    grid-column: span 2; 
+.item-controls { 
+    grid-column: span 1; 
     padding: 10px; 
 } 
 
 .item-main { 
-    grid-column: span 7; /* Span 2 columns */ 
+    grid-column: span 6; /* Span 6 columns */ 
     padding: 10px; 
 } 
 
 .item-tendency { 
-    grid-column: span 3; 
+    grid-column: span 5; 
     padding: 10px;
 } 
 

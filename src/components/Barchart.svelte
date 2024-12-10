@@ -9,9 +9,9 @@
 
     // Margins and SVG dimensions
     let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 400;
-    const height = 200;
-    const barWidth = 40;
+    const width = 600;
+    const height = 400;
+    const barWidth = 30;
 
     console.log('lengthB:'+datapoints.length+ 'x:'+x+ ' y:'+y);
 

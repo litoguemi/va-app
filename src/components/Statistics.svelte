@@ -11,8 +11,6 @@
         justify-content: center;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(1, 5, 14, 0.1);
-        width: 150px; 
-        height: 150px; 
         display: flex; 
         flex-direction: column; 
         justify-content: center; /* Center content vertically */ 
