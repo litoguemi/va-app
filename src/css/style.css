@@ -16,10 +16,10 @@ header {
 }
   
 .item {
-    background-color: #5ca99e;   
+    /*background-color: #5ca99e;   */
     color: var(--clr-light);
     text-align: center;
-    border: 1px solid black;    
+    /*border: 1px solid black;   */ 
 }
 
 .item-title {   

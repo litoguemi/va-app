@@ -9,7 +9,7 @@
 
     // Margins and SVG dimensions
     let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 600;
+    const width = 800;
     const height = 400;
     const barWidth = 30;
 
@@ -20,9 +20,9 @@
 
     // Scale functions
     const scaleX = scaleBand()
-    .domain(datapoints.map(d => d[x]))                  
-    .range([margins.left, width - margins.right])    
-    .padding(0.1);
+        .domain(datapoints.map(d => d[x]))                  
+        .range([margins.left, width - margins.right])    
+        .padding(0.1);
 
     const scaleY = (total) => (total / maxTotal) * (height - 50);
 
@@ -40,14 +40,23 @@
         />
         
         <!-- Labels for places below each bar -->
-        <text
-            x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}
-            y={height - 30}
-            transform={`rotate(-90, ${scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}, ${height - 30})`}
-            font-size="15"
-            >
-            {datapoint[x]}
-        </text>
+        {#if scaleY(datapoint[y]) >= height / 2}
+            <text
+                x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}
+                y={height - 30}
+                transform={`rotate(-90, ${scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}, ${height - 30})`}
+                font-size="15">
+                {datapoint[x]}
+            </text>
+        {:else}
+            <text
+                x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}
+                y={height - scaleY(datapoint[y]) - 50}
+                transform={`rotate(-90, ${scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}, ${height - scaleY(datapoint[y]) - 50})`}
+                font-size="15">
+                {datapoint[x]}
+            </text>
+        {/if}
 
         <!-- Labels for total amount at the top of each bar -->
         <text
@@ -57,14 +66,14 @@
             font-size="12"
             fill="black"
         >
-            ${datapoint[y].toFixed(2)}
+            ${datapoint[y].toFixed(2)}K
         </text>
     {/each}
 
 
     <!-- Add axis labels -->
     <text x={(width - margins.left - margins.right) / 2 + margins.left} 
-          y={height - 5}  
+          y={height - 2}  
           class="x-label">
         {xLabel}
     </text>
@@ -78,24 +87,22 @@
     </text>
 </svg>
 
-
-
-
-
-
 <style>
-    svg { background-color: whitesmoke }
+    svg { 
+        border: 1px solid black; 
+        box-shadow: 0 10px 10px rgba(1, 5, 14, 0.1);
+    }
     
     /* Axis label styles */
     .x-label {
         text-anchor: middle;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
     }
 
     .y-label {
         text-anchor: middle;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
     }
 </style>

@@ -1,17 +1,19 @@
 
 <script>
     import { base } from '$app/paths';
-    import { onMount } from "svelte";
+    import { onMount} from "svelte";
     import L from "leaflet";
-  
-    let data = [];
+    import { computeMostFrequentWeather } from '../js/dataprocess.js';
+    
     let map;
-  
+    let { datapoints = [], month='month'} = $props();
+    
+
     onMount(async () => {
-      const responseJSON = await fetch(base + "/flights_part.json")
+      /*const responseJSON = await fetch(base + "/flights_part.json")
       const flights = await responseJSON.json()
       data = flights.slice(0, 5000); // reduce size
-  
+      */
       map = L.map("map", { preferCanvas: true }).setView(
         [50.8476, 4.3572],
         2,
@@ -24,17 +26,41 @@
           maxZoom: 18,
         },
       ).addTo(map);
-      data.forEach((d) => {
-        L.circle(
-          [+d.from_lat, +d.from_long],
-          {
-            stroke: false,
-            color: "black",
-            radius: 50000  // radius in meters
-          },
-        ).addTo(map);
-      });
+      
+      updateMarkers();
     });
+
+    $effect(() => { updateMarkers(); });
+
+    function updateMarkers() {
+        // Clear existing markers
+        map.eachLayer(layer => {
+          if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+          }
+        });
+
+        // Process data and add markers
+        const mostFrequentData = computeMostFrequentWeather(datapoints, month);
+
+        console.log('computedMostWeather'+month+' data:'+mostFrequentData.length);
+        
+
+        mostFrequentData.forEach(location => {
+          const icon = L.icon({
+            iconUrl: base + '/data/' + location.icon_location,
+            iconSize: [50, 50],
+            iconAnchor: [25, 25],
+            popupAnchor: [0, -25]
+          });
+          if(location.lat && location.lat){
+            const marker = L.marker([location.lat, location.lon], { icon }).addTo(map);
+            marker.bindPopup(`<b>${location.Destination}</b><br>${location.condition_text}`);
+          }
+        });
+      }
+
+
   </script>
   
   <svelte:head>
@@ -51,7 +77,7 @@
     </script>
   </svelte:head>
   
-  <div id="map" />
+  <div id="map"></div>
   
   <style>
     #map {

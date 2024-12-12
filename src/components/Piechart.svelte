@@ -3,29 +3,27 @@
     import { onMount } from 'svelte';
 
     let slices = $state([]);
-    let { datapoints = [], title='title'} = $props();
+    let { groupedData = [], title='title'} = $props();
     
 
     // Margins and SVG dimensions
     let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 200;
-    const height = 200;
+    const width = 400;
+    const height = 300;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
-    console.log('lengthPieDataPoints:'+datapoints.length);
+    console.log('lengthPiegroupedData:'+groupedData.length);
 
     onMount(() => {
 
-        const ageGroups = datapoints.reduce((acc, person) => { 
-            const ageGroup = `${Math.floor(person.age / 10) * 10}s`; 
-            acc[ageGroup] = (acc[ageGroup] || 0) + 1; 
-            return acc; 
-        }, {});
+        const colors = ['#D8A25E', '#36A2EB', '#344966', '#BFCC94', '#E6AACE']; 
         
+        //Suffle colors
+        colors.sort(() => Math.random() - 0.5);
 
-        const chartData = Object.keys(ageGroups).map(key => ({ 
+        const chartData = Object.keys(groupedData).map(key => ({ 
             label: key, 
-            value: ageGroups[key] 
+            value: groupedData[key] 
         }));
 
         const total = chartData.reduce((sum, item) => sum + item.value, 0); 
@@ -53,7 +51,7 @@
             
             return { path: pathData, 
                     label: d.label, 
-                    color: ['#FF6384', '#36A2EB', '#344966', '#BFCC94', '#E6AACE'][i % 5],
+                    color: colors[i % colors.length],
                     midX: width / 2 + (radius / 2) * Math.cos(midAngle), 
                     midY: height / 2 + (radius / 2) * Math.sin(midAngle)
                     };
@@ -62,7 +60,7 @@
 </script>
 
 <svg width={width} height={height}>
-    
+
     <text   x={width / 2} 
             y={height - (margins.bottom / 4)} 
             text-anchor="middle" 
@@ -79,5 +77,7 @@
         </text> 
     {/each} 
 </svg>
+
+
 
 

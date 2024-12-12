@@ -1,0 +1,501 @@
+Trip ID,Destination,Start date,End date,Duration (days),Traveler name,Traveler age,Traveler gender,Traveler nationality,Accommodation type,Accommodation cost,Transportation type,Transportation cost
+1,"Marrakech, Morocco",01/04/2024,01/11/2024,7,Ahmed El-Mansouri,35,Male,Moroccan,Riad,900.0,Flight,550.0
+2,"Hanoi, Vietnam",01/12/2024,01/19/2024,7,Nguyen Thi Hoa,29,Female,Vietnamese,Hotel,800.0,Flight,450.0
+3,"Lisbon, Portugal",01/20/2024,01/27/2024,7,Antonio Pereira,38,Male,Portuguese,Hotel,950.0,Flight,400.0
+4,"Seoul, South Korea",01/28/2024,02/04/2024,7,Kim Soo-Yeon,33,Female,Korean,Guesthouse,600.0,Flight,500.0
+5,"Auckland, New Zealand",02/06/2024,02/13/2024,7,Oliver White,42,Male,New Zealander,Hotel,1100.0,Flight,900.0
+6,"Buenos Aires, Argentina",02/15/2024,02/22/2024,7,Lucia Fernandez,27,Female,Argentinian,Hostel,500.0,Flight,600.0
+7,"Kyoto, Japan",02/24/2024,03/03/2024,7,Yuki Nakamura,32,Female,Japanese,Hotel,1200.0,Train,300.0
+8,"Cape Town, South Africa",03/05/2024,03/12/2024,7,Thabo Mbeki,40,Male,South African,Resort,1300.0,Flight,700.0
+9,"Barcelona, Spain",03/14/2024,03/21/2024,7,Laura Martinez,30,Female,Spanish,Hotel,1000.0,Flight,450.0
+10,"Istanbul, Turkey",03/23/2024,03/30/2024,7,Mehmet Yildirim,39,Male,Turkish,Hotel,850.0,Flight,500.0
+11,"Rome, Italy",04/01/2024,04/08/2024,7,Giulia Conti,28,Female,Italian,Hotel,1050.0,Flight,550.0
+12,"Santorini, Greece",04/10/2024,04/17/2024,7,Nikolas Papadopoulos,35,Male,Greek,Villa,1150.0,Flight,600.0
+13,"Vancouver, Canada",04/19/2024,04/26/2024,7,Emily Brown,29,Female,Canadian,Airbnb,900.0,Flight,650.0
+14,"Reykjavik, Iceland",04/28/2024,05/05/2024,7,Erik Sigurdsson,44,Male,Icelandic,Hotel,1400.0,Flight,700.0
+15,"Dubai, United Arab Emirates",05/07/2024,05/14/2024,7,Aisha Al-Maktoum,31,Female,Emirati,Resort,2500.0,Flight,850.0
+16,"Tokyo, Japan",05/16/2024,05/23/2024,7,Kenji Sato,37,Male,Japanese,Hotel,1300.0,Train,350.0
+17,"New York, USA",05/25/2024,06/01/2024,7,Sarah Johnson,29,Female,American,Hotel,2000.0,Flight,1000.0
+18,"Sydney, Australia",06/03/2024,06/10/2024,7,Liam Wilson,33,Male,Australian,Hostel,600.0,Flight,1200.0
+19,"London, UK",06/12/2024,06/19/2024,7,Emma Thompson,32,Female,British,Hotel,1500.0,Flight,700.0
+20,"Rio de Janeiro, Brazil",06/21/2024,06/28/2024,7,Lucas Pereira,25,Male,Brazilian,Airbnb,900.0,Flight,600.0
+21,"Milan, Italy",06/30/2024,07/07/2024,7,Marco Bianchi,34,Male,Italian,Hotel,1200.0,Flight,500.0
+22,"Buenos Aires, Argentina",07/09/2024,07/16/2024,7,Ana Torres,28,Female,Argentinian,Hostel,500.0,Flight,650.0
+23,"Bangkok, Thailand",07/18/2024,07/25/2024,7,Preecha Sukhum,30,Male,Thai,Resort,700.0,Flight,450.0
+24,"Los Angeles, USA",07/27/2024,08/03/2024,7,David Kim,42,Male,American,Hotel,1800.0,Flight,900.0
+25,"Paris, France",08/05/2024,08/12/2024,7,Claire Dubois,27,Female,French,Hotel,1600.0,Flight,500.0
+26,"Berlin, Germany",08/14/2024,08/21/2024,7,Hans Muller,35,Male,German,Hotel,1450.0,Flight,400.0
+27,"Prague, Czech Republic",08/23/2024,08/30/2024,7,Lenka Novakova,30,Female,Czech,Hotel,1100.0,Flight,450.0
+28,"Athens, Greece",09/01/2024,09/08/2024,7,Dimitrios Kostas,36,Male,Greek,Apartment,900.0,Flight,500.0
+29,"Tokyo, Japan",09/10/2024,09/17/2024,7,Akira Takahashi,29,Female,Japanese,Hotel,1500.0,Train,350.0
+30,"Bangkok, Thailand",09/19/2024,09/26/2024,7,Arthit Chaiyapan,32,Male,Thai,Hotel,850.0,Flight,450.0
+31,"Mexico City, Mexico",09/28/2024,10/05/2024,7,Juan Hernandez,39,Male,Mexican,Hotel,1100.0,Flight,550.0
+32,"Hong Kong, China",10/07/2024,10/14/2024,7,Li Wei,34,Male,Chinese,Hotel,1300.0,Flight,650.0
+33,"Madrid, Spain",10/16/2024,10/23/2024,7,Sofia Lopez,28,Female,Spanish,Hostel,600.0,Flight,400.0
+34,"Edinburgh, UK",10/25/2024,11/01/2024,7,James Campbell,40,Male,British,B&B,750.0,Train,250.0
+35,"Melbourne, Australia",11/03/2024,11/10/2024,7,Olivia Brown,35,Female,Australian,Hotel,1400.0,Flight,800.0
+36,"Singapore, Singapore",11/12/2024,11/19/2024,7,Mohamed Bin Ali,33,Male,Singaporean,Hotel,1350.0,Flight,500.0
+37,"Dublin, Ireland",11/21/2024,11/28/2024,7,Aoife Murphy,29,Female,Irish,Hotel,1100.0,Flight,400.0
+38,"Stockholm, Sweden",11/30/2024,12/07/2024,7,Erik Johansson,38,Male,Swedish,Hotel,1250.0,Flight,450.0
+39,"Dubai, United Arab Emirates",12/09/2024,12/16/2024,7,Salma Al-Tayer,31,Female,Emirati,Resort,2400.0,Flight,850.0
+40,"Tokyo, Japan",12/18/2024,12/25/2024,7,Mai Ito,27,Female,Japanese,Hotel,1450.0,Train,300.0
+41,"Cape Town, South Africa",12/27/2024,01/03/2024,7,Noku Ndlovu,30,Female,South African,Guesthouse,850.0,Flight,700.0
+42,"Lisbon, Portugal",01/05/2024,01/12/2024,7,Ana Silva,34,Female,Portuguese,Hotel,1000.0,Flight,450.0
+43,"Rio de Janeiro, Brazil",01/14/2024,01/21/2024,7,Felipe Souza,31,Male,Brazilian,Airbnb,950.0,Flight,600.0
+44,"Rome, Italy",01/23/2024,01/30/2024,7,Elena Russo,36,Female,Italian,Hotel,1250.0,Flight,500.0
+45,"Bangkok, Thailand",02/01/2024,02/08/2024,7,Natthakorn Phongpanich,28,Male,Thai,Resort,800.0,Flight,450.0
+46,"Buenos Aires, Argentina",04/24/2024,05/01/2024,7,Juliana Santos,27,Female,Argentinian,Hostel,500.0,Flight,600.0
+47,"Lisbon, Portugal",05/03/2024,05/10/2024,7,Diogo Silva,34,Male,Portuguese,Hotel,950.0,Flight,450.0
+48,"Hanoi, Vietnam",05/12/2024,05/19/2024,7,Linh Tran,29,Female,Vietnamese,Hotel,800.0,Flight,450.0
+49,"Kyoto, Japan",05/21/2024,05/28/2024,7,Makoto Tanaka,33,Male,Japanese,Hotel,1300.0,Train,350.0
+50,"Cape Town, South Africa",05/30/2024,06/06/2024,7,Zodwa Ndlovu,40,Female,South African,Resort,1300.0,Flight,700.0
+51,"Barcelona, Spain",06/08/2024,06/15/2024,7,Clara Garcia,28,Female,Spanish,Hotel,1000.0,Flight,450.0
+52,"Tokyo, Japan",06/17/2024,06/24/2024,7,Daisuke Sato,35,Male,Japanese,Hotel,1450.0,Train,350.0
+53,"Dubai, United Arab Emirates",06/26/2024,07/03/2024,7,Ahmed Al-Mansouri,31,Male,Emirati,Resort,2700.0,Flight,850.0
+54,"Rome, Italy",07/05/2024,07/12/2024,7,Lorenzo Bianchi,32,Male,Italian,Hotel,1250.0,Flight,550.0
+55,"Vancouver, Canada",07/14/2024,07/21/2024,7,Isabella Smith,30,Female,Canadian,Airbnb,900.0,Flight,650.0
+56,"Buenos Aires, Argentina",07/23/2024,07/30/2024,7,Jose Torres,35,Male,Argentinian,Hostel,500.0,Flight,600.0
+57,"Amsterdam, Netherlands",08/01/2024,08/08/2024,7,Sophie Bakker,29,Female,Dutch,Hotel,1150.0,Train,300.0
+58,"Phuket, Thailand",08/10/2024,08/17/2024,7,Pichai Prasert,34,Male,Thai,Resort,800.0,Flight,450.0
+59,"Paris, France",08/19/2024,08/26/2024,7,Marie Dubois,27,Female,French,Hotel,1600.0,Flight,500.0
+60,"Athens, Greece",08/28/2024,09/04/2024,7,Katerina Nikolaou,31,Female,Greek,Apartment,900.0,Flight,500.0
+61,"New York, USA",09/06/2024,09/13/2024,7,James Wilson,38,Male,American,Hotel,2000.0,Flight,800.0
+62,"Bangkok, Thailand",09/15/2024,09/22/2024,7,Natthakarn Phongpanich,30,Female,Thai,Hotel,850.0,Flight,450.0
+63,"Melbourne, Australia",09/24/2024,10/01/2024,7,Emily Brown,30,Female,Australian,Hotel,1400.0,Flight,800.0
+64,"Lisbon, Portugal",10/03/2024,10/10/2024,7,Pedro Costa,35,Male,Portuguese,Hotel,1000.0,Flight,450.0
+65,"Berlin, Germany",10/12/2024,10/19/2024,7,Hannah Mueller,31,Female,German,Hotel,1450.0,Flight,450.0
+66,"Reykjavik, Iceland",10/21/2024,10/28/2024,7,Bjorn Einarsson,29,Male,Icelandic,Hotel,1400.0,Flight,700.0
+67,"Sydney, Australia",10/30/2024,11/06/2024,7,Olivia Taylor,32,Female,Australian,Hostel,600.0,Flight,1200.0
+68,"Dubai, United Arab Emirates",11/08/2024,11/15/2024,7,Fatima Al-Maktoum,28,Female,Emirati,Resort,2500.0,Flight,850.0
+69,"Cape Town, South Africa",11/17/2024,11/24/2024,7,Mandla Zulu,34,Male,South African,Resort,1300.0,Flight,700.0
+70,"Kyoto, Japan",11/26/2024,12/03/2024,7,Sakura Yamada,28,Female,Japanese,Hotel,1300.0,Train,350.0
+71,"Rio de Janeiro, Brazil",12/05/2024,12/12/2024,7,Felipe Lima,31,Male,Brazilian,Airbnb,950.0,Flight,600.0
+72,"Buenos Aires, Argentina",12/14/2024,12/21/2024,7,Lucia Gomez,27,Female,Argentinian,Hostel,500.0,Flight,600.0
+73,"Lisbon, Portugal",12/23/2024,12/30/2024,7,Ana Pereira,31,Female,Portuguese,Hotel,950.0,Flight,450.0
+74,"Bangkok, Thailand",01/01/2024,01/08/2024,7,Suthep Chaiyapan,30,Male,Thai,Resort,700.0,Flight,450.0
+75,"New York, USA",01/10/2024,01/17/2024,7,Michael Davis,38,Male,American,Hotel,2000.0,Flight,800.0
+76,"Tokyo, Japan",01/19/2024,01/26/2024,7,Kenji Nakamura,32,Male,Japanese,Hotel,1450.0,Train,350.0
+77,"Phuket, Thailand",01/28/2024,02/04/2024,7,Nok Chaiyapan,29,Female,Thai,Resort,800.0,Flight,450.0
+78,"Paris, France",02/06/2024,02/13/2024,7,Chloe Moreau,27,Female,French,Hotel,1600.0,Flight,500.0
+79,"Barcelona, Spain",02/15/2024,02/22/2024,7,David Garcia,31,Male,Spanish,Hotel,1000.0,Flight,450.0
+80,"Cape Town, South Africa",02/24/2024,03/02/2024,7,Thandiwe Ndlovu,29,Female,South African,Guesthouse,850.0,Flight,700.0
+81,"Vienna, Austria",03/04/2024,03/11/2024,7,Lukas Wagner,35,Male,Austrian,Hotel,1250.0,Flight,550.0
+82,"Hong Kong, China",03/13/2024,03/20/2024,7,Li Wei,32,Male,Chinese,Hotel,1300.0,Flight,650.0
+83,"Amsterdam, Netherlands",03/22/2024,03/29/2024,7,Emma van Dijk,29,Female,Dutch,Hotel,1150.0,Train,300.0
+84,"Auckland, New Zealand",03/31/2024,04/07/2024,7,Olivia Martin,30,Female,New Zealander,Hotel,1100.0,Flight,900.0
+85,"Lisbon, Portugal",04/09/2024,04/16/2024,7,Diogo Ferreira,35,Male,Portuguese,Hotel,950.0,Flight,450.0
+86,"Melbourne, Australia",04/18/2024,04/25/2024,7,James Wilson,32,Male,Australian,Hotel,1400.0,Flight,800.0
+87,"Berlin, Germany",04/27/2024,05/04/2024,7,Hanna Mueller,30,Female,German,Hotel,1450.0,Flight,450.0
+88,"Bangkok, Thailand",05/06/2024,05/13/2024,7,Preecha Sukhum,34,Male,Thai,Resort,700.0,Flight,450.0
+89,"Buenos Aires, Argentina",05/15/2024,05/22/2024,7,Sofia Martinez,28,Female,Argentinian,Hostel,500.0,Flight,600.0
+90,"Dubai, United Arab Emirates",05/24/2024,05/31/2024,7,Ali Al-Farsi,40,Male,Emirati,Resort,2500.0,Flight,850.0
+91,"Bergen, Norway",06/02/2024,06/09/2024,7,Sofie Larsen,34,Female,Norwegian,Hotel,850.0,Flight,450.0
+92,"Ghent, Belgium",06/11/2024,06/18/2024,7,Jasper De Vries,29,Male,Belgian,Hotel,800.0,Flight,450.0
+93,"Verona, Italy",06/20/2024,06/27/2024,7,Giovanni Rossi,31,Male,Italian,Hotel,950.0,Flight,500.0
+94,"Bruges, Belgium",06/29/2024,07/06/2024,7,Elise Janssens,28,Female,Belgian,Hotel,900.0,Flight,450.0
+95,"Salzburg, Austria",07/08/2024,07/15/2024,7,Lukas Wagner,32,Male,Austrian,Hotel,1000.0,Flight,450.0
+96,"Seville, Spain",07/17/2024,07/24/2024,7,Maria Lopez,35,Female,Spanish,Hotel,1200.0,Flight,550.0
+97,"Quebec City, Canada",07/26/2024,08/02/2024,7,Isabelle Tremblay,30,Female,Canadian,Airbnb,900.0,Flight,650.0
+98,"Ljubljana, Slovenia",08/04/2024,08/11/2024,7,Ana Kovač,29,Female,Slovenian,Hotel,800.0,Flight,450.0
+99,"Bilbao, Spain",08/13/2024,08/20/2024,7,Ander Garcia,31,Male,Spanish,Hotel,1000.0,Flight,500.0
+100,"Split, Croatia",08/22/2024,08/29/2024,7,Ivana Horvat,32,Female,Croatian,Hotel,850.0,Flight,450.0
+101,"Tallinn, Estonia",08/31/2024,09/07/2024,7,Mart Kask,34,Male,Estonian,Hotel,900.0,Flight,500.0
+102,"Innsbruck, Austria",09/09/2024,09/16/2024,7,Anna Müller,29,Female,Austrian,Hotel,950.0,Flight,450.0
+103,"Porto, Portugal",09/18/2024,09/25/2024,7,João Martins,32,Male,Portuguese,Hotel,900.0,Flight,450.0
+104,"Brisbane, Australia",09/27/2024,10/04/2024,7,Olivia Brown,30,Female,Australian,Hotel,1200.0,Flight,800.0
+105,"Thessaloniki, Greece",10/06/2024,10/13/2024,7,Georgios Papadopoulos,35,Male,Greek,Hotel,950.0,Flight,450.0
+106,"Zagreb, Croatia",10/15/2024,10/22/2024,7,Marina Novak,31,Female,Croatian,Hotel,800.0,Flight,450.0
+107,"Valencia, Spain",10/24/2024,10/31/2024,7,Raul Torres,34,Male,Spanish,Hotel,900.0,Flight,450.0
+108,"Bergen, Norway",11/02/2024,11/09/2024,7,Henrik Olsen,29,Male,Norwegian,Hotel,950.0,Flight,450.0
+109,"Ghent, Belgium",11/11/2024,11/18/2024,7,Emma De Smet,31,Female,Belgian,Hotel,800.0,Flight,450.0
+110,"Verona, Italy",11/20/2024,11/27/2024,7,Luca Bianchi,30,Male,Italian,Hotel,950.0,Flight,500.0
+111,"Bruges, Belgium",11/29/2024,12/06/2024,7,Marie Dubois,34,Female,Belgian,Hotel,900.0,Flight,450.0
+112,"Salzburg, Austria",12/08/2024,12/15/2024,7,Maximilian Steiner,32,Male,Austrian,Hotel,1000.0,Flight,450.0
+113,"Seville, Spain",12/17/2024,12/24/2024,7,Carmen Gonzalez,30,Female,Spanish,Hotel,1200.0,Flight,550.0
+114,"Quebec City, Canada",12/26/2024,01/02/2024,7,Alexandre Tremblay,29,Male,Canadian,Airbnb,900.0,Flight,650.0
+115,"Ljubljana, Slovenia",01/04/2024,01/11/2024,7,Petra Novak,30,Female,Slovenian,Hotel,800.0,Flight,450.0
+116,"Bilbao, Spain",01/13/2024,01/20/2024,7,Iker Martinez,31,Male,Spanish,Hotel,1000.0,Flight,500.0
+117,"Split, Croatia",01/22/2024,01/29/2024,7,Katarina Ivanković,32,Female,Croatian,Hotel,850.0,Flight,450.0
+118,"Tallinn, Estonia",01/31/2024,02/07/2024,7,Markus Tamm,34,Male,Estonian,Hotel,900.0,Flight,500.0
+119,"Innsbruck, Austria",02/09/2024,02/16/2024,7,Sophie Hofer,29,Female,Austrian,Hotel,950.0,Flight,450.0
+120,"Porto, Portugal",02/18/2024,02/25/2024,7,Maria Silva,32,Female,Portuguese,Hotel,900.0,Flight,450.0
+121,"Brisbane, Australia",02/27/2024,03/06/2024,7,Ethan White,30,Male,Australian,Hotel,1200.0,Flight,800.0
+122,"Thessaloniki, Greece",03/08/2024,03/15/2024,7,Anna Georgiou,31,Female,Greek,Hotel,950.0,Flight,450.0
+123,"Zagreb, Croatia",03/17/2024,03/24/2024,7,Ivan Petrovic,35,Male,Croatian,Hotel,800.0,Flight,450.0
+124,"Valencia, Spain",03/26/2024,04/02/2024,7,Sofia Sanchez,30,Female,Spanish,Hotel,900.0,Flight,450.0
+125,"Bergen, Norway",04/04/2024,04/11/2024,7,Erik Johansen,32,Male,Norwegian,Hotel,950.0,Flight,450.0
+126,"Ghent, Belgium",04/13/2024,04/20/2024,7,Laura De Wilde,29,Female,Belgian,Hotel,800.0,Flight,450.0
+127,"Verona, Italy",04/22/2024,04/29/2024,7,Matteo Russo,31,Male,Italian,Hotel,950.0,Flight,500.0
+128,"Bruges, Belgium",05/01/2024,05/08/2024,7,Louise Dupont,30,Female,Belgian,Hotel,900.0,Flight,450.0
+129,"Salzburg, Austria",05/10/2024,05/17/2024,7,Andreas Gruber,32,Male,Austrian,Hotel,1000.0,Flight,450.0
+130,"Seville, Spain",05/19/2024,05/26/2024,7,Javier Martinez,34,Male,Spanish,Hotel,1200.0,Flight,550.0
+131,"Quebec City, Canada",05/28/2024,06/04/2024,7,Chloe Tremblay,30,Female,Canadian,Airbnb,900.0,Flight,650.0
+132,"Ljubljana, Slovenia",06/06/2024,06/13/2024,7,Tomaž Kovač,29,Male,Slovenian,Hotel,800.0,Flight,450.0
+133,"Bilbao, Spain",06/15/2024,06/22/2024,7,Leire Fernandez,31,Female,Spanish,,,,
+134,"Buenos Aires, Argentina",06/24/2024,07/01/2024,7,Mateo Torres,34,Male,Argentinian,Hostel,500.0,Flight,600.0
+135,"Lima, Peru",07/03/2024,07/10/2024,7,Ana Garcia,30,Female,Peruvian,Hotel,850.0,Flight,450.0
+136,"Sao Paulo, Brazil",07/12/2024,07/19/2024,7,Lucas Oliveira,32,Male,Brazilian,Airbnb,950.0,Flight,600.0
+137,"Bogota, Colombia",07/21/2024,07/28/2024,7,Sofia Rodriguez,28,Female,Colombian,Hotel,800.0,Flight,550.0
+138,"Santiago, Chile",07/30/2024,08/06/2024,7,Diego Morales,35,Male,Chilean,Hotel,900.0,Flight,650.0
+139,"Mexico City, Mexico",08/08/2024,08/15/2024,7,Valeria Hernandez,31,Female,Mexican,Hotel,1100.0,Flight,500.0
+140,"Quito, Ecuador",08/17/2024,08/24/2024,7,Juan Perez,33,Male,Ecuadorian,Hotel,750.0,Flight,450.0
+141,"Rio de Janeiro, Brazil",08/26/2024,09/02/2024,7,Mariana Silva,29,Female,Brazilian,Airbnb,950.0,Flight,600.0
+142,"Havana, Cuba",09/04/2024,09/11/2024,7,Carlos Rodriguez,30,Male,Cuban,Hotel,850.0,Flight,500.0
+143,"Montevideo, Uruguay",09/13/2024,09/20/2024,7,Lucia Martinez,27,Female,Uruguayan,Hostel,600.0,Flight,450.0
+144,"Buenos Aires, Argentina",09/22/2024,09/29/2024,7,Francisco Torres,31,Male,Argentinian,Hotel,1100.0,Flight,550.0
+145,"Panama City, Panama",10/01/2024,10/08/2024,7,Carolina Ruiz,30,Female,Panamanian,Hotel,850.0,Flight,450.0
+146,"La Paz, Bolivia",10/10/2024,10/17/2024,7,Diego Fernandez,33,Male,Bolivian,Hostel,500.0,Flight,600.0
+147,"Toronto, Canada",10/19/2024,10/26/2024,7,Emma Johnson,28,Female,Canadian,Hotel,1300.0,Flight,700.0
+148,"New York, USA",10/28/2024,11/04/2024,7,Michael Brown,35,Male,American,Hotel,2000.0,Flight,800.0
+149,"Vancouver, Canada",11/06/2024,11/13/2024,7,Liam Wilson,31,Male,Canadian,Airbnb,900.0,Flight,650.0
+150,"Buenos Aires, Argentina",11/15/2024,11/22/2024,7,Ana Torres,29,Female,Argentinian,Hostel,500.0,Flight,600.0
+151,"Lima, Peru",11/24/2024,12/01/2024,7,Diego Ramirez,32,Male,Peruvian,Hotel,850.0,Flight,450.0
+152,"Sao Paulo, Brazil",12/03/2024,12/10/2024,7,Isabella Costa,30,Female,Brazilian,Airbnb,950.0,Flight,600.0
+153,"Bogota, Colombia",12/12/2024,12/19/2024,7,Mateo Hernandez,27,Male,Colombian,Hotel,800.0,Flight,550.0
+154,"Santiago, Chile",12/21/2024,12/28/2024,7,Valentina Lopez,31,Female,Chilean,Hotel,900.0,Flight,650.0
+155,"Mexico City, Mexico",12/30/2024,01/06/2024,7,Carlos Gonzalez,33,Male,Mexican,Hotel,1100.0,Flight,500.0
+156,"Quito, Ecuador",01/08/2024,01/15/2024,7,Martina Perez,29,Female,Ecuadorian,Hotel,750.0,Flight,450.0
+157,"Rio de Janeiro, Brazil",01/17/2024,01/24/2024,7,Pedro Silva,31,Male,Brazilian,Airbnb,950.0,Flight,600.0
+158,"Havana, Cuba",01/26/2024,02/02/2024,7,Lucia Rodriguez,30,Female,Cuban,Hotel,850.0,Flight,500.0
+159,"Montevideo, Uruguay",02/04/2024,02/11/2024,7,Sebastian Martinez,27,Male,Uruguayan,Hostel,600.0,Flight,450.0
+160,"Buenos Aires, Argentina",02/13/2024,02/20/2024,7,Sofia Torres,31,Female,Argentinian,Hotel,1100.0,Flight,550.0
+161,"Panama City, Panama",02/22/2024,2/29/2030,7,Fernando Ruiz,30,Male,Panamanian,Hotel,850.0,Flight,450.0
+162,"La Paz, Bolivia",03/02/2024,03/09/2024,7,Daniel Fernandez,33,Male,Bolivian,Hostel,500.0,Flight,600.0
+163,"Toronto, Canada",03/11/2024,03/18/2024,7,Grace Johnson,28,Female,Canadian,Hotel,1300.0,Flight,700.0
+164,"New York, USA",03/20/2024,03/27/2024,7,Sophia Brown,35,Female,American,Hotel,2000.0,Flight,800.0
+165,"Vancouver, Canada",03/29/2024,04/05/2024,7,Lucas Wilson,31,Male,Canadian,Airbnb,900.0,Flight,650.0
+166,"Buenos Aires, Argentina",04/07/2024,04/14/2024,7,Maria Torres,29,Female,Argentinian,Hostel,500.0,Flight,600.0
+167,"Lima, Peru",04/16/2024,04/23/2024,7,Rafael Ramirez,32,Male,Peruvian,Hotel,850.0,Flight,450.0
+168,"Sao Paulo, Brazil",04/25/2024,05/02/2024,7,Victoria Costa,30,Female,Brazilian,Airbnb,950.0,Flight,600.0
+169,"Bogota, Colombia",05/04/2024,05/11/2024,7,Santiago Hernandez,27,Male,Colombian,Hotel,800.0,Flight,550.0
+170,"Santiago, Chile",05/13/2024,05/20/2024,7,Isabella Lopez,31,Female,Chilean,Hotel,900.0,Flight,650.0
+171,"Mexico City, Mexico",05/22/2024,05/29/2024,7,Juan Gonzalez,33,Male,Mexican,Hotel,1100.0,Flight,500.0
+172,"Quito, Ecuador",05/31/2024,06/07/2024,7,Camila Perez,29,Female,Ecuadorian,Hotel,750.0,Flight,450.0
+173,"Rio de Janeiro, Brazil",06/09/2024,06/16/2024,7,Victor Silva,31,Male,Brazilian,Airbnb,950.0,Flight,600.0
+174,"Havana, Cuba",06/18/2024,06/25/2024,7,Santiago Rodriguez,30,Male,Cuban,Hotel,850.0,Flight,500.0
+175,"Montevideo, Uruguay",06/27/2024,07/04/2024,7,Florencia Martinez,27,Female,Uruguayan,Hostel,600.0,Flight,450.0
+176,"Buenos Aires, Argentina",07/06/2024,07/13/2024,7,Lucia Torres,31,Female,Argentinian,Hotel,1100.0,Flight,550.0
+177,"Panama City, Panama",07/15/2024,07/22/2024,7,Carlos Ruiz,30,Male,Panamanian,Hotel,850.0,Flight,450.0
+178,"La Paz, Bolivia",07/24/2024,07/31/2024,7,Andres Fernandez,33,Male,Bolivian,Hostel,500.0,Flight,600.0
+179,"Toronto, Canada",08/02/2024,08/09/2024,7,Emily Johnson,28,Female,Canadian,Hotel,1300.0,Flight,700.0
+180,"Athens, Greece",09/22/2024,09/29/2024,7,Nikolaos Pappas,35,Male,Greek,Apartment,900.0,Flight,500.0
+181,"Amsterdam, Netherlands",10/01/2024,10/08/2024,7,Lotte Bakker,27,Female,Dutch,Hotel,1150.0,Train,300.0
+182,"Cape Town, South Africa",10/10/2024,10/17/2024,7,Mandla Zulu,34,Male,South African,Resort,1300.0,Flight,700.0
+183,"Bangkok, Thailand",10/19/2024,10/26/2024,7,Nittaya Chaiyapan,30,Female,Thai,Hotel,850.0,Flight,450.0
+184,"Vienna, Austria",10/28/2024,11/04/2024,7,Josef Wagner,33,Male,Austrian,Hotel,1250.0,Flight,550.0
+185,"Tokyo, Japan",11/06/2024,11/13/2024,7,Sakura Yamada,28,Female,Japanese,Hotel,1300.0,Train,350.0
+186,"Rio de Janeiro, Brazil",11/15/2024,11/22/2024,7,Pedro Lima,31,Male,Brazilian,Airbnb,950.0,Flight,600.0
+187,"Hanoi, Vietnam",11/24/2024,12/01/2024,7,Trang Nguyen,32,Female,Vietnamese,Hotel,800.0,Flight,450.0
+188,"Melbourne, Australia",12/03/2024,12/10/2024,7,Emily Wilson,30,Female,Australian,Hotel,1400.0,Flight,800.0
+189,"Lisbon, Portugal",12/12/2024,12/19/2024,7,Rafael Costa,35,Male,Portuguese,Hotel,1000.0,Flight,450.0
+190,"New York, USA",12/21/2024,12/28/2024,7,Olivia Taylor,29,Female,American,Hotel,2000.0,Flight,800.0
+191,"Barcelona, Spain",12/30/2024,01/06/2024,7,David Fernandez,31,Male,Spanish,Hotel,1000.0,Flight,450.0
+192,"Hong Kong, China",01/08/2024,01/15/2024,7,Xin Wang,34,Male,Chinese,Hotel,1300.0,Flight,650.0
+193,"Buenos Aires, Argentina",01/17/2024,01/24/2024,7,Martina Gomez,27,Female,Argentinian,Hostel,500.0,Flight,600.0
+194,"Tokyo, Japan",01/26/2024,02/02/2024,7,Hiroshi Matsumoto,32,Male,Japanese,Hotel,1300.0,Train,350.0
+195,"Dubai, United Arab Emirates",02/04/2024,02/11/2024,7,Fatima Bin Rashid,31,Female,Emirati,Resort,2500.0,Flight,850.0
+196,"San Francisco, USA",02/13/2024,02/20/2024,7,Mia Smith,30,Female,American,Hotel,2000.0,Flight,800.0
+197,"Amsterdam, Netherlands",02/22/2024,02/27/2024,5,Noah Jansen,28,Male,Dutch,Hotel,1150.0,Train,300.0
+198,"Lisbon, Portugal",03/02/2024,03/09/2024,7,Catarina Sousa,31,Female,Portuguese,Hotel,1000.0,Flight,450.0
+199,"Sydney, Australia",03/11/2024,03/18/2024,7,Thomas Brown,35,Male,Australian,Hostel,600.0,Flight,1200.0
+200,"Tokyo, Japan",08/10/2024,08/17/2024,7,Kenji Tanaka,30,Male,Japanese,Hotel,1450.0,Train,350.0
+201,"Bangkok, Thailand",08/19/2024,08/26/2024,7,Sirilak Prasert,28,Female,Thai,Resort,800.0,Flight,450.0
+202,"Seoul, South Korea",08/28/2024,09/04/2024,7,Jihoon Kim,33,Male,Korean,Hotel,1200.0,Flight,550.0
+203,"Beijing, China",09/06/2024,09/13/2024,7,Li Wei,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+204,"Mumbai, India",09/15/2024,09/22/2024,7,Aarav Patel,32,Male,Indian,Hotel,1100.0,Flight,500.0
+205,"Singapore, Singapore",09/24/2024,10/01/2024,7,Fatima Ahmad,29,Female,Singaporean,Hotel,1500.0,Flight,700.0
+206,"Kuala Lumpur, Malaysia",10/03/2024,10/10/2024,7,Ahmad Rosli,34,Male,Malaysian,Hotel,900.0,Flight,450.0
+207,"Hanoi, Vietnam",10/12/2024,10/19/2024,7,Nguyen Thi Lan,30,Female,Vietnamese,Hotel,800.0,Flight,450.0
+208,"Manila, Philippines",10/21/2024,10/28/2024,7,Josefina Cruz,31,Female,Filipino,Hotel,850.0,Flight,500.0
+209,"Jakarta, Indonesia",10/30/2024,11/06/2024,7,Budi Santoso,33,Male,Indonesian,Hotel,950.0,Flight,500.0
+210,"Kyoto, Japan",11/08/2024,11/15/2024,7,Yuki Nakamura,28,Female,Japanese,Hotel,1300.0,Train,350.0
+211,"Ho Chi Minh City, Vietnam",11/17/2024,11/24/2024,7,Tran Van Minh,32,Male,Vietnamese,Hotel,850.0,Flight,450.0
+212,"Taipei, Taiwan",11/26/2024,12/03/2024,7,Chen Wei,35,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+213,"Dhaka, Bangladesh",12/05/2024,12/12/2024,7,Anika Rahman,29,Female,Bangladeshi,Hotel,700.0,Flight,450.0
+214,"Colombo, Sri Lanka",12/14/2024,12/21/2024,7,Kamal Perera,34,Male,Sri Lankan,Hotel,800.0,Flight,500.0
+215,"Kathmandu, Nepal",12/23/2024,12/30/2024,7,Priya Shrestha,30,Female,Nepalese,Hotel,750.0,Flight,450.0
+216,"Hyderabad, India",01/01/2024,01/08/2024,7,Ravi Kumar,32,Male,Indian,Hotel,950.0,Flight,500.0
+217,"Shanghai, China",01/10/2024,01/17/2024,7,Li Jing,29,Female,Chinese,Hotel,1300.0,Flight,600.0
+218,"Yangon, Myanmar",01/19/2024,01/26/2024,7,Win Min,30,Male,Myanmar,Hotel,850.0,Flight,450.0
+219,"Kolkata, India",01/28/2024,02/04/2024,7,Soumitra Banerjee,33,Male,Indian,Hotel,900.0,Flight,500.0
+220,"Phnom Penh, Cambodia",02/06/2024,02/13/2024,7,Srey Leak,28,Female,Cambodian,Hotel,800.0,Flight,450.0
+221,"Tokyo, Japan",02/15/2024,02/22/2024,7,Haruto Sato,34,Male,Japanese,Hotel,1450.0,Train,350.0
+222,"Bangkok, Thailand",02/24/2024,03/03/2024,7,Natthakarn Phongpanich,30,Female,Thai,Resort,800.0,Flight,450.0
+223,"Seoul, South Korea",03/05/2024,03/12/2024,7,Minji Park,31,Female,Korean,Hotel,1200.0,Flight,550.0
+224,"Beijing, China",03/14/2024,03/21/2024,7,Chang Liu,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+225,"Mumbai, India",03/23/2024,03/30/2024,7,Kavya Shah,32,Female,Indian,Hotel,1100.0,Flight,500.0
+226,"Singapore, Singapore",04/01/2024,04/08/2024,7,Jonathan Lee,31,Male,Singaporean,Hotel,1500.0,Flight,700.0
+227,"Kuala Lumpur, Malaysia",04/10/2024,04/17/2024,7,Siti Nurhaliza,28,Female,Malaysian,Hotel,900.0,Flight,450.0
+228,"Hanoi, Vietnam",04/19/2024,04/26/2024,7,Le Anh,32,Female,Vietnamese,Hotel,800.0,Flight,450.0
+229,"Manila, Philippines",04/28/2024,05/05/2024,7,Jose Santos,34,Male,Filipino,Hotel,850.0,Flight,500.0
+230,"Jakarta, Indonesia",05/07/2024,05/14/2024,7,Maria Pertiwi,30,Female,Indonesian,Hotel,950.0,Flight,500.0
+231,"Kyoto, Japan",05/16/2024,05/23/2024,7,Hana Takahashi,29,Female,Japanese,Hotel,1300.0,Train,350.0
+232,"Ho Chi Minh City, Vietnam",05/25/2024,06/01/2024,7,Ngoc Tran,33,Female,Vietnamese,Hotel,850.0,Flight,450.0
+233,"Taipei, Taiwan",06/03/2024,06/10/2024,7,Cheng Li,31,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+234,"Dhaka, Bangladesh",06/12/2024,06/19/2024,7,Farhan Ahmed,29,Male,Bangladeshi,Hotel,700.0,Flight,450.0
+235,"Colombo, Sri Lanka",06/21/2024,06/28/2024,7,Dilani Wijesinghe,28,Female,Sri Lankan,Hotel,800.0,Flight,500.0
+236,"Kathmandu, Nepal",06/30/2024,07/07/2024,7,Anil Gurung,32,Male,Nepalese,Hotel,750.0,Flight,450.0
+237,"Hyderabad, India",07/09/2024,07/16/2024,7,Meera Reddy,30,Female,Indian,Hotel,950.0,Flight,500.0
+238,"Shanghai, China",07/18/2024,07/25/2024,7,Wei Tang,33,Female,Chinese,Hotel,1300.0,Flight,600.0
+239,"Yangon, Myanmar",07/27/2024,08/03/2024,7,Hlaing Baw,31,Male,Myanmar,Hotel,850.0,Flight,450.0
+240,"Kolkata, India",08/05/2024,08/12/2024,7,Arjun Das,28,Male,Indian,Hotel,900.0,Flight,500.0
+241,"Phnom Penh, Cambodia",08/14/2024,08/21/2024,7,Sokun Nisa,30,Female,Cambodian,Hotel,800.0,Flight,450.0
+242,"Tokyo, Japan",08/23/2024,08/30/2024,7,Yoshiko Tanaka,31,Female,Japanese,Hotel,1450.0,Train,350.0
+243,"Bangkok, Thailand",09/01/2024,09/08/2024,7,Chaiwat Prasert,33,Male,Thai,Resort,800.0,Flight,450.0
+244,"Seoul, South Korea",09/10/2024,09/17/2024,7,Hyunwoo Lee,34,Male,Korean,Hotel,1200.0,Flight,550.0
+245,"Beijing, China",09/19/2024,09/26/2024,7,Li Ming,31,Female,Chinese,Hotel,1300.0,Flight,600.0
+246,"Sydney, Australia",09/28/2024,10/05/2024,7,Olivia Brown,32,Female,Australian,Hostel,600.0,Flight,1200.0
+247,"Auckland, New Zealand",10/07/2024,10/14/2024,7,Liam Martin,31,Male,New Zealander,Hotel,1100.0,Flight,900.0
+248,"Melbourne, Australia",10/16/2024,10/23/2024,7,Emily Wilson,29,Female,Australian,Hotel,1400.0,Flight,800.0
+249,"Wellington, New Zealand",10/25/2024,11/01/2024,7,James Taylor,34,Male,New Zealander,Hotel,1200.0,Flight,850.0
+250,"Brisbane, Australia",11/03/2024,11/10/2024,7,Charlotte Harris,30,Female,Australian,Hostel,700.0,Flight,900.0
+251,"Perth, Australia",11/12/2024,11/19/2024,7,Oliver Clark,32,Male,Australian,Hotel,1300.0,Flight,1000.0
+252,"Christchurch, New Zealand",11/21/2024,11/28/2024,7,Sophie Lee,31,Female,New Zealander,Hotel,1100.0,Flight,950.0
+253,"Adelaide, Australia",11/30/2024,12/07/2024,7,William Davis,33,Male,Australian,Hotel,1250.0,Flight,900.0
+254,"Hobart, Australia",12/09/2024,12/16/2024,7,Amelia Robinson,28,Female,Australian,Hostel,600.0,Flight,800.0
+255,"Dunedin, New Zealand",12/18/2024,12/25/2024,7,Noah Brown,29,Male,New Zealander,Hotel,1050.0,Flight,900.0
+256,"Gold Coast, Australia",12/27/2024,01/03/2024,7,Mia Thompson,30,Female,Australian,Hotel,1200.0,Flight,850.0
+257,"Hamilton, New Zealand",01/05/2024,01/12/2024,7,Jack Evans,32,Male,New Zealander,Hotel,1100.0,Flight,900.0
+258,"Cairns, Australia",01/14/2024,01/21/2024,7,Sophia Lewis,27,Female,Australian,Hostel,700.0,Flight,900.0
+259,"Rotorua, New Zealand",01/23/2024,01/30/2024,7,Lucas Walker,31,Male,New Zealander,Hotel,1000.0,Flight,800.0
+260,"Canberra, Australia",02/01/2024,02/08/2024,7,Isabella Hall,30,Female,Australian,Hotel,1300.0,Flight,950.0
+261,"Tauranga, New Zealand",02/10/2024,02/17/2024,7,Hunter King,32,Male,New Zealander,Hotel,1050.0,Flight,850.0
+262,"Darwin, Australia",02/19/2024,02/26/2024,7,Emma Wright,28,Female,Australian,Hostel,700.0,Flight,900.0
+263,"Whangarei, New Zealand",02/28/2024,03/06/2024,7,Thomas Lopez,31,Male,New Zealander,Hotel,950.0,Flight,800.0
+264,"Townsville, Australia",03/08/2024,03/15/2024,7,Ava Harris,29,Female,Australian,Hotel,1200.0,Flight,850.0
+265,"Palmerston North, New Zealand",03/17/2024,03/24/2024,7,Jacob Young,30,Male,New Zealander,Hotel,1100.0,Flight,900.0
+266,"Rockhampton, Australia",03/26/2024,04/02/2024,7,Charlotte Scott,31,Female,Australian,Hostel,700.0,Flight,800.0
+267,"Invercargill, New Zealand",04/04/2024,04/11/2024,7,Mason Green,32,Male,New Zealander,Hotel,1000.0,Flight,850.0
+268,"Geelong, Australia",04/13/2024,04/20/2024,7,Isabella Adams,30,Female,Australian,Hotel,1200.0,Flight,950.0
+269,"Nelson, New Zealand",04/22/2024,04/29/2024,7,Elijah Baker,28,Male,New Zealander,Hotel,1100.0,Flight,900.0
+270,"Albury, Australia",05/01/2024,05/08/2024,7,Lucy Gonzalez,29,Female,Australian,Hostel,700.0,Flight,850.0
+271,"New Plymouth, New Zealand",05/10/2024,05/17/2024,7,Ethan Carter,31,Male,New Zealander,Hotel,1000.0,Flight,800.0
+272,"Hobart, Australia",05/19/2024,05/26/2024,7,Amelia Robinson,28,Female,Australian,Hostel,600.0,Flight,800.0
+273,"Dunedin, New Zealand",05/28/2024,06/04/2024,7,Noah Brown,29,Male,New Zealander,Hotel,1050.0,Flight,900.0
+274,"Sydney, Australia",06/06/2024,06/13/2024,7,Olivia Brown,32,Female,Australian,Hostel,600.0,Flight,1200.0
+275,"Auckland, New Zealand",06/15/2024,06/22/2024,7,Liam Martin,31,Male,New Zealander,Hotel,1100.0,Flight,900.0
+276,"Melbourne, Australia",06/24/2024,07/01/2024,7,Emily Wilson,29,Female,Australian,Hotel,1400.0,Flight,800.0
+277,"Wellington, New Zealand",07/03/2024,07/10/2024,7,James Taylor,34,Male,New Zealander,Hotel,1200.0,Flight,850.0
+278,"Brisbane, Australia",07/12/2024,07/19/2024,7,Charlotte Harris,30,Female,Australian,Hostel,700.0,Flight,900.0
+279,"Perth, Australia",07/21/2024,07/28/2024,7,Oliver Clark,32,Male,Australian,Hotel,1300.0,Flight,1000.0
+280,"Christchurch, New Zealand",07/30/2024,08/06/2024,7,Sophie Lee,31,Female,New Zealander,Hotel,1100.0,Flight,950.0
+281,"Adelaide, Australia",08/08/2024,08/15/2024,7,William Davis,33,Male,Australian,Hotel,1250.0,Flight,900.0
+282,"Hamilton, New Zealand",08/17/2024,08/24/2024,7,Jack Evans,32,Male,New Zealander,Hotel,1100.0,Flight,900.0
+283,"Cairns, Australia",08/26/2024,09/02/2024,7,Sophia Lewis,27,Female,Australian,Hostel,700.0,Flight,900.0
+284,"Rotorua, New Zealand",09/04/2024,09/11/2024,7,Lucas Walker,31,Male,New Zealander,Hotel,1000.0,Flight,800.0
+285,"Canberra, Australia",09/13/2024,09/20/2024,7,Isabella Hall,30,Female,Australian,Hotel,1300.0,Flight,950.0
+286,"Tauranga, New Zealand",09/22/2024,09/29/2024,7,Hunter King,32,Male,New Zealander,Hotel,1050.0,Flight,850.0
+287,"Darwin, Australia",10/01/2024,10/08/2024,7,Emma Wright,28,Female,Australian,Hostel,700.0,Flight,900.0
+288,"Whangarei, New Zealand",10/10/2024,10/17/2024,7,Thomas Lopez,31,Male,New Zealander,Hotel,950.0,Flight,800.0
+289,"Townsville, Australia",10/19/2024,10/26/2024,7,Ava Harris,29,Female,Australian,Hotel,1200.0,Flight,850.0
+290,"Palmerston North, New Zealand",10/28/2024,11/04/2024,7,Jacob Young,30,Male,New Zealander,Hotel,1100.0,Flight,900.0
+291,"Cape Town, South Africa",11/06/2024,11/13/2024,7,Noku Ndlovu,29,Female,South African,Guesthouse,850.0,Flight,700.0
+292,"Nairobi, Kenya",11/15/2024,11/22/2024,7,David Kimani,34,Male,Kenyan,Hotel,900.0,Flight,450.0
+293,"Cairo, Egypt",11/24/2024,12/01/2024,7,Mona Abdel,30,Female,Egyptian,Hotel,1100.0,Flight,600.0
+294,"Lagos, Nigeria",12/03/2024,12/10/2024,7,Chinedu Okafor,33,Male,Nigerian,Hotel,800.0,Flight,500.0
+295,"Accra, Ghana",12/12/2024,12/19/2024,7,Adjoa Mensah,28,Female,Ghanaian,Hotel,850.0,Flight,450.0
+296,"Johannesburg, South Africa",12/21/2024,12/28/2024,7,Thabo Dlamini,35,Male,South African,Hotel,1200.0,Flight,700.0
+297,"Marrakech, Morocco",12/30/2024,01/06/2024,7,Khalid El-Mansouri,30,Male,Moroccan,Riad,900.0,Flight,600.0
+298,"Dar es Salaam, Tanzania",01/08/2024,01/15/2024,7,Asha Nyerere,29,Female,Tanzanian,Hotel,800.0,Flight,500.0
+299,"Kampala, Uganda",01/17/2024,01/24/2024,7,Musa Kato,32,Male,Ugandan,Hotel,850.0,Flight,450.0
+300,"Addis Ababa, Ethiopia",01/26/2024,02/02/2024,7,Hana Bekele,31,Female,Ethiopian,Hotel,900.0,Flight,500.0
+301,"Dakar, Senegal",02/04/2024,02/11/2024,7,Cheikh Ndiaye,34,Male,Senegalese,Hotel,950.0,Flight,600.0
+302,"Lusaka, Zambia",02/13/2024,02/20/2024,7,Chipo Banda,30,Female,Zambian,Hotel,800.0,Flight,450.0
+303,"Abidjan, Ivory Coast",02/22/2024,03/01/2024,7,Koffi Kouassi,29,Male,Ivorian,Hotel,850.0,Flight,450.0
+304,"Rabat, Morocco",03/03/2024,03/10/2024,7,Fatima Bennani,32,Female,Moroccan,Riad,900.0,Flight,600.0
+305,"Harare, Zimbabwe",03/12/2024,03/19/2024,7,Tendai Moyo,31,Male,Zimbabwean,Hotel,850.0,Flight,450.0
+306,"Tripoli, Libya",03/21/2024,03/28/2024,7,Sara El-Feky,28,Female,Libyan,Hotel,900.0,Flight,500.0
+307,"Antananarivo, Madagascar",03/30/2024,04/06/2024,7,Razafindrakoto Ranaivo,34,Male,Madagascan,Hotel,800.0,Flight,450.0
+308,"Conakry, Guinea",04/08/2024,04/15/2024,7,Mamadou Diallo,30,Male,Guinean,Hotel,850.0,Flight,450.0
+309,"Bamako, Mali",04/17/2024,04/24/2024,7,Fatoumata Traore,31,Female,Malian,Hotel,800.0,Flight,500.0
+310,"Nairobi, Kenya",04/26/2024,05/03/2024,7,Wanjiku Mwangi,33,Female,Kenyan,Hotel,900.0,Flight,450.0
+311,"Cape Town, South Africa",05/05/2024,05/12/2024,7,Simphiwe Ndlovu,32,Male,South African,Guesthouse,850.0,Flight,700.0
+312,"Lagos, Nigeria",05/14/2024,05/21/2024,7,Funke Adeyemi,30,Female,Nigerian,Hotel,800.0,Flight,500.0
+313,"Dakar, Senegal",05/23/2024,05/30/2024,7,Ndiaye Diop,29,Male,Senegalese,Hotel,950.0,Flight,600.0
+314,"Dar es Salaam, Tanzania",06/01/2024,06/08/2024,7,Hadija Mwinyi,31,Female,Tanzanian,Hotel,800.0,Flight,500.0
+315,"Accra, Ghana",06/10/2024,06/17/2024,7,Kwaku Anane,32,Male,Ghanaian,Hotel,850.0,Flight,450.0
+316,"Addis Ababa, Ethiopia",06/19/2024,06/26/2024,7,Mulugeta Tadesse,30,Male,Ethiopian,Hotel,900.0,Flight,500.0
+317,"Marrakech, Morocco",06/28/2024,07/05/2024,7,Amina El-Karim,28,Female,Moroccan,Riad,900.0,Flight,600.0
+318,"Kampala, Uganda",07/07/2024,07/14/2024,7,Nakato Mukasa,31,Female,Ugandan,Hotel,850.0,Flight,450.0
+319,"Lusaka, Zambia",07/16/2024,07/23/2024,7,Chisomo Phiri,32,Male,Zambian,Hotel,800.0,Flight,450.0
+320,"Abidjan, Ivory Coast",07/25/2024,08/01/2024,7,Akissi Kone,30,Female,Ivorian,Hotel,850.0,Flight,450.0
+321,"Harare, Zimbabwe",08/03/2024,08/10/2024,7,Munyaradzi Chigumbura,31,Male,Zimbabwean,Hotel,850.0,Flight,450.0
+322,"Cape Town, South Africa",08/12/2024,08/19/2024,7,Thandiwe Khumalo,30,Female,South African,Guesthouse,850.0,Flight,700.0
+323,"Nairobi, Kenya",08/21/2024,08/28/2024,7,Kamau Njoroge,34,Male,Kenyan,Hotel,900.0,Flight,450.0
+324,"Cairo, Egypt",08/30/2024,09/06/2024,7,Hussein Ismail,29,Male,Egyptian,Hotel,1100.0,Flight,600.0
+325,"Lagos, Nigeria",09/08/2024,09/15/2024,7,Bola Adeola,32,Female,Nigerian,Hotel,800.0,Flight,500.0
+326,"Dakar, Senegal",09/17/2024,09/24/2024,7,Ba Ndiaye,28,Female,Senegalese,Hotel,950.0,Flight,600.0
+327,"Dar es Salaam, Tanzania",09/26/2024,10/03/2024,7,Zubeda Kassem,31,Female,Tanzanian,Hotel,800.0,Flight,500.0
+328,"Accra, Ghana",10/05/2024,10/12/2024,7,Kojo Owusu,30,Male,Ghanaian,Hotel,850.0,Flight,450.0
+329,"Johannesburg, South Africa",10/14/2024,10/21/2024,7,Sipho Sibanda,33,Male,South African,Hotel,1200.0,Flight,700.0
+330,"Marrakech, Morocco",10/23/2024,10/30/2024,7,Hassan Bouazza,34,Male,Moroccan,Riad,900.0,Flight,600.0
+331,"Kampala, Uganda",11/01/2024,11/08/2024,7,Zawedde Lwanga,28,Female,Ugandan,Hotel,850.0,Flight,450.0
+332,"Addis Ababa, Ethiopia",11/10/2024,11/17/2024,7,Mariam Tesfaye,30,Female,Ethiopian,Hotel,900.0,Flight,500.0
+333,"Harare, Zimbabwe",11/19/2024,11/26/2024,7,Chido Dube,31,Female,Zimbabwean,Hotel,850.0,Flight,450.0
+334,"Lusaka, Zambia",11/28/2024,12/05/2024,7,Banda Mwila,33,Male,Zambian,Hotel,800.0,Flight,450.0
+335,"Panama City, Panama",12/15/2024,12/22/2024,7,John Doe,32,Male,American,Hotel,850.0,Flight,500.0
+336,"San Jose, Costa Rica",12/24/2024,12/31/2024,7,Ana Rodriguez,28,Female,Spanish,Resort,900.0,Flight,550.0
+337,"Managua, Nicaragua",01/02/2024,01/09/2024,7,Miguel Hernandez,31,Male,Mexican,Hotel,750.0,Flight,450.0
+338,"San Salvador, El Salvador",01/11/2024,01/18/2024,7,Emily Davis,30,Female,Canadian,Hotel,800.0,Flight,500.0
+339,"Tegucigalpa, Honduras",01/20/2024,01/27/2024,7,Jose Martinez,29,Male,Colombian,Hotel,700.0,Flight,450.0
+340,"Guatemala City, Guatemala",01/29/2024,02/05/2024,7,Laura Lopez,32,Female,Argentinian,Hotel,800.0,Flight,500.0
+341,"Belmopan, Belize",02/07/2024,02/14/2024,7,Lucas Brown,31,Male,British,Hotel,850.0,Flight,550.0
+342,"San Pedro Sula, Honduras",02/16/2024,02/23/2024,7,Olivia Johnson,30,Female,Australian,Hostel,600.0,Flight,450.0
+343,"San Jose, Costa Rica",02/25/2024,03/04/2024,7,Daniel Kim,33,Male,Korean,Hotel,900.0,Flight,600.0
+344,"Panama City, Panama",03/06/2024,03/13/2024,7,David Smith,31,Male,Brazilian,Hotel,850.0,Flight,500.0
+345,"San Salvador, El Salvador",03/15/2024,03/22/2024,7,Isabella Perez,29,Female,Spanish,Hotel,800.0,Flight,500.0
+346,"Managua, Nicaragua",03/24/2024,03/31/2024,7,Sofia Gonzalez,28,Female,Chilean,Hotel,750.0,Flight,450.0
+347,"Tegucigalpa, Honduras",04/02/2024,04/09/2024,7,Maria Santos,32,Female,Portuguese,Hotel,700.0,Flight,450.0
+348,"Guatemala City, Guatemala",04/11/2024,04/18/2024,7,James Wilson,30,Male,American,Hotel,800.0,Flight,500.0
+349,"Belmopan, Belize",04/20/2024,04/27/2024,7,Emma Thompson,31,Female,British,Hotel,850.0,Flight,550.0
+350,"San Pedro Sula, Honduras",04/29/2024,05/06/2024,7,Liam Miller,28,Male,New Zealander,Hostel,600.0,Flight,450.0
+351,"Panama City, Panama",05/08/2024,05/15/2024,7,Charlotte Martin,30,Female,French,Hotel,850.0,Flight,500.0
+352,"San Jose, Costa Rica",05/17/2024,05/24/2024,7,Ethan Johnson,31,Male,Canadian,Hotel,900.0,Flight,550.0
+353,"San Salvador, El Salvador",05/26/2024,06/02/2024,7,Hannah Lee,32,Female,Korean,Hotel,800.0,Flight,500.0
+354,"Managua, Nicaragua",06/04/2024,06/11/2024,7,Michael Martinez,29,Male,Spanish,Hotel,750.0,Flight,450.0
+355,"Tegucigalpa, Honduras",06/13/2024,06/20/2024,7,Grace Davis,30,Female,American,Hotel,700.0,Flight,450.0
+356,"Guatemala City, Guatemala",06/22/2024,06/29/2024,7,Alexander Brown,32,Male,British,Hotel,800.0,Flight,500.0
+357,"Belmopan, Belize",07/01/2024,07/08/2024,7,Ava Wilson,31,Female,Australian,Hotel,850.0,Flight,550.0
+358,"San Pedro Sula, Honduras",07/10/2024,07/17/2024,7,Benjamin Smith,28,Male,Canadian,Hostel,600.0,Flight,450.0
+359,"Panama City, Panama",07/19/2024,07/26/2024,7,Sofia Garcia,29,Female,Argentinian,Hotel,850.0,Flight,500.0
+360,"San Jose, Costa Rica",07/28/2024,08/04/2024,7,Matthew Rodriguez,31,Male,American,Resort,900.0,Flight,550.0
+361,"San Salvador, El Salvador",08/06/2024,08/13/2024,7,Madison Hernandez,32,Female,Colombian,Hotel,800.0,Flight,500.0
+362,"Managua, Nicaragua",08/15/2024,08/22/2024,7,Joshua Lopez,30,Male,Brazilian,Hotel,750.0,Flight,450.0
+363,"Tegucigalpa, Honduras",08/24/2024,08/31/2024,7,Zoe Wilson,29,Female,Chilean,Hotel,700.0,Flight,450.0
+364,"Guatemala City, Guatemala",09/02/2024,09/09/2024,7,Christopher Brown,31,Male,Korean,Hotel,800.0,Flight,500.0
+365,"Belmopan, Belize",09/11/2024,09/18/2024,7,Isabella Lee,30,Female,American,Hotel,850.0,Flight,550.0
+366,"San Pedro Sula, Honduras",09/20/2024,09/27/2024,7,Jackson Thompson,32,Male,French,Hostel,600.0,Flight,450.0
+367,"Panama City, Panama",09/29/2024,10/06/2024,7,Mia Martin,28,Female,Canadian,Hotel,850.0,Flight,500.0
+368,"San Jose, Costa Rica",10/08/2024,10/15/2024,7,Samuel Kim,31,Male,Korean,Resort,900.0,Flight,550.0
+369,"San Salvador, El Salvador",10/17/2024,10/24/2024,7,Avery Davis,30,Female,Brazilian,Hotel,800.0,Flight,500.0
+370,"Managua, Nicaragua",10/26/2024,11/02/2024,7,Mason Martinez,32,Male,British,Hotel,750.0,Flight,450.0
+371,"Tegucigalpa, Honduras",11/04/2024,11/11/2024,7,Addison Garcia,31,Female,French,Hotel,700.0,Flight,450.0
+372,"Guatemala City, Guatemala",11/13/2024,11/20/2024,7,Logan Rodriguez,29,Male,Canadian,Hotel,800.0,Flight,500.0
+373,"Belmopan, Belize",11/22/2024,11/29/2024,7,Harper Hernandez,30,Female,Argentinian,Hotel,850.0,Flight,550.0
+374,"San Pedro Sula, Honduras",12/01/2024,12/08/2024,7,James Johnson,31,Male,American,Hostel,600.0,Flight,450.0
+375,"Bruges, Belgium",12/19/2024,12/26/2024,7,Liam Johnson,30,Male,American,Hotel,1200.0,Flight,500.0
+376,"Salzburg, Austria",12/28/2024,01/04/2024,7,Anna Schmidt,32,Female,German,Hotel,1300.0,Flight,550.0
+377,"Cesky Krumlov, Czech Republic",01/06/2024,01/13/2024,7,Jakub Novak,34,Male,Czech,Guesthouse,900.0,Train,350.0
+378,"Rothenburg ob der Tauber, Germany",01/15/2024,01/22/2024,7,Emily Wilson,29,Female,British,Hotel,1100.0,Train,450.0
+379,"Bled, Slovenia",01/24/2024,01/31/2024,7,Maja Kovic,28,Female,Slovenian,Hotel,1000.0,Flight,450.0
+380,"Sintra, Portugal",02/02/2024,02/09/2024,7,Lucas Ferreira,31,Male,Brazilian,Hotel,1150.0,Train,400.0
+381,"Ghent, Belgium",02/11/2024,02/18/2024,7,Isabella Vermeulen,27,Female,Australian,Hotel,1200.0,Flight,500.0
+382,"Hallstatt, Austria",02/20/2024,02/27/2024,7,Markus Huber,30,Male,Swiss,Guesthouse,950.0,Train,350.0
+383,"Freiburg im Breisgau, Germany",03/01/2024,03/08/2024,7,Hannah Fischer,32,Female,German,Hotel,1150.0,Train,450.0
+384,"Cobh, Ireland",03/10/2024,03/17/2024,7,Sean O'Connor,34,Male,Irish,Hotel,1050.0,Flight,400.0
+385,"Lausanne, Switzerland",03/19/2024,03/26/2024,7,Sophie Müller,28,Female,French,Hotel,1250.0,Flight,550.0
+386,"Bratislava, Slovakia",03/28/2024,04/04/2024,7,Martin Horvath,30,Male,Slovak,Hotel,950.0,Train,450.0
+387,"Zermatt, Switzerland",04/06/2024,04/13/2024,7,Elena Meyer,29,Female,American,Hotel,1400.0,Flight,600.0
+388,"Innsbruck, Austria",04/15/2024,04/22/2024,7,Lucas Bauer,31,Male,German,Guesthouse,1100.0,Train,450.0
+389,"Ljubljana, Slovenia",04/24/2024,05/01/2024,7,Nina Jovanovic,27,Female,Serbian,Hotel,1000.0,Flight,450.0
+390,"Santorini, Greece",05/03/2024,05/10/2024,7,Aris Papadopoulos,30,Male,Greek,Hotel,1100.0,Flight,500.0
+391,"Kotor, Montenegro",05/12/2024,05/19/2024,7,Marija Petrovic,28,Female,Montenegrin,Guesthouse,950.0,Flight,400.0
+392,"Lille, France",05/21/2024,05/28/2024,7,Clara Martin,31,Female,French,Hotel,1200.0,Flight,500.0
+393,"Heidelberg, Germany",05/30/2024,06/06/2024,7,Felix Klein,29,Male,Swiss,Hotel,1150.0,Train,450.0
+394,"Dubrovnik, Croatia",06/08/2024,06/15/2024,7,Petra Kovac,32,Female,Croatian,Hotel,1200.0,Flight,500.0
+395,"York, UK",06/17/2024,06/24/2024,7,James Anderson,30,Male,British,Guesthouse,1000.0,Train,450.0
+396,"Bergen, Norway",06/26/2024,07/03/2024,7,Nora Hansen,28,Female,Norwegian,Hotel,1300.0,Flight,550.0
+397,"Riga, Latvia",07/05/2024,07/12/2024,7,Aleksis Berzins,31,Male,Latvian,Hotel,950.0,Flight,400.0
+398,"Siena, Italy",07/14/2024,07/21/2024,7,Giulia Bianchi,29,Female,Italian,Hotel,1100.0,Train,450.0
+399,"Krakow, Poland",07/23/2024,07/30/2024,7,Marek Kowalski,30,Male,Polish,Hotel,1000.0,Flight,450.0
+400,"Tromsø, Norway",08/01/2024,08/08/2024,7,Maria Johansen,32,Female,Norwegian,Guesthouse,1050.0,Flight,500.0
+401,"Aix-en-Provence, France",08/10/2024,08/17/2024,7,Lucas Dupont,28,Male,French,Hotel,1250.0,Flight,550.0
+402,"Ghent, Belgium",08/19/2024,08/26/2024,7,Emma Lambert,27,Female,Canadian,Hotel,1200.0,Flight,500.0
+403,"Hallstatt, Austria",08/28/2024,09/04/2024,7,Leonard Fischer,30,Male,German,Guesthouse,950.0,Train,350.0
+404,"Freiburg im Breisgau, Germany",09/06/2024,09/13/2024,7,Hannah Schwarz,32,Female,Swiss,Hotel,1150.0,Train,450.0
+405,"Cobh, Ireland",09/15/2024,09/22/2024,7,Owen Murphy,34,Male,Irish,Hotel,1050.0,Flight,400.0
+406,"Lausanne, Switzerland",09/24/2024,10/01/2024,7,Marie Dubois,28,Female,French,Hotel,1250.0,Flight,550.0
+407,"Bratislava, Slovakia",10/03/2024,10/10/2024,7,Anna Novak,30,Female,Slovak,Hotel,950.0,Train,450.0
+408,"Zermatt, Switzerland",10/12/2024,10/19/2024,7,David Müller,29,Male,American,Hotel,1400.0,Flight,600.0
+409,"Innsbruck, Austria",10/21/2024,10/28/2024,7,Julia Wagner,31,Female,German,Guesthouse,1100.0,Train,450.0
+410,"Ljubljana, Slovenia",10/30/2024,11/06/2024,7,Ivan Jankovic,27,Male,Serbian,Hotel,1000.0,Flight,450.0
+411,"Santorini, Greece",11/08/2024,11/15/2024,7,Elena Nikolaou,30,Female,Greek,Hotel,1100.0,Flight,500.0
+412,"Kotor, Montenegro",11/17/2024,11/24/2024,7,Marko Vukovic,28,Male,Montenegrin,Guesthouse,950.0,Flight,400.0
+413,"Lille, France",11/26/2024,12/03/2024,7,Isabelle Lefevre,31,Female,French,Hotel,1200.0,Flight,500.0
+414,"Heidelberg, Germany",12/05/2024,12/12/2024,7,Stefan Meier,29,Male,Swiss,Hotel,1150.0,Train,450.0
+415,"Dubrovnik, Croatia",12/14/2024,12/21/2024,7,Marina Horvat,32,Female,Croatian,Hotel,1200.0,Flight,500.0
+416,"York, UK",12/23/2024,12/30/2024,7,George Smith,30,Male,British,Guesthouse,1000.0,Train,450.0
+417,"Bergen, Norway",01/01/2024,01/08/2024,7,Ingrid Larsen,28,Female,Norwegian,Hotel,1300.0,Flight,550.0
+418,"Riga, Latvia",01/09/2024,01/16/2024,7,Laura Ozola,31,Female,Latvian,Hotel,950.0,Flight,400.0
+419,"Siena, Italy",01/18/2024,01/25/2024,7,Federico Rossi,29,Male,Italian,Hotel,1100.0,Train,450.0
+420,"Kotor, Montenegro",11/17/2024,11/24/2024,7,Marko Vukovic,28,Male,Montenegrin,Guesthouse,950.0,Flight,400.0
+421,"Tokyo, Japan",02/01/2024,02/08/2024,7,Kenji Tanaka,30,Male,Japanese,Hotel,1450.0,Train,350.0
+422,"Bangkok, Thailand",02/10/2024,02/17/2024,7,Sirilak Prasert,28,Female,Thai,Resort,800.0,Flight,450.0
+423,"Seoul, South Korea",02/19/2024,02/26/2024,7,Jihoon Kim,33,Male,Korean,Hotel,1200.0,Flight,550.0
+424,"Beijing, China",02/28/2024,03/06/2024,7,Li Wei,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+425,"Mumbai, India",03/08/2024,03/15/2024,7,Aarav Patel,32,Male,Indian,Hotel,1100.0,Flight,500.0
+426,"Singapore, Singapore",03/17/2024,03/24/2024,7,Fatima Ahmad,29,Female,Singaporean,Hotel,1500.0,Flight,700.0
+427,"Kuala Lumpur, Malaysia",03/26/2024,04/02/2024,7,Ahmad Rosli,34,Male,Malaysian,Hotel,900.0,Flight,450.0
+428,"Hanoi, Vietnam",04/04/2024,04/11/2024,7,Nguyen Thi Lan,30,Female,Vietnamese,Hotel,800.0,Flight,450.0
+429,"Manila, Philippines",04/13/2024,04/20/2024,7,Josefina Cruz,31,Female,Filipino,Hotel,850.0,Flight,500.0
+430,"Jakarta, Indonesia",04/22/2024,04/29/2024,7,Budi Santoso,33,Male,Indonesian,Hotel,950.0,Flight,500.0
+431,"Kyoto, Japan",05/01/2024,05/08/2024,7,Yuki Nakamura,28,Female,Japanese,Hotel,1300.0,Train,350.0
+432,"Ho Chi Minh City, Vietnam",05/10/2024,05/17/2024,7,Tran Van Minh,32,Male,Vietnamese,Hotel,850.0,Flight,450.0
+433,"Taipei, Taiwan",05/19/2024,05/26/2024,7,Chen Wei,35,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+434,"Dhaka, Bangladesh",05/28/2024,06/04/2024,7,Anika Rahman,29,Female,Bangladeshi,Hotel,700.0,Flight,450.0
+435,"Colombo, Sri Lanka",06/06/2024,06/13/2024,7,Kamal Perera,34,Male,Sri Lankan,Hotel,800.0,Flight,500.0
+436,"Kathmandu, Nepal",06/15/2024,06/22/2024,7,Priya Shrestha,30,Female,Nepalese,Hotel,750.0,Flight,450.0
+437,"Hyderabad, India",06/24/2024,07/01/2024,7,Ravi Kumar,32,Male,Indian,Hotel,950.0,Flight,500.0
+438,"Shanghai, China",07/03/2024,07/10/2024,7,Li Jing,29,Female,Chinese,Hotel,1300.0,Flight,600.0
+439,"Yangon, Myanmar",07/12/2024,07/19/2024,7,Win Min,30,Male,Myanmar,Hotel,850.0,Flight,450.0
+440,"Kolkata, India",07/21/2024,07/28/2024,7,Soumitra Banerjee,33,Male,Indian,Hotel,900.0,Flight,500.0
+441,"Phnom Penh, Cambodia",07/30/2024,08/06/2024,7,Srey Leak,28,Female,Cambodian,Hotel,800.0,Flight,450.0
+442,"Tokyo, Japan",08/08/2024,08/15/2024,7,Haruto Sato,34,Male,Japanese,Hotel,1450.0,Train,350.0
+443,"Bangkok, Thailand",08/17/2024,08/24/2024,7,Natthakarn Phongpanich,30,Female,Thai,Resort,800.0,Flight,450.0
+444,"Seoul, South Korea",08/26/2024,09/02/2024,7,Minji Park,31,Female,Korean,Hotel,1200.0,Flight,550.0
+445,"Beijing, China",09/04/2024,09/11/2024,7,Chang Liu,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+446,"Mumbai, India",09/13/2024,09/20/2024,7,Kavya Shah,32,Female,Indian,Hotel,1100.0,Flight,500.0
+447,"Singapore, Singapore",09/22/2024,09/29/2024,7,Jonathan Lee,31,Male,Singaporean,Hotel,1500.0,Flight,700.0
+448,"Kuala Lumpur, Malaysia",10/01/2024,10/08/2024,7,Siti Nurhaliza,28,Female,Malaysian,Hotel,900.0,Flight,450.0
+449,"Hanoi, Vietnam",10/10/2024,10/17/2024,7,Le Anh,32,Female,Vietnamese,Hotel,800.0,Flight,450.0
+450,"Manila, Philippines",10/19/2024,10/26/2024,7,Jose Santos,34,Male,Filipino,Hotel,850.0,Flight,500.0
+451,"Jakarta, Indonesia",10/28/2024,11/04/2024,7,Maria Pertiwi,30,Female,Indonesian,Hotel,950.0,Flight,500.0
+452,"Kyoto, Japan",11/06/2024,11/13/2024,7,Hana Takahashi,29,Female,Japanese,Hotel,1300.0,Train,350.0
+453,"Ho Chi Minh City, Vietnam",11/15/2024,11/22/2024,7,Ngoc Tran,33,Female,Vietnamese,Hotel,850.0,Flight,450.0
+454,"Taipei, Taiwan",11/24/2024,12/01/2024,7,Cheng Li,31,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+455,"Dhaka, Bangladesh",12/03/2024,12/10/2024,7,Farhan Ahmed,29,Male,Bangladeshi,Hotel,700.0,Flight,450.0
+456,"Colombo, Sri Lanka",12/12/2024,12/19/2024,7,Dilani Wijesinghe,28,Female,Sri Lankan,Hotel,800.0,Flight,500.0
+457,"Kathmandu, Nepal",12/21/2024,12/28/2024,7,Anil Gurung,32,Male,Nepalese,Hotel,750.0,Flight,450.0
+458,"Hyderabad, India",12/30/2024,01/06/2024,7,Meera Reddy,30,Female,Indian,Hotel,950.0,Flight,500.0
+459,"Shanghai, China",01/08/2024,01/15/2024,7,Wei Tang,33,Female,Chinese,Hotel,1300.0,Flight,600.0
+460,"Yangon, Myanmar",01/17/2024,01/24/2024,7,Hlaing Baw,31,Male,Myanmar,Hotel,850.0,Flight,450.0
+461,"Kolkata, India",01/26/2024,02/02/2024,7,Arjun Das,28,Male,Indian,Hotel,900.0,Flight,500.0
+462,"Phnom Penh, Cambodia",02/04/2024,02/11/2024,7,Sokun Nisa,30,Female,Cambodian,Hotel,800.0,Flight,450.0
+463,"Tokyo, Japan",02/13/2024,02/20/2024,7,Yoshiko Tanaka,31,Female,Japanese,Hotel,1450.0,Train,350.0
+464,"Bangkok, Thailand",02/22/2024,03/01/2024,7,Chaiwat Prasert,33,Male,Thai,Resort,800.0,Flight,450.0
+465,"Seoul, South Korea",03/03/2024,03/10/2024,7,Hyunwoo Lee,34,Male,Korean,Hotel,1200.0,Flight,550.0
+466,"Tokyo, Japan",03/12/2024,03/19/2024,7,Kenji Tanaka,30,Male,Japanese,Hotel,1450.0,Train,350.0
+467,"Bangkok, Thailand",03/21/2024,03/28/2024,7,Sirilak Prasert,28,Female,Thai,Resort,800.0,Flight,450.0
+468,"Seoul, South Korea",03/30/2024,04/06/2024,7,Jihoon Kim,33,Male,Korean,Hotel,1200.0,Flight,550.0
+469,"Beijing, China",04/08/2024,04/15/2024,7,Li Wei,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+470,"Mumbai, India",04/17/2024,04/24/2024,7,Aarav Patel,32,Male,Indian,Hotel,1100.0,Flight,500.0
+471,"Singapore, Singapore",04/26/2024,05/03/2024,7,Fatima Ahmad,29,Female,Singaporean,Hotel,1500.0,Flight,700.0
+472,"Kuala Lumpur, Malaysia",05/05/2024,05/12/2024,7,Ahmad Rosli,34,Male,Malaysian,Hotel,900.0,Flight,450.0
+473,"Hanoi, Vietnam",05/14/2024,05/21/2024,7,Nguyen Thi Lan,30,Female,Vietnamese,Hotel,800.0,Flight,450.0
+474,"Manila, Philippines",05/23/2024,05/30/2024,7,Josefina Cruz,31,Female,Filipino,Hotel,850.0,Flight,500.0
+475,"Jakarta, Indonesia",06/01/2024,06/08/2024,7,Budi Santoso,33,Male,Indonesian,Hotel,950.0,Flight,500.0
+476,"Kyoto, Japan",06/10/2024,06/17/2024,7,Yuki Nakamura,28,Female,Japanese,Hotel,1300.0,Train,350.0
+477,"Ho Chi Minh City, Vietnam",06/19/2024,06/26/2024,7,Tran Van Minh,32,Male,Vietnamese,Hotel,850.0,Flight,450.0
+478,"Taipei, Taiwan",06/28/2024,07/05/2024,7,Chen Wei,35,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+479,"Dhaka, Bangladesh",07/07/2024,07/14/2024,7,Anika Rahman,29,Female,Bangladeshi,Hotel,700.0,Flight,450.0
+480,"Colombo, Sri Lanka",07/16/2024,07/23/2024,7,Kamal Perera,34,Male,Sri Lankan,Hotel,800.0,Flight,500.0
+481,"Kathmandu, Nepal",07/25/2024,08/01/2024,7,Priya Shrestha,30,Female,Nepalese,Hotel,750.0,Flight,450.0
+482,"Hyderabad, India",08/03/2024,08/10/2024,7,Ravi Kumar,32,Male,Indian,Hotel,950.0,Flight,500.0
+483,"Shanghai, China",08/12/2024,08/19/2024,7,Li Jing,29,Female,Chinese,Hotel,1300.0,Flight,600.0
+484,"Yangon, Myanmar",08/21/2024,08/28/2024,7,Win Min,30,Male,Myanmar,Hotel,850.0,Flight,450.0
+485,"Kolkata, India",08/30/2024,09/06/2024,7,Soumitra Banerjee,33,Male,Indian,Hotel,900.0,Flight,500.0
+486,"Phnom Penh, Cambodia",09/08/2024,09/15/2024,7,Srey Leak,28,Female,Cambodian,Hotel,800.0,Flight,450.0
+487,"Tokyo, Japan",09/17/2024,09/24/2024,7,Haruto Sato,34,Male,Japanese,Hotel,1450.0,Train,350.0
+488,"Bangkok, Thailand",09/26/2024,10/03/2024,7,Natthakarn Phongpanich,30,Female,Thai,Resort,800.0,Flight,450.0
+489,"Seoul, South Korea",10/05/2024,10/12/2024,7,Minji Park,31,Female,Korean,Hotel,1200.0,Flight,550.0
+490,"Beijing, China",10/14/2024,10/21/2024,7,Chang Liu,35,Male,Chinese,Hotel,1300.0,Flight,600.0
+491,"Mumbai, India",10/23/2024,10/30/2024,7,Kavya Shah,32,Female,Indian,Hotel,1100.0,Flight,500.0
+492,"Singapore, Singapore",11/01/2024,11/08/2024,7,Jonathan Lee,31,Male,Singaporean,Hotel,1500.0,Flight,700.0
+493,"Kuala Lumpur, Malaysia",11/10/2024,11/17/2024,7,Siti Nurhaliza,28,Female,Malaysian,Hotel,900.0,Flight,450.0
+494,"Hanoi, Vietnam",11/19/2024,11/26/2024,7,Le Anh,32,Female,Vietnamese,Hotel,800.0,Flight,450.0
+495,"Manila, Philippines",11/28/2024,12/05/2024,7,Jose Santos,34,Male,Filipino,Hotel,850.0,Flight,500.0
+496,"Jakarta, Indonesia",12/07/2024,12/14/2024,7,Maria Pertiwi,30,Female,Indonesian,Hotel,950.0,Flight,500.0
+497,"Kyoto, Japan",12/16/2024,12/23/2024,7,Hana Takahashi,29,Female,Japanese,Hotel,1300.0,Train,350.0
+498,"Ho Chi Minh City, Vietnam",12/24/2024,12/31/2024,7,Ngoc Tran,33,Female,Vietnamese,Hotel,850.0,Flight,450.0
+499,"Taipei, Taiwan",01/02/2024,01/09/2024,7,Cheng Li,31,Male,Taiwanese,Hotel,1200.0,Flight,500.0
+500,"Dhaka, Bangladesh",01/11/2024,01/18/2024,7,Farhan Ahmed,29,Male,Bangladeshi,Hotel,700.0,Flight,450.0

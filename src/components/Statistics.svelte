@@ -2,6 +2,7 @@
 <script>
     export let number;
     export let description;
+    export let place;
 </script>
 
 <style>
@@ -26,9 +27,16 @@
         color: #16474b;
         margin-top: 0.5rem;
     }
+    .place {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    
 </style>
 
 <div class="statistic">
     <div class="number">{number}</div>
-    <div class="description">{description}</div>
+    <div class="description">{description}</div>  
+    <div class="place">{place}</div>    
 </div>

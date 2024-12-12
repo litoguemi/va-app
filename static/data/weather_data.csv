@@ -1,0 +1,471 @@
+Destination,Start date,lat,lon,maxtemp_c,mintemp_c,avgtemp_c,totalprecip_mm,totalsnow_cm,avghumidity,maxwind_kph,avgvis_km,condition_text,condition_icon_url,icon_location
+"Marrakech, Morocco",01/04/2024,31.6333,-8.0,22.9,11.9,16.4,0.0,0.0,32,18.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Hanoi, Vietnam",01/12/2024,21.0333,105.85,17.7,17.2,17.5,8.81,0.0,91,8.3,5.5,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Lisbon, Portugal",01/20/2024,38.7167,-9.1333,13.3,8.3,10.4,0.0,0.0,70,17.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Seoul, South Korea",01/28/2024,37.5664,126.9997,0.7,-2.6,-1.1,0.0,0.0,54,9.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Auckland, New Zealand",02/06/2024,-36.8667,174.7667,25.6,14.9,19.9,0.0,0.0,73,10.8,9.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"Buenos Aires, Argentina",02/15/2024,-34.5875,-58.6725,28.9,18.1,23.1,0.0,0.0,58,14.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Kyoto, Japan",02/24/2024,35.0211,135.7539,8.1,2.7,5.1,0.03,0.0,62,15.5,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Cape Town, South Africa",03/05/2024,-33.9167,18.4167,22.3,17.4,19.4,1.08,0.0,67,27.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Barcelona, Spain",03/14/2024,41.3833,2.1833,16.5,12.0,14.1,0.0,0.0,69,19.1,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Istanbul, Turkey",03/23/2024,41.0186,28.9647,10.4,6.1,8.6,0.0,0.0,61,9.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Rome, Italy",04/01/2024,41.9,12.4833,19.0,10.5,14.5,9.59,0.0,73,28.1,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Santorini, Greece",04/10/2024,43.2554,-77.7299,13.7,10.6,12.0,1.51,0.0,81,15.5,9.1,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Vancouver, Canada",04/19/2024,49.25,-123.1333,13.2,8.6,11.0,0.0,0.0,54,14.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Reykjavik, Iceland",04/28/2024,64.15,-21.95,8.8,3.2,6.1,0.75,0.0,61,9.7,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Dubai, United Arab Emirates",05/07/2024,25.2522,55.28,32.6,29.3,31.1,0.0,0.0,37,16.9,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Tokyo, Japan",05/16/2024,35.6895,139.6917,24.0,17.0,19.1,1.79,0.0,69,45.0,9.3,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"New York, USA",05/25/2024,40.7142,-74.0064,24.5,18.7,21.4,0.03,0.0,53,21.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Sydney, Australia",06/03/2024,-33.8833,151.2167,17.0,10.7,13.2,0.0,0.0,59,19.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"London, UK",06/12/2024,51.5171,-0.1062,16.0,9.3,12.0,0.87,0.0,71,13.0,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Rio de Janeiro, Brazil",06/21/2024,-22.9,-43.2333,27.2,20.5,23.4,0.0,0.0,63,13.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Milan, Italy",06/30/2024,45.4667,9.2,28.1,19.7,23.7,2.94,0.0,78,12.6,9.3,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Buenos Aires, Argentina",07/09/2024,-34.5875,-58.6725,8.5,1.7,4.8,0.0,0.0,45,6.5,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Bangkok, Thailand",07/18/2024,13.75,100.5167,28.6,25.3,26.7,3.02,0.0,84,15.1,8.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Los Angeles, USA",07/27/2024,34.0522,-118.2428,29.3,20.6,24.5,0.0,0.0,48,17.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Paris, France",08/05/2024,48.8667,2.3333,29.7,16.8,23.2,0.0,0.0,50,8.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Berlin, Germany",08/14/2024,52.5167,13.4,32.1,19.4,25.4,2.24,0.0,42,16.9,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Prague, Czech Republic",08/23/2024,50.0833,14.4667,29.2,14.1,21.2,0.0,0.0,54,17.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Athens, Greece",09/01/2024,37.9795,23.7162,29.3,20.7,25.2,0.0,0.0,50,23.4,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Tokyo, Japan",09/10/2024,35.6895,139.6917,32.1,26.5,28.8,5.18,0.0,68,21.6,9.8,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bangkok, Thailand",09/19/2024,13.75,100.5167,30.5,24.3,27.1,0.6,0.0,80,13.7,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Mexico City, Mexico",09/28/2024,19.4285,-99.1277,19.5,13.1,15.4,22.52,0.0,91,8.3,8.5,Moderate or heavy rain shower,http://cdn.weatherapi.com/weather/64x64/day/356.png,icons/356.png
+"Hong Kong, China",10/07/2024,22.2833,114.15,29.9,26.2,27.8,0.28,0.0,67,17.3,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Madrid, Spain",10/16/2024,40.4,-3.6833,20.5,15.2,17.6,9.42,0.0,78,38.2,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Edinburgh, UK",10/25/2024,55.949,-3.1625,11.5,8.8,10.3,1.02,0.0,85,9.0,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Melbourne, Australia",11/03/2024,-37.8167,144.9667,23.8,11.8,19.2,0.04,0.0,40,29.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Singapore, Singapore",11/12/2024,1.2931,103.8558,29.5,26.3,27.6,6.5,0.0,79,9.0,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dublin, Ireland",11/21/2024,53.3331,-6.2489,4.4,0.5,2.2,0.0,0.0,72,33.5,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Stockholm, Sweden",11/30/2024,59.3333,18.05,5.6,4.3,4.8,0.27,0.0,84,23.8,9.5,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Dubai, United Arab Emirates",12/09/2024,25.2522,55.28,26.3,19.9,22.7,0.0,0.0,43,24.5,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lisbon, Portugal",01/05/2024,38.7167,-9.1333,13.8,10.9,12.0,3.16,0.0,66,34.9,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Rio de Janeiro, Brazil",01/14/2024,-22.9,-43.2333,27.1,23.9,25.4,4.79,0.0,87,10.8,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Rome, Italy",01/23/2024,41.9,12.4833,12.4,6.8,8.9,0.64,0.0,71,12.6,9.7,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Bangkok, Thailand",02/01/2024,13.75,100.5167,33.7,27.2,29.7,0.0,0.0,60,20.5,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Buenos Aires, Argentina",04/24/2024,-34.5875,-58.6725,18.0,9.9,13.6,0.0,0.0,59,10.1,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lisbon, Portugal",05/03/2024,38.7167,-9.1333,18.2,11.0,14.6,0.0,0.0,66,21.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Hanoi, Vietnam",05/12/2024,21.0333,105.85,32.1,24.8,27.6,34.23,0.0,84,12.2,6.5,Moderate or heavy rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/389.png,icons/389.png
+"Kyoto, Japan",05/21/2024,35.0211,135.7539,22.4,12.1,16.8,0.02,0.0,71,16.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Cape Town, South Africa",05/30/2024,-33.9167,18.4167,16.9,12.6,15.4,15.23,0.0,81,38.9,9.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Barcelona, Spain",06/08/2024,41.3833,2.1833,25.7,20.8,22.9,0.04,0.0,60,31.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tokyo, Japan",06/17/2024,35.6895,139.6917,27.8,24.2,25.7,1.07,0.0,67,21.6,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dubai, United Arab Emirates",06/26/2024,25.2522,55.28,37.9,32.5,34.7,0.0,0.0,56,23.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Rome, Italy",07/05/2024,41.9,12.4833,30.0,20.5,25.2,0.0,0.0,56,17.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Vancouver, Canada",07/14/2024,49.25,-123.1333,19.5,15.6,18.0,0.02,0.0,75,9.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Buenos Aires, Argentina",07/23/2024,-34.5875,-58.6725,23.4,13.4,17.2,0.0,0.0,81,10.1,8.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"Amsterdam, Netherlands",08/01/2024,52.374,4.8897,23.6,15.2,19.0,0.0,0.0,74,12.6,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Phuket, Thailand",08/10/2024,7.8833,98.4,29.2,26.8,27.9,0.42,0.0,76,18.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Paris, France",08/19/2024,48.8667,2.3333,25.6,14.2,20.0,0.0,0.0,51,7.9,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Athens, Greece",08/28/2024,37.9795,23.7162,33.2,22.3,27.3,0.0,0.0,37,14.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"New York, USA",09/06/2024,40.7142,-74.0064,24.4,19.0,21.5,0.04,0.0,68,16.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Bangkok, Thailand",09/15/2024,13.75,100.5167,34.7,25.6,29.6,0.2,0.0,62,19.8,9.8,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Melbourne, Australia",09/24/2024,-37.8167,144.9667,22.1,10.8,15.8,0.0,0.0,63,19.8,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Lisbon, Portugal",10/03/2024,38.7167,-9.1333,23.5,17.3,20.4,0.08,0.0,78,23.8,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Berlin, Germany",10/12/2024,52.5167,13.4,13.8,6.5,10.1,0.0,0.0,60,18.7,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Reykjavik, Iceland",10/21/2024,64.15,-21.95,3.2,1.6,2.4,2.11,0.95,81,31.7,7.8,Moderate or heavy snow showers,http://cdn.weatherapi.com/weather/64x64/day/371.png,icons/371.png
+"Sydney, Australia",10/30/2024,-33.8833,151.2167,21.5,13.7,18.0,0.0,0.0,71,31.7,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Dubai, United Arab Emirates",11/08/2024,25.2522,55.28,30.4,25.5,27.7,0.0,0.0,52,14.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Cape Town, South Africa",11/17/2024,-33.9167,18.4167,24.3,14.6,18.6,0.0,0.0,71,20.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Kyoto, Japan",11/26/2024,35.0211,135.7539,16.2,7.9,12.8,23.33,0.0,80,29.2,8.3,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Rio de Janeiro, Brazil",12/05/2024,-22.9,-43.2333,25.0,22.0,23.3,12.48,0.0,93,11.9,7.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Bangkok, Thailand",01/01/2024,13.75,100.5167,35.5,27.0,31.2,0.0,0.0,41,8.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"New York, USA",01/10/2024,40.7142,-74.0064,14.3,4.7,8.7,23.61,0.0,70,52.9,9.1,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Tokyo, Japan",01/19/2024,35.6895,139.6917,12.1,9.3,10.2,0.0,0.0,55,19.1,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Phuket, Thailand",01/28/2024,7.8833,98.4,31.1,24.8,27.5,0.03,0.0,71,25.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Paris, France",02/06/2024,48.8667,2.3333,13.1,9.8,11.0,0.06,0.0,68,23.0,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Barcelona, Spain",02/15/2024,41.3833,2.1833,16.2,13.4,14.4,0.0,0.0,73,13.3,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Cape Town, South Africa",02/24/2024,-33.9167,18.4167,23.2,16.2,18.9,5.07,0.0,74,23.8,9.5,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Vienna, Austria",03/04/2024,48.2,16.3667,15.0,6.5,10.5,0.0,0.0,60,11.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Hong Kong, China",03/13/2024,22.2833,114.15,20.3,18.5,19.0,0.11,0.0,71,36.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Amsterdam, Netherlands",03/22/2024,52.374,4.8897,10.1,6.2,8.8,2.62,0.0,88,16.2,8.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Auckland, New Zealand",03/31/2024,-36.8667,174.7667,19.4,12.4,15.5,0.0,0.0,60,21.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lisbon, Portugal",04/09/2024,38.7167,-9.1333,18.1,9.0,12.8,0.0,0.0,58,23.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Melbourne, Australia",04/18/2024,-37.8167,144.9667,16.1,11.3,13.7,0.49,0.0,69,13.7,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Berlin, Germany",04/27/2024,52.5167,13.4,19.6,6.6,13.6,0.0,0.0,58,16.2,9.8,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Bangkok, Thailand",05/06/2024,13.75,100.5167,37.6,30.9,33.5,0.01,0.0,59,29.2,9.5,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Buenos Aires, Argentina",05/15/2024,-34.5875,-58.6725,13.9,5.3,9.2,0.0,0.0,62,9.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Dubai, United Arab Emirates",05/24/2024,25.2522,55.28,33.0,29.7,31.0,0.0,0.0,59,31.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Bergen, Norway",06/02/2024,60.3911,5.3247,11.7,9.2,10.8,0.18,0.0,85,26.3,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Ghent, Belgium",06/11/2024,51.05,3.7167,16.7,7.1,12.0,2.57,0.0,70,20.5,9.6,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Verona, Italy",06/20/2024,45.45,11.0,28.8,19.8,23.7,0.0,0.0,71,12.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bruges, Belgium",06/29/2024,51.2167,3.2333,19.8,10.0,15.4,0.0,0.0,76,20.9,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Salzburg, Austria",07/08/2024,47.8,13.0333,23.4,9.3,16.8,0.03,0.0,84,9.7,7.6,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Seville, Spain",07/17/2024,37.3772,-5.9869,40.4,19.2,29.1,0.0,0.0,27,23.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Quebec City, Canada",07/26/2024,50.1833,-66.6333,19.7,11.2,15.3,0.0,0.0,68,18.0,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Ljubljana, Slovenia",08/04/2024,46.0553,14.5144,27.0,14.6,20.5,0.23,0.0,71,11.9,8.7,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bilbao, Spain",08/13/2024,43.25,-2.9667,23.5,18.4,20.8,4.06,0.0,87,13.0,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Split, Croatia",08/22/2024,43.5139,16.4558,29.2,23.6,26.2,0.0,0.0,58,15.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Tallinn, Estonia",08/31/2024,59.4339,24.7281,18.8,12.4,15.9,18.62,0.0,86,18.7,8.2,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Innsbruck, Austria",09/09/2024,47.2667,11.4,12.9,4.0,10.8,32.96,0.0,93,10.4,7.2,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Porto, Portugal",09/18/2024,41.15,-8.6167,25.1,16.7,20.5,0.0,0.0,50,22.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Brisbane, Australia",09/27/2024,-27.5,153.0167,22.2,16.7,18.9,6.99,0.0,75,25.6,9.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Thessaloniki, Greece",10/06/2024,40.6436,22.9309,25.3,15.6,20.1,0.01,0.0,60,12.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Zagreb, Croatia",10/15/2024,45.8,16.0,19.5,11.0,15.0,0.02,0.0,80,7.2,9.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"Valencia, Spain",10/24/2024,39.4667,-0.3667,23.0,15.7,18.2,0.04,0.0,78,16.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Bergen, Norway",11/02/2024,60.3911,5.3247,9.4,3.5,6.5,12.82,0.0,79,35.3,8.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Ghent, Belgium",11/11/2024,51.05,3.7167,12.4,6.3,9.3,0.7,0.0,80,20.9,9.7,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Verona, Italy",11/20/2024,45.45,11.0,11.6,5.0,8.5,2.58,0.0,77,16.6,9.9,Moderate rain at times,http://cdn.weatherapi.com/weather/64x64/day/299.png,icons/299.png
+"Bruges, Belgium",11/29/2024,51.2167,3.2333,7.7,2.1,4.2,0.0,0.0,83,18.0,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Salzburg, Austria",12/08/2024,47.8,13.0333,2.3,-0.3,1.2,9.25,2.74,99,6.1,7.5,Moderate or heavy snow showers,http://cdn.weatherapi.com/weather/64x64/day/371.png,icons/371.png
+"Ljubljana, Slovenia",01/04/2024,46.0553,14.5144,6.7,0.8,4.0,0.15,0.0,88,9.7,9.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bilbao, Spain",01/13/2024,43.25,-2.9667,14.8,4.5,8.4,0.0,0.0,66,9.7,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Split, Croatia",01/22/2024,43.5139,16.4558,8.9,3.6,5.9,0.0,0.0,45,12.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tallinn, Estonia",01/31/2024,59.4339,24.7281,2.5,0.9,1.8,3.77,0.0,95,27.0,7.6,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Innsbruck, Austria",02/09/2024,47.2667,11.4,8.0,-2.6,1.8,0.15,0.0,80,10.4,10.0,Light freezing rain,http://cdn.weatherapi.com/weather/64x64/day/311.png,icons/311.png
+"Porto, Portugal",02/18/2024,41.15,-8.6167,17.7,12.4,14.5,0.0,0.0,82,13.0,9.3,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Brisbane, Australia",02/27/2024,-27.5,153.0167,27.8,23.3,25.4,0.55,0.0,72,19.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Thessaloniki, Greece",03/08/2024,40.6436,22.9309,12.5,6.3,9.3,0.45,0.0,75,10.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Zagreb, Croatia",03/17/2024,45.8,16.0,15.2,8.2,11.5,1.26,0.0,77,8.6,9.5,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Valencia, Spain",03/26/2024,39.4667,-0.3667,16.6,10.5,13.2,1.12,0.0,48,47.5,9.6,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Bergen, Norway",04/04/2024,60.3911,5.3247,2.3,0.6,1.5,2.76,1.96,87,9.0,6.4,Moderate or heavy snow showers,http://cdn.weatherapi.com/weather/64x64/day/371.png,icons/371.png
+"Ghent, Belgium",04/13/2024,51.05,3.7167,22.9,11.7,16.6,0.09,0.0,70,24.5,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Verona, Italy",04/22/2024,45.45,11.0,8.3,4.9,6.2,16.53,0.0,82,32.8,6.6,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Bruges, Belgium",05/01/2024,51.2167,3.2333,14.6,11.0,13.2,3.54,0.0,93,20.9,8.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Salzburg, Austria",05/10/2024,47.8,13.0333,18.9,4.7,11.7,0.19,0.0,72,12.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Seville, Spain",05/19/2024,37.3772,-5.9869,25.4,11.2,17.7,0.0,0.0,57,32.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Quebec City, Canada",05/28/2024,50.1833,-66.6333,10.7,7.0,9.1,17.72,0.0,97,36.7,5.2,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Ljubljana, Slovenia",06/06/2024,46.0553,14.5144,26.6,12.6,19.0,0.08,0.0,77,6.5,7.2,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Bilbao, Spain",06/15/2024,43.25,-2.9667,18.8,13.4,15.8,0.65,0.0,74,12.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Buenos Aires, Argentina",06/24/2024,-34.5875,-58.6725,11.6,6.2,8.8,0.0,0.0,62,14.0,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Lima, Peru",07/03/2024,-12.05,-77.05,19.4,14.1,16.2,0.03,0.0,75,12.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Sao Paulo, Brazil",07/12/2024,-23.5333,-46.6167,17.5,15.5,16.9,0.98,0.0,92,15.5,9.7,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Bogota, Colombia",07/21/2024,4.6,-74.0833,18.2,10.1,13.8,6.31,0.0,84,7.2,9.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Santiago, Chile",07/30/2024,-33.45,-70.6667,19.3,7.8,14.9,0.01,0.0,29,11.9,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Mexico City, Mexico",08/08/2024,19.4285,-99.1277,24.6,13.5,18.0,4.76,0.0,67,13.0,9.6,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Quito, Ecuador",08/17/2024,-0.2167,-78.5,21.5,8.4,13.8,0.38,0.0,56,13.7,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Rio de Janeiro, Brazil",08/26/2024,-22.9,-43.2333,17.2,14.7,15.9,16.27,0.0,87,20.9,9.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Havana, Cuba",09/04/2024,23.1319,-82.3642,31.5,24.6,27.5,6.86,0.0,85,16.6,9.0,Moderate or heavy rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/389.png,icons/389.png
+"Montevideo, Uruguay",09/13/2024,-34.8581,-56.1708,17.6,7.7,11.9,0.0,0.0,75,13.7,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Buenos Aires, Argentina",09/22/2024,-34.5875,-58.6725,21.8,15.2,18.6,6.8,0.0,91,20.9,9.0,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Panama City, Panama",10/01/2024,8.9667,-79.5333,28.4,23.3,25.4,4.51,0.0,85,16.2,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"La Paz, Bolivia",10/10/2024,-16.5,-68.15,14.7,4.2,9.3,0.41,0.0,51,26.3,10.0,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Toronto, Canada",10/19/2024,43.6667,-79.4167,16.6,6.6,11.0,0.0,0.0,88,12.2,10.0,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"New York, USA",10/28/2024,40.7142,-74.0064,17.8,7.9,12.4,0.0,0.0,45,14.0,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Vancouver, Canada",11/06/2024,49.25,-123.1333,6.8,4.9,5.9,0.0,0.0,84,9.0,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Buenos Aires, Argentina",11/15/2024,-34.5875,-58.6725,34.2,20.1,26.8,0.0,0.0,41,18.7,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lima, Peru",11/24/2024,-12.05,-77.05,21.9,17.8,19.7,0.16,0.0,77,14.8,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Sao Paulo, Brazil",12/03/2024,-23.5333,-46.6167,22.9,20.3,21.9,25.17,0.0,93,11.2,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Quito, Ecuador",01/08/2024,-0.2167,-78.5,18.9,9.3,13.5,2.45,0.0,74,10.8,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Rio de Janeiro, Brazil",01/17/2024,-22.9,-43.2333,34.1,25.6,29.3,0.19,0.0,72,11.9,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Havana, Cuba",01/26/2024,23.1319,-82.3642,28.5,19.5,23.1,0.0,0.0,79,19.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Montevideo, Uruguay",02/04/2024,-34.8581,-56.1708,24.8,20.0,22.2,0.0,0.0,59,31.0,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Buenos Aires, Argentina",02/13/2024,-34.5875,-58.6725,24.2,13.6,18.6,0.0,0.0,55,19.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Panama City, Panama",02/22/2024,8.9667,-79.5333,29.3,21.1,25.1,0.16,0.0,71,21.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"La Paz, Bolivia",03/02/2024,-16.5,-68.15,12.2,3.0,7.7,0.98,0.0,73,15.1,10.0,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Toronto, Canada",03/11/2024,43.6667,-79.4167,5.9,-0.2,2.6,0.0,0.0,50,32.0,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"New York, USA",03/20/2024,40.7142,-74.0064,10.3,3.7,7.1,0.17,0.0,49,29.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Vancouver, Canada",03/29/2024,49.25,-123.1333,9.1,6.5,7.8,6.99,0.0,81,16.6,8.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Buenos Aires, Argentina",04/07/2024,-34.5875,-58.6725,22.9,14.8,18.4,0.0,0.0,74,8.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Lima, Peru",04/16/2024,-12.05,-77.05,24.0,19.3,21.4,0.08,0.0,81,12.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Sao Paulo, Brazil",04/25/2024,-23.5333,-46.6167,26.7,20.8,22.5,0.91,0.0,80,16.6,9.5,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Bogota, Colombia",05/04/2024,4.6,-74.0833,17.3,12.3,14.5,10.66,0.0,92,4.7,7.4,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Santiago, Chile",05/13/2024,-33.45,-70.6667,12.7,6.3,9.0,0.0,0.0,45,10.1,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Mexico City, Mexico",05/22/2024,19.4285,-99.1277,30.2,19.8,24.1,16.0,0.0,44,21.6,9.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Quito, Ecuador",05/31/2024,-0.2167,-78.5,21.3,9.4,14.2,3.14,0.0,73,8.3,9.9,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Rio de Janeiro, Brazil",06/09/2024,-22.9,-43.2333,26.3,19.4,22.5,0.0,0.0,75,10.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Havana, Cuba",06/18/2024,23.1319,-82.3642,31.2,23.7,27.0,3.88,0.0,78,20.5,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Montevideo, Uruguay",06/27/2024,-34.8581,-56.1708,15.2,8.1,10.7,0.0,0.0,72,25.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Buenos Aires, Argentina",07/06/2024,-34.5875,-58.6725,10.1,3.3,6.4,0.0,0.0,52,9.4,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Panama City, Panama",07/15/2024,8.9667,-79.5333,29.9,24.0,26.7,8.03,0.0,87,14.8,7.3,Moderate or heavy rain shower,http://cdn.weatherapi.com/weather/64x64/day/356.png,icons/356.png
+"La Paz, Bolivia",07/24/2024,-16.5,-68.15,13.4,0.8,6.7,0.14,0.0,60,11.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Toronto, Canada",08/02/2024,43.6667,-79.4167,28.5,23.4,25.5,1.27,0.0,73,18.0,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Athens, Greece",09/22/2024,37.9795,23.7162,25.8,16.6,20.7,0.0,0.0,40,24.1,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Amsterdam, Netherlands",10/01/2024,52.374,4.8897,14.8,12.0,13.1,31.99,0.0,92,38.9,9.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Cape Town, South Africa",10/10/2024,-33.9167,18.4167,19.6,12.8,15.8,0.02,0.0,72,20.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Bangkok, Thailand",10/19/2024,13.75,100.5167,31.2,24.8,27.3,25.35,0.0,83,12.2,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Vienna, Austria",10/28/2024,48.2,16.3667,18.2,11.7,14.4,0.0,0.0,75,10.8,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tokyo, Japan",11/06/2024,35.6895,139.6917,15.0,13.6,14.3,0.62,0.0,70,20.5,9.7,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Rio de Janeiro, Brazil",11/15/2024,-22.9,-43.2333,25.3,20.3,22.8,7.42,0.0,87,11.5,9.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hanoi, Vietnam",11/24/2024,21.0333,105.85,22.3,20.8,21.7,0.78,0.0,78,8.3,9.7,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Melbourne, Australia",12/03/2024,-37.8167,144.9667,28.0,14.6,20.1,1.97,0.0,76,24.8,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hong Kong, China",01/08/2024,22.2833,114.15,19.1,16.7,17.9,0.26,0.0,80,33.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Buenos Aires, Argentina",01/17/2024,-34.5875,-58.6725,26.8,17.8,22.1,0.62,0.0,75,20.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tokyo, Japan",01/26/2024,35.6895,139.6917,9.4,2.7,5.7,0.0,0.0,29,30.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Dubai, United Arab Emirates",02/04/2024,25.2522,55.28,20.6,18.8,19.7,0.0,0.0,49,34.9,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"San Francisco, USA",02/13/2024,37.775,-122.4183,13.7,9.8,11.3,0.0,0.0,77,8.6,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Amsterdam, Netherlands",02/22/2024,52.374,4.8897,11.7,4.3,9.0,7.69,0.0,91,43.6,8.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Lisbon, Portugal",03/02/2024,38.7167,-9.1333,14.5,11.7,12.8,2.14,0.0,74,37.1,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Sydney, Australia",03/11/2024,-33.8833,151.2167,25.7,20.3,23.2,0.23,0.0,71,25.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tokyo, Japan",08/10/2024,35.6895,139.6917,34.1,27.8,30.5,0.29,0.0,58,23.0,9.8,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bangkok, Thailand",08/19/2024,13.75,100.5167,32.8,26.9,29.4,13.15,0.0,76,14.8,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Seoul, South Korea",08/28/2024,37.5664,126.9997,31.0,21.6,26.2,0.01,0.0,65,13.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Beijing, China",09/06/2024,39.9289,116.3883,29.3,19.3,24.4,0.04,0.0,52,12.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Mumbai, India",09/15/2024,18.975,72.8258,29.3,26.1,27.7,3.04,0.0,71,18.7,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Singapore, Singapore",09/24/2024,1.2931,103.8558,29.5,26.8,28.0,11.25,0.0,77,11.2,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kuala Lumpur, Malaysia",10/03/2024,3.1667,101.7,30.3,22.7,25.5,10.93,0.0,84,5.4,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hanoi, Vietnam",10/12/2024,21.0333,105.85,30.5,23.0,26.3,1.39,0.0,73,15.5,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Manila, Philippines",10/21/2024,14.6042,120.9822,32.8,26.1,28.9,0.35,0.0,67,10.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Jakarta, Indonesia",10/30/2024,-6.2146,106.8451,34.9,28.5,31.3,0.67,0.0,57,21.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kyoto, Japan",11/08/2024,35.0211,135.7539,13.9,7.5,10.0,0.0,0.0,65,11.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Ho Chi Minh City, Vietnam",11/17/2024,10.75,106.6667,32.1,23.2,26.5,0.21,0.0,80,12.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Taipei, Taiwan",11/26/2024,25.0392,121.525,18.8,13.4,16.3,7.87,0.0,83,18.0,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dhaka, Bangladesh",12/05/2024,23.7231,90.4086,27.8,18.1,22.4,0.0,0.0,40,16.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Hyderabad, India",01/01/2024,17.3753,78.4744,28.6,16.7,22.0,0.0,0.0,61,14.8,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Shanghai, China",01/10/2024,31.005,121.4086,10.1,4.4,6.8,0.03,0.0,59,20.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Yangon, Myanmar",01/19/2024,16.7833,96.1667,32.8,18.5,25.1,0.0,0.0,34,12.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Kolkata, India",01/28/2024,22.5697,88.3697,25.7,13.3,19.2,0.0,0.0,37,11.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Phnom Penh, Cambodia",02/06/2024,11.55,104.9167,35.7,24.2,29.6,0.32,0.0,59,18.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tokyo, Japan",02/15/2024,35.6895,139.6917,18.0,10.3,14.2,0.68,0.0,55,45.0,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Bangkok, Thailand",02/24/2024,13.75,100.5167,34.7,28.1,30.7,0.0,0.0,61,21.2,9.9,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Seoul, South Korea",03/05/2024,37.5664,126.9997,8.4,3.9,6.0,0.13,0.0,41,12.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Beijing, China",03/14/2024,39.9289,116.3883,20.5,8.7,14.3,0.0,0.0,22,12.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Mumbai, India",03/23/2024,18.975,72.8258,30.0,26.0,27.8,0.0,0.0,55,24.1,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Singapore, Singapore",04/01/2024,1.2931,103.8558,30.4,26.9,28.6,9.86,0.0,76,10.4,9.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kuala Lumpur, Malaysia",04/10/2024,3.1667,101.7,30.0,22.7,25.8,10.66,0.0,86,4.7,9.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hanoi, Vietnam",04/19/2024,21.0333,105.85,37.6,24.5,28.6,8.92,0.0,75,24.8,8.7,Moderate or heavy rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/389.png,icons/389.png
+"Manila, Philippines",04/28/2024,14.6042,120.9822,36.5,28.5,31.7,0.94,0.0,62,14.0,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Jakarta, Indonesia",05/07/2024,-6.2146,106.8451,33.1,25.8,28.9,0.54,0.0,69,17.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kyoto, Japan",05/16/2024,35.0211,135.7539,17.8,13.1,15.4,1.12,0.0,72,23.4,8.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Ho Chi Minh City, Vietnam",05/25/2024,10.75,106.6667,35.9,27.5,31.0,3.35,0.0,66,17.6,9.5,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Taipei, Taiwan",06/03/2024,25.0392,121.525,23.1,16.4,20.3,7.14,0.0,78,15.5,9.1,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Dhaka, Bangladesh",06/12/2024,23.7231,90.4086,37.8,28.4,31.5,0.11,0.0,67,30.2,9.6,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Colombo, Sri Lanka",06/21/2024,6.9319,79.8478,28.1,25.2,26.5,20.88,0.0,86,21.6,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kathmandu, Nepal",06/30/2024,27.7167,85.3167,25.6,20.1,22.0,36.25,0.0,90,7.9,9.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hyderabad, India",07/09/2024,17.3753,78.4744,29.6,23.0,26.1,1.09,0.0,73,23.0,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Shanghai, China",07/18/2024,31.005,121.4086,37.5,26.8,30.8,2.21,0.0,73,16.2,9.8,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Yangon, Myanmar",07/27/2024,16.7833,96.1667,26.0,24.7,25.1,31.21,0.0,95,13.3,8.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kolkata, India",08/05/2024,22.5697,88.3697,35.3,27.7,30.7,0.94,0.0,69,17.6,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Phnom Penh, Cambodia",08/14/2024,11.55,104.9167,36.3,25.9,30.1,1.12,0.0,67,15.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tokyo, Japan",08/23/2024,35.6895,139.6917,30.8,27.1,28.8,0.44,0.0,75,28.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Bangkok, Thailand",09/01/2024,13.75,100.5167,34.0,25.9,29.2,18.5,0.0,69,14.8,9.4,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Seoul, South Korea",09/10/2024,37.5664,126.9997,33.3,24.7,28.6,0.0,0.0,59,13.0,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Beijing, China",09/19/2024,39.9289,116.3883,30.1,22.5,26.2,1.13,0.0,62,11.9,9.7,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Sydney, Australia",09/28/2024,-33.8833,151.2167,17.4,14.6,16.1,1.33,0.0,66,22.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Auckland, New Zealand",10/07/2024,-36.8667,174.7667,20.0,13.5,15.9,8.68,0.0,86,27.4,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Melbourne, Australia",10/16/2024,-37.8167,144.9667,23.4,15.6,18.4,0.17,0.0,59,18.4,9.8,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Wellington, New Zealand",10/25/2024,-41.3,174.7833,14.9,14.0,14.5,10.27,0.0,95,51.8,8.1,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Brisbane, Australia",11/03/2024,-27.5,153.0167,25.8,20.1,22.5,0.27,0.0,71,19.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Perth, Australia",11/12/2024,-31.9333,115.8333,21.3,13.3,17.6,0.0,0.0,67,26.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Christchurch, New Zealand",11/21/2024,-43.5333,172.6333,14.1,5.2,9.4,2.9,0.0,72,38.2,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Adelaide, Australia",11/30/2024,-34.9333,138.6,21.8,14.5,17.8,3.59,0.0,70,19.1,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hobart, Australia",12/09/2024,-42.9167,147.3333,16.4,8.6,12.4,0.41,0.0,65,19.8,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Hamilton, New Zealand",01/05/2024,-37.7833,175.2833,21.4,9.9,15.6,0.13,0.0,75,14.8,9.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Cairns, Australia",01/14/2024,-16.9167,145.7667,27.0,24.7,25.6,20.88,0.0,91,9.7,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Rotorua, New Zealand",01/23/2024,-38.1378,176.2514,23.9,16.0,18.8,3.47,0.0,87,14.0,5.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Canberra, Australia",02/01/2024,-35.2833,149.2167,32.1,13.2,21.9,0.01,0.0,59,20.5,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tauranga, New Zealand",02/10/2024,-37.6861,176.1667,20.6,15.6,18.7,4.87,0.0,91,17.3,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Darwin, Australia",02/19/2024,-12.4667,130.8333,30.1,27.4,28.5,3.44,0.0,81,23.0,10.0,Moderate rain at times,http://cdn.weatherapi.com/weather/64x64/day/299.png,icons/299.png
+"Whangarei, New Zealand",02/28/2024,-35.72,174.33,24.7,13.0,18.0,0.19,0.0,75,8.6,7.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Townsville, Australia",03/08/2024,-19.25,146.8,29.4,24.2,26.3,6.42,0.0,81,23.4,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Palmerston North, New Zealand",03/17/2024,-40.35,175.6167,18.0,4.6,12.5,0.24,0.0,71,21.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Rockhampton, Australia",03/26/2024,-23.3833,150.5,27.8,21.2,24.1,3.87,0.0,85,12.6,7.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Invercargill, New Zealand",04/04/2024,-46.4,168.35,13.2,9.1,10.8,4.86,0.0,73,27.7,8.3,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Geelong, Australia",04/13/2024,-38.1583,144.35,18.7,9.6,14.0,0.23,0.0,75,13.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Nelson, New Zealand",04/22/2024,-41.2833,173.2833,17.3,6.4,11.8,0.87,0.0,75,12.2,9.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Albury, Australia",05/01/2024,-36.0833,146.9167,20.4,4.0,11.0,0.0,0.0,55,8.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"New Plymouth, New Zealand",05/10/2024,-39.0667,174.0833,13.5,5.8,9.1,0.0,0.0,63,17.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Hobart, Australia",05/19/2024,-42.9167,147.3333,12.4,5.9,8.9,1.56,0.0,74,16.9,9.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Dunedin, New Zealand",05/28/2024,-45.8667,170.5,10.2,7.7,9.1,0.1,0.0,65,28.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Sydney, Australia",06/06/2024,-33.8833,151.2167,16.2,13.2,14.4,7.95,0.0,82,19.8,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Auckland, New Zealand",06/15/2024,-36.8667,174.7667,15.1,10.5,12.6,0.78,0.0,73,27.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Melbourne, Australia",06/24/2024,-37.8167,144.9667,12.1,4.6,8.2,0.0,0.0,63,19.4,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Wellington, New Zealand",07/03/2024,-41.3,174.7833,9.4,8.2,9.0,0.83,0.0,66,40.7,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Brisbane, Australia",07/12/2024,-27.5,153.0167,22.8,13.1,17.1,0.0,0.0,65,11.5,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Perth, Australia",07/21/2024,-31.9333,115.8333,18.6,16.1,17.1,3.96,0.0,68,30.6,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Christchurch, New Zealand",07/30/2024,-43.5333,172.6333,8.6,4.6,6.1,18.28,0.0,93,42.8,7.5,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Adelaide, Australia",08/08/2024,-34.9333,138.6,13.1,9.2,11.3,0.9,0.0,71,23.4,8.5,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Hamilton, New Zealand",08/17/2024,-37.7833,175.2833,14.9,7.7,10.9,20.56,0.0,97,19.8,4.8,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Cairns, Australia",08/26/2024,-16.9167,145.7667,25.5,17.9,21.5,0.42,0.0,70,20.5,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Rotorua, New Zealand",09/04/2024,-38.1378,176.2514,14.4,5.0,8.3,1.54,0.0,85,9.7,5.3,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Canberra, Australia",09/13/2024,-35.2833,149.2167,16.3,-0.9,7.2,0.0,0.0,70,11.5,8.3,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Tauranga, New Zealand",09/22/2024,-37.6861,176.1667,14.9,6.6,11.2,0.65,0.0,80,8.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Darwin, Australia",10/01/2024,-12.4667,130.8333,32.5,26.6,29.5,0.0,0.0,62,21.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Whangarei, New Zealand",10/10/2024,-35.72,174.33,16.6,6.1,10.2,2.37,0.0,82,6.5,6.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Townsville, Australia",10/19/2024,-19.25,146.8,27.6,21.5,24.2,0.01,0.0,71,17.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Palmerston North, New Zealand",10/28/2024,-40.35,175.6167,14.8,7.5,10.4,6.8,0.0,87,27.0,8.1,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Cape Town, South Africa",11/06/2024,-33.9167,18.4167,23.1,12.0,17.2,0.0,0.0,60,30.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Nairobi, Kenya",11/15/2024,-1.2833,36.8167,23.9,15.6,18.9,6.28,0.0,79,18.7,9.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Cairo, Egypt",11/24/2024,30.05,31.25,20.1,14.8,17.2,0.2,0.0,56,37.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Lagos, Nigeria",12/03/2024,6.4531,3.3958,32.6,25.8,28.8,0.02,0.0,67,19.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Dar es Salaam, Tanzania",01/08/2024,-6.8,39.2833,30.3,24.6,26.9,5.22,0.0,83,13.7,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kampala, Uganda",01/17/2024,0.3156,32.5656,26.6,18.6,22.1,6.81,0.0,67,10.4,9.6,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Addis Ababa, Ethiopia",01/26/2024,9.0333,38.7,24.0,13.6,18.4,0.0,0.0,41,11.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Dakar, Senegal",02/04/2024,14.6708,-17.4381,23.9,22.5,23.3,0.0,0.0,62,27.7,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Lusaka, Zambia",02/13/2024,-15.4167,28.2833,29.5,16.7,21.9,0.02,0.0,68,14.0,9.3,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Abidjan, Ivory Coast",02/22/2024,-24.3667,46.45,28.9,21.7,25.0,0.13,0.0,81,24.5,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Rabat, Morocco",03/03/2024,34.0253,-6.8361,16.9,11.7,13.9,5.19,0.0,74,20.9,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Harare, Zimbabwe",03/12/2024,-17.8178,31.0447,31.3,15.4,22.1,1.92,0.0,66,10.8,8.5,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tripoli, Libya",03/21/2024,32.8925,13.18,24.0,13.2,17.8,0.0,0.0,59,28.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Antananarivo, Madagascar",03/30/2024,-18.9167,47.5167,26.7,15.5,19.8,0.92,0.0,80,6.1,7.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Conakry, Guinea",04/08/2024,9.5092,-13.7122,28.6,25.6,27.0,0.0,0.0,69,25.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Bamako, Mali",04/17/2024,12.65,-8.0,40.2,26.0,33.7,0.0,0.0,10,16.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Nairobi, Kenya",04/26/2024,-1.2833,36.8167,18.0,16.5,17.2,32.11,0.0,93,10.8,8.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Cape Town, South Africa",05/05/2024,-33.9167,18.4167,20.6,12.5,15.4,0.0,0.0,70,25.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lagos, Nigeria",05/14/2024,6.4531,3.3958,32.0,28.2,29.8,1.44,0.0,73,17.6,8.9,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Dakar, Senegal",05/23/2024,14.6708,-17.4381,23.4,22.5,23.0,0.0,0.0,82,28.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Dar es Salaam, Tanzania",06/01/2024,-6.8,39.2833,31.4,21.9,25.7,0.34,0.0,79,16.2,8.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Accra, Ghana",06/10/2024,5.55,-0.2167,27.6,25.2,26.4,12.65,0.0,84,19.4,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Addis Ababa, Ethiopia",06/19/2024,9.0333,38.7,24.6,13.3,18.2,4.7,0.0,64,18.0,9.3,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Marrakech, Morocco",06/28/2024,31.6333,-8.0,30.0,15.7,22.4,0.0,0.0,52,24.1,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Kampala, Uganda",07/07/2024,0.3156,32.5656,30.4,18.1,23.0,0.04,0.0,60,14.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Lusaka, Zambia",07/16/2024,-15.4167,28.2833,29.5,13.8,20.2,0.0,0.0,29,15.5,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Abidjan, Ivory Coast",07/25/2024,-24.3667,46.45,24.8,16.8,20.1,0.0,0.0,69,18.7,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Harare, Zimbabwe",08/03/2024,-17.8178,31.0447,28.4,9.3,17.8,0.0,0.0,32,12.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Cape Town, South Africa",08/12/2024,-33.9167,18.4167,15.1,9.5,11.6,0.27,0.0,80,18.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Nairobi, Kenya",08/21/2024,-1.2833,36.8167,24.1,15.1,18.8,0.03,0.0,58,22.0,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Cairo, Egypt",08/30/2024,30.05,31.25,37.9,25.3,30.6,0.0,0.0,41,32.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lagos, Nigeria",09/08/2024,6.4531,3.3958,29.3,24.0,26.3,0.01,0.0,72,17.3,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Dakar, Senegal",09/17/2024,14.6708,-17.4381,26.6,24.8,25.8,12.42,0.0,82,27.0,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dar es Salaam, Tanzania",09/26/2024,-6.8,39.2833,29.6,22.3,25.0,0.55,0.0,73,20.5,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Accra, Ghana",10/05/2024,5.55,-0.2167,25.8,24.2,24.8,7.79,0.0,88,22.0,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Johannesburg, South Africa",10/14/2024,-26.2,28.0833,31.9,20.3,26.0,0.15,0.0,23,21.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Marrakech, Morocco",10/23/2024,31.6333,-8.0,27.5,20.8,23.2,0.83,0.0,44,28.1,9.5,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Kampala, Uganda",11/01/2024,0.3156,32.5656,30.3,18.6,22.8,3.3,0.0,70,8.6,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Addis Ababa, Ethiopia",11/10/2024,9.0333,38.7,20.3,9.8,14.6,0.03,0.0,58,20.9,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Harare, Zimbabwe",11/19/2024,-17.8178,31.0447,29.2,16.2,20.4,3.65,0.0,67,18.7,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Lusaka, Zambia",11/28/2024,-15.4167,28.2833,22.7,19.3,20.8,12.27,0.0,86,11.5,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Managua, Nicaragua",01/02/2024,12.1508,-86.2683,31.1,23.6,26.3,0.2,0.0,68,25.2,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"San Salvador, El Salvador",01/11/2024,13.7086,-89.2031,31.8,17.9,23.4,0.0,0.0,71,10.8,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tegucigalpa, Honduras",01/20/2024,14.1,-87.2167,26.9,15.9,20.5,0.23,0.0,77,19.1,7.3,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Guatemala City, Guatemala",01/29/2024,14.6211,-90.5269,19.5,12.0,15.8,0.12,0.0,78,17.6,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Belmopan, Belize",02/07/2024,17.25,-88.7667,26.7,14.4,19.6,0.0,0.0,74,10.4,8.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"San Pedro Sula, Honduras",02/16/2024,15.5,-88.0333,31.3,16.5,22.5,0.0,0.0,77,13.7,7.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"San Jose, Costa Rica",02/25/2024,9.9333,-84.0833,22.8,9.6,15.8,1.26,0.0,83,10.8,9.2,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Panama City, Panama",03/06/2024,8.9667,-79.5333,32.2,21.9,26.2,0.01,0.0,75,9.0,7.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"San Salvador, El Salvador",03/15/2024,13.7086,-89.2031,34.3,20.8,26.4,0.0,0.0,60,14.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Managua, Nicaragua",03/24/2024,12.1508,-86.2683,34.5,25.7,29.7,3.44,0.0,65,15.1,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tegucigalpa, Honduras",04/02/2024,14.1,-87.2167,33.0,18.0,24.2,0.0,0.0,65,15.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Guatemala City, Guatemala",04/11/2024,14.6211,-90.5269,28.2,17.4,21.7,0.46,0.0,68,10.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Belmopan, Belize",04/20/2024,17.25,-88.7667,32.1,23.0,26.9,0.58,0.0,79,13.0,7.3,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"San Pedro Sula, Honduras",04/29/2024,15.5,-88.0333,38.8,21.5,28.7,0.88,0.0,67,20.5,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Panama City, Panama",05/08/2024,8.9667,-79.5333,30.3,24.3,26.5,21.85,0.0,87,7.9,8.9,Moderate or heavy rain shower,http://cdn.weatherapi.com/weather/64x64/day/356.png,icons/356.png
+"San Jose, Costa Rica",05/17/2024,9.9333,-84.0833,24.5,17.3,20.4,18.37,0.0,94,3.2,6.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"San Salvador, El Salvador",05/26/2024,13.7086,-89.2031,32.0,21.3,25.8,2.24,0.0,76,13.0,9.2,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Managua, Nicaragua",06/04/2024,12.1508,-86.2683,31.2,25.1,27.6,6.73,0.0,80,13.0,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Tegucigalpa, Honduras",06/13/2024,14.1,-87.2167,24.9,19.4,21.9,13.63,0.0,91,7.6,7.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Guatemala City, Guatemala",06/22/2024,14.6211,-90.5269,22.4,15.5,18.3,1.35,0.0,89,11.2,5.3,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Belmopan, Belize",07/01/2024,17.25,-88.7667,29.8,24.0,26.3,2.48,0.0,88,12.6,5.5,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"San Pedro Sula, Honduras",07/10/2024,15.5,-88.0333,32.3,21.8,26.4,13.07,0.0,82,13.7,7.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Panama City, Panama",07/19/2024,8.9667,-79.5333,28.6,23.2,25.2,9.71,0.0,89,10.8,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"San Jose, Costa Rica",07/28/2024,9.9333,-84.0833,26.2,13.3,18.8,13.07,0.0,91,7.9,5.5,Moderate or heavy rain shower,http://cdn.weatherapi.com/weather/64x64/day/356.png,icons/356.png
+"San Salvador, El Salvador",08/06/2024,13.7086,-89.2031,30.3,20.4,24.4,5.22,0.0,83,4.7,6.8,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Managua, Nicaragua",08/15/2024,12.1508,-86.2683,31.0,23.5,26.6,0.91,0.0,81,15.5,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Tegucigalpa, Honduras",08/24/2024,14.1,-87.2167,27.0,17.6,21.4,1.81,0.0,80,12.6,8.4,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Guatemala City, Guatemala",09/02/2024,14.6211,-90.5269,23.0,15.2,18.8,17.91,0.0,91,5.4,7.6,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Belmopan, Belize",09/11/2024,17.25,-88.7667,32.5,23.9,27.4,4.19,0.0,84,10.1,7.9,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"San Pedro Sula, Honduras",09/20/2024,15.5,-88.0333,30.9,21.3,25.4,16.23,0.0,87,9.0,9.3,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Panama City, Panama",09/29/2024,8.9667,-79.5333,28.4,23.8,25.3,19.35,0.0,87,16.2,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"San Jose, Costa Rica",10/08/2024,9.9333,-84.0833,21.9,13.5,16.3,12.89,0.0,97,7.6,6.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"San Salvador, El Salvador",10/17/2024,13.7086,-89.2031,29.1,19.6,23.3,8.5,0.0,86,4.7,6.5,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Managua, Nicaragua",10/26/2024,12.1508,-86.2683,29.1,24.4,25.8,0.65,0.0,82,19.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tegucigalpa, Honduras",11/04/2024,14.1,-87.2167,26.9,17.1,20.7,1.73,0.0,84,5.4,6.5,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Guatemala City, Guatemala",11/13/2024,14.6211,-90.5269,22.8,14.8,17.8,2.48,0.0,89,5.8,4.5,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Belmopan, Belize",11/22/2024,17.25,-88.7667,24.1,16.4,20.4,0.07,0.0,79,8.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"San Pedro Sula, Honduras",12/01/2024,15.5,-88.0333,23.2,18.1,20.6,12.45,0.0,92,5.8,8.6,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Cesky Krumlov, Czech Republic",01/06/2024,48.8167,14.3167,4.1,1.4,2.7,6.39,1.78,93,11.2,8.5,Light sleet,http://cdn.weatherapi.com/weather/64x64/day/317.png,icons/317.png
+"Rothenburg ob der Tauber, Germany",01/15/2024,49.3833,10.1833,-0.9,-2.9,-2.0,1.57,0.68,85,31.3,6.5,Heavy snow,http://cdn.weatherapi.com/weather/64x64/day/338.png,icons/338.png
+"Bled, Slovenia",01/24/2024,46.3692,14.1136,3.9,-2.6,0.2,0.0,0.0,86,8.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Sintra, Portugal",02/02/2024,38.8,-9.3833,18.6,11.7,14.9,0.0,0.0,65,9.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Ghent, Belgium",02/11/2024,51.05,3.7167,10.1,7.0,8.4,1.3,0.0,84,24.8,9.3,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Hallstatt, Austria",02/20/2024,47.55,13.65,0.7,-1.9,-0.2,12.68,9.16,98,9.0,3.9,Moderate or heavy snow showers,http://cdn.weatherapi.com/weather/64x64/day/371.png,icons/371.png
+"Freiburg im Breisgau, Germany",03/01/2024,48.0,7.85,8.5,4.6,6.2,0.61,0.0,80,14.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Cobh, Ireland",03/10/2024,51.8572,-8.2992,6.7,5.2,5.7,0.32,0.0,93,18.0,9.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Lausanne, Switzerland",03/19/2024,46.5333,6.6667,13.3,5.9,9.2,0.0,0.0,77,9.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bratislava, Slovakia",03/28/2024,48.15,17.1167,16.0,6.2,10.6,2.34,0.0,72,40.3,7.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Zermatt, Switzerland",04/06/2024,46.0167,7.75,8.1,-1.0,2.9,0.0,0.0,47,8.3,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Innsbruck, Austria",04/15/2024,47.2667,11.4,14.7,5.7,10.4,15.97,0.0,89,7.2,8.7,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Ljubljana, Slovenia",04/24/2024,46.0553,14.5144,2.1,-0.3,1.4,12.24,0.0,100,3.2,5.6,Light sleet,http://cdn.weatherapi.com/weather/64x64/day/317.png,icons/317.png
+"Santorini, Greece",05/03/2024,43.2554,-77.7299,16.5,8.8,12.7,1.33,0.0,79,22.3,9.8,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Kotor, Montenegro",05/12/2024,42.4258,18.7719,18.5,12.7,15.4,2.6,0.0,71,11.2,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Lille, France",05/21/2024,50.6333,3.0667,16.3,11.9,13.4,5.48,0.0,94,10.8,5.3,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Heidelberg, Germany",05/30/2024,49.4167,8.7,19.7,12.0,14.9,10.61,0.0,82,14.0,8.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dubrovnik, Croatia",06/08/2024,42.6506,18.0914,25.4,20.5,23.4,0.0,0.0,70,6.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"York, UK",06/17/2024,53.9562,-1.0947,17.3,9.0,13.2,6.98,0.0,85,17.3,8.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Bergen, Norway",06/26/2024,60.3911,5.3247,16.8,13.5,14.9,0.33,0.0,88,19.1,7.3,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"Riga, Latvia",07/05/2024,56.95,24.1,19.7,11.7,15.3,1.73,0.0,74,21.6,9.1,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Siena, Italy",07/14/2024,43.3167,11.35,36.3,17.4,26.4,0.0,0.0,41,20.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Krakow, Poland",07/23/2024,51.7333,18.5167,25.0,16.2,20.7,0.01,0.0,65,18.4,8.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tromsø, Norway",08/01/2024,33.4464,-81.1165,35.6,23.0,28.8,2.52,0.0,70,21.2,9.8,Patchy light rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/386.png,icons/386.png
+"Aix-en-Provence, France",08/10/2024,43.5333,5.4333,33.8,24.3,29.0,0.0,0.0,45,15.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Ghent, Belgium",08/19/2024,51.05,3.7167,26.6,13.5,19.9,0.0,0.0,60,14.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Hallstatt, Austria",08/28/2024,47.55,13.65,25.6,12.1,17.6,1.77,0.0,69,9.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Freiburg im Breisgau, Germany",09/06/2024,48.0,7.85,22.8,12.6,17.2,0.8,0.0,81,11.2,8.7,Mist,http://cdn.weatherapi.com/weather/64x64/day/143.png,icons/143.png
+"Cobh, Ireland",09/15/2024,51.8572,-8.2992,18.5,11.0,14.4,1.81,0.0,92,23.0,7.3,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Lausanne, Switzerland",09/24/2024,46.5333,6.6667,17.8,10.5,13.4,2.24,0.0,74,23.4,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Bratislava, Slovakia",10/03/2024,48.15,17.1167,12.4,7.5,10.2,2.08,0.0,89,7.6,7.4,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Zermatt, Switzerland",10/12/2024,46.0167,7.75,1.3,-3.9,-0.9,2.72,0.0,90,12.2,7.0,Light freezing rain,http://cdn.weatherapi.com/weather/64x64/day/311.png,icons/311.png
+"Innsbruck, Austria",10/21/2024,47.2667,11.4,19.4,4.0,9.3,0.0,0.0,78,8.3,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Ljubljana, Slovenia",10/30/2024,46.0553,14.5144,17.7,10.3,12.9,0.0,0.0,90,5.4,7.3,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Santorini, Greece",11/08/2024,43.2554,-77.7299,13.9,6.5,9.8,0.0,0.0,65,21.2,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Kotor, Montenegro",11/17/2024,42.4258,18.7719,12.2,8.4,10.1,0.0,0.0,64,7.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Lille, France",11/26/2024,50.6333,3.0667,9.6,6.9,8.0,5.42,0.0,82,22.3,8.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Heidelberg, Germany",12/05/2024,49.4167,8.7,5.1,0.9,3.0,0.29,0.0,78,16.2,9.7,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Bergen, Norway",01/01/2024,60.3911,5.3247,0.8,-3.6,-1.7,0.13,0.0,67,23.8,10.0,Light freezing rain,http://cdn.weatherapi.com/weather/64x64/day/311.png,icons/311.png
+"Riga, Latvia",01/09/2024,56.95,24.1,0.9,-3.1,-1.0,0.05,0.0,94,20.2,6.8,Freezing fog,http://cdn.weatherapi.com/weather/64x64/day/260.png,icons/260.png
+"Siena, Italy",01/18/2024,43.3167,11.35,15.3,9.3,11.7,2.84,0.0,84,26.6,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kotor, Montenegro",11/17/2024,42.4258,18.7719,12.2,8.4,10.1,0.0,0.0,64,7.2,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Tokyo, Japan",02/01/2024,35.6895,139.6917,14.4,6.3,10.4,1.03,0.0,48,33.8,8.9,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Bangkok, Thailand",02/10/2024,13.75,100.5167,34.2,27.0,30.4,4.25,0.0,61,18.7,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Seoul, South Korea",02/19/2024,37.5664,126.9997,9.2,5.1,7.9,3.76,0.0,93,11.5,3.8,Fog,http://cdn.weatherapi.com/weather/64x64/day/248.png,icons/248.png
+"Beijing, China",02/28/2024,39.9289,116.3883,7.4,0.9,4.1,0.0,0.0,41,10.8,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Mumbai, India",03/08/2024,18.975,72.8258,30.2,25.1,27.6,0.0,0.0,42,32.4,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Singapore, Singapore",03/17/2024,1.2931,103.8558,31.5,25.9,28.2,0.21,0.0,74,28.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kuala Lumpur, Malaysia",03/26/2024,3.1667,101.7,35.5,22.1,27.1,5.62,0.0,76,8.6,9.8,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Hanoi, Vietnam",04/04/2024,21.0333,105.85,36.8,24.7,28.6,0.05,0.0,74,26.3,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Manila, Philippines",04/13/2024,14.6042,120.9822,34.5,25.2,29.6,0.01,0.0,60,19.4,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Jakarta, Indonesia",04/22/2024,-6.2146,106.8451,33.6,26.1,29.1,3.22,0.0,73,13.7,9.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kyoto, Japan",05/01/2024,35.0211,135.7539,15.2,10.7,13.1,3.23,0.0,84,14.8,7.8,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Ho Chi Minh City, Vietnam",05/10/2024,10.75,106.6667,38.0,27.6,31.6,0.06,0.0,61,24.5,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Taipei, Taiwan",05/19/2024,25.0392,121.525,29.8,20.2,25.0,0.42,0.0,72,20.5,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Dhaka, Bangladesh",05/28/2024,23.7231,90.4086,27.5,24.7,25.9,41.1,0.0,89,46.4,8.2,Moderate rain,http://cdn.weatherapi.com/weather/64x64/day/302.png,icons/302.png
+"Colombo, Sri Lanka",06/06/2024,6.9319,79.8478,29.6,25.8,27.3,5.73,0.0,83,22.0,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kathmandu, Nepal",06/15/2024,27.7167,85.3167,34.3,21.3,25.7,5.86,0.0,57,11.2,9.8,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Hyderabad, India",06/24/2024,17.3753,78.4744,29.7,24.0,26.9,2.52,0.0,71,25.2,9.9,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Shanghai, China",07/03/2024,31.005,121.4086,33.6,24.7,28.7,2.59,0.0,75,11.2,9.9,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Yangon, Myanmar",07/12/2024,16.7833,96.1667,28.8,25.1,26.7,6.21,0.0,82,17.3,9.4,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kolkata, India",07/21/2024,22.5697,88.3697,34.4,28.3,30.9,7.32,0.0,72,23.0,7.9,Moderate or heavy rain with thunder,http://cdn.weatherapi.com/weather/64x64/day/389.png,icons/389.png
+"Phnom Penh, Cambodia",07/30/2024,11.55,104.9167,30.8,24.8,27.7,1.07,0.0,74,22.7,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Tokyo, Japan",08/08/2024,35.6895,139.6917,32.6,27.1,29.4,9.71,0.0,70,15.5,8.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Bangkok, Thailand",08/17/2024,13.75,100.5167,32.8,28.4,30.1,3.68,0.0,71,14.0,9.9,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Seoul, South Korea",08/26/2024,37.5664,126.9997,29.9,24.3,26.5,3.68,0.0,79,4.7,9.6,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Beijing, China",09/04/2024,39.9289,116.3883,27.0,21.1,23.5,6.03,0.0,68,9.0,8.7,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Mumbai, India",09/13/2024,18.975,72.8258,29.5,27.4,28.3,2.1,0.0,70,21.2,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Singapore, Singapore",09/22/2024,1.2931,103.8558,30.3,26.6,28.5,1.11,0.0,73,13.7,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kuala Lumpur, Malaysia",10/01/2024,3.1667,101.7,31.2,22.0,25.8,6.29,0.0,82,9.7,9.0,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Hanoi, Vietnam",10/10/2024,21.0333,105.85,32.6,23.0,27.4,0.0,0.0,61,15.1,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Manila, Philippines",10/19/2024,14.6042,120.9822,31.1,25.8,28.2,0.26,0.0,74,10.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Jakarta, Indonesia",10/28/2024,-6.2146,106.8451,35.5,28.4,31.3,2.52,0.0,57,20.5,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kyoto, Japan",11/06/2024,35.0211,135.7539,16.6,11.7,14.0,0.6,0.0,72,20.2,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Ho Chi Minh City, Vietnam",11/15/2024,10.75,106.6667,31.6,24.0,26.9,3.63,0.0,84,12.2,8.3,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Taipei, Taiwan",11/24/2024,25.0392,121.525,18.6,17.2,17.8,0.68,0.0,80,19.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Dhaka, Bangladesh",12/03/2024,23.7231,90.4086,29.1,18.5,22.9,0.0,0.0,52,15.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Shanghai, China",01/08/2024,31.005,121.4086,11.0,4.2,7.9,0.0,0.0,62,16.2,10.0,Overcast,http://cdn.weatherapi.com/weather/64x64/day/122.png,icons/122.png
+"Yangon, Myanmar",01/17/2024,16.7833,96.1667,33.9,21.6,26.9,0.0,0.0,53,13.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Kolkata, India",01/26/2024,22.5697,88.3697,26.9,16.3,21.6,0.0,0.0,43,10.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Phnom Penh, Cambodia",02/04/2024,11.55,104.9167,36.1,23.6,29.2,0.01,0.0,62,18.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Tokyo, Japan",02/13/2024,35.6895,139.6917,14.4,6.1,10.2,0.0,0.0,47,18.0,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Bangkok, Thailand",02/22/2024,13.75,100.5167,34.2,27.7,30.4,0.0,0.0,62,22.7,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Seoul, South Korea",03/03/2024,37.5664,126.9997,6.7,-0.0,3.0,0.0,0.0,47,15.8,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Tokyo, Japan",03/12/2024,35.6895,139.6917,11.9,6.6,9.7,51.1,0.0,67,41.0,8.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Bangkok, Thailand",03/21/2024,13.75,100.5167,34.8,26.5,30.1,0.01,0.0,56,15.1,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Seoul, South Korea",03/30/2024,37.5664,126.9997,11.8,5.1,7.7,0.77,0.0,49,20.5,9.6,Patchy light drizzle,http://cdn.weatherapi.com/weather/64x64/day/263.png,icons/263.png
+"Beijing, China",04/08/2024,39.9289,116.3883,22.4,13.3,18.2,0.04,0.0,25,19.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Mumbai, India",04/17/2024,18.975,72.8258,31.1,28.8,29.9,0.0,0.0,69,22.7,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Singapore, Singapore",04/26/2024,1.2931,103.8558,30.5,26.9,28.9,8.42,0.0,75,10.1,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kuala Lumpur, Malaysia",05/05/2024,3.1667,101.7,31.1,23.6,26.2,5.11,0.0,88,8.3,7.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hanoi, Vietnam",05/14/2024,21.0333,105.85,32.0,24.4,27.3,2.85,0.0,76,15.8,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Manila, Philippines",05/23/2024,14.6042,120.9822,35.4,27.4,30.9,0.0,0.0,61,21.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Jakarta, Indonesia",06/01/2024,-6.2146,106.8451,33.1,27.3,29.4,3.78,0.0,70,11.5,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kyoto, Japan",06/10/2024,35.0211,135.7539,27.0,15.7,20.6,10.24,0.0,81,6.8,8.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Ho Chi Minh City, Vietnam",06/19/2024,10.75,106.6667,34.7,27.4,30.5,0.68,0.0,64,19.8,10.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Taipei, Taiwan",06/28/2024,25.0392,121.525,34.6,24.3,28.3,15.92,0.0,78,10.1,9.7,Moderate or heavy rain shower,http://cdn.weatherapi.com/weather/64x64/day/356.png,icons/356.png
+"Dhaka, Bangladesh",07/07/2024,23.7231,90.4086,34.0,27.1,30.1,4.7,0.0,74,17.3,9.0,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Colombo, Sri Lanka",07/16/2024,6.9319,79.8478,28.8,25.6,26.9,17.71,0.0,83,17.3,9.7,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kathmandu, Nepal",07/25/2024,27.7167,85.3167,26.5,19.8,22.1,47.33,0.0,91,6.1,9.2,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Hyderabad, India",08/03/2024,17.3753,78.4744,25.9,22.7,24.0,0.15,0.0,81,28.4,10.0,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Shanghai, China",08/12/2024,31.005,121.4086,36.6,26.1,30.6,3.9,0.0,72,13.3,9.8,Light rain,http://cdn.weatherapi.com/weather/64x64/day/296.png,icons/296.png
+"Yangon, Myanmar",08/21/2024,16.7833,96.1667,27.1,24.0,25.2,0.95,0.0,89,7.9,7.7,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Kolkata, India",08/30/2024,22.5697,88.3697,34.7,26.2,29.9,0.15,0.0,73,14.8,10.0,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Phnom Penh, Cambodia",09/08/2024,11.55,104.9167,31.6,26.5,28.6,0.0,0.0,69,25.9,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Tokyo, Japan",09/17/2024,35.6895,139.6917,31.3,25.1,27.9,0.02,0.0,70,25.6,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Bangkok, Thailand",09/26/2024,13.75,100.5167,32.4,25.4,28.4,6.08,0.0,77,8.6,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Seoul, South Korea",10/05/2024,37.5664,126.9997,23.9,14.4,19.0,0.0,0.0,43,6.8,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Beijing, China",10/14/2024,39.9289,116.3883,24.0,15.4,19.4,0.2,0.0,56,17.3,10.0,Thundery outbreaks possible,http://cdn.weatherapi.com/weather/64x64/day/200.png,icons/200.png
+"Mumbai, India",10/23/2024,18.975,72.8258,31.6,27.7,29.5,0.87,0.0,70,13.3,9.9,Patchy rain possible,http://cdn.weatherapi.com/weather/64x64/day/176.png,icons/176.png
+"Singapore, Singapore",11/01/2024,1.2931,103.8558,31.1,27.1,28.6,4.18,0.0,73,25.9,9.8,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Kuala Lumpur, Malaysia",11/10/2024,3.1667,101.7,28.7,22.6,25.1,2.33,0.0,83,11.2,9.5,Light drizzle,http://cdn.weatherapi.com/weather/64x64/day/266.png,icons/266.png
+"Hanoi, Vietnam",11/19/2024,21.0333,105.85,28.8,22.8,25.3,0.01,0.0,57,13.0,10.0,Cloudy,http://cdn.weatherapi.com/weather/64x64/day/119.png,icons/119.png
+"Manila, Philippines",11/28/2024,14.6042,120.9822,30.9,25.5,27.8,0.04,0.0,69,20.9,10.0,Partly cloudy,http://cdn.weatherapi.com/weather/64x64/day/116.png,icons/116.png
+"Jakarta, Indonesia",12/07/2024,-6.2146,106.8451,31.8,25.0,28.3,3.56,0.0,69,16.6,9.5,Light rain shower,http://cdn.weatherapi.com/weather/64x64/day/353.png,icons/353.png
+"Taipei, Taiwan",01/02/2024,25.0392,121.525,19.2,12.1,15.1,0.0,0.0,70,17.6,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png
+"Dhaka, Bangladesh",01/11/2024,23.7231,90.4086,26.4,15.7,20.5,0.0,0.0,39,15.8,10.0,Sunny,http://cdn.weatherapi.com/weather/64x64/day/113.png,icons/113.png

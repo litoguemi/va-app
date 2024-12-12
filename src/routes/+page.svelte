@@ -11,12 +11,17 @@
     import { base } from '$app/paths';
 
     let { data } = $props();
-    
 
-    const mostVisitedPlace = "Vienna"; const visitsToday = 12345; // Example number
     const mostVisitedPlace2 = "Londres"; const visitsToday2 = 5412; // Example number
     const mostVisitedPlace3 = "Barcelona"; const visitsToday3 = 3612; // Example number
     const mostVisitedPlace4 = "Guyana"; const visitsToday4 = 60; // Example number
+
+    let selectedMonth = $state("January");  // Default month
+
+    function handleMonthChange(event) { 
+        selectedMonth = event.target.value; 
+    }
+
 </script>
 
 <main>    
@@ -27,11 +32,11 @@
         <div class="item item-summary">
             <h3 class="item-tittle">Summary of Recent Updates</h3> 
             <div class="statistics-container"> 
-                <Statistics number={visitsToday} description={`is the most visited place today in ${mostVisitedPlace}`} />
+                <Statistics number={data.stMostLeastVisited.maxVisits} description={'is the most visited place today in '} place={data.stMostLeastVisited.mostVisited} />
+                <Statistics number={data.stMostLeastVisited.minVisits} description={'is the least visited place today in '} place={data.stMostLeastVisited.leastVisited} /> 
                 <Statistics number={visitsToday2} description={`is the most rainy place today in ${mostVisitedPlace2}`} />
                 <Statistics number={visitsToday3} description={`is the most sunny place today in ${mostVisitedPlace3}`} />
-                <Statistics number={visitsToday4} description={`is the lowest visited place today in ${mostVisitedPlace4}`} /> 
-                <Statistics number={visitsToday} description={`is the lowest visited place today in ${mostVisitedPlace}`} /> 
+                <Statistics number={visitsToday4} description={`is the lowest visited place today in ${mostVisitedPlace4}`} />                 
             </div>            
         </div>
         <div class="item item-controls">
@@ -41,18 +46,37 @@
                 <label><input type="checkbox" value="Population"> Population</label>
                 <label><input type="checkbox" value="Most visited"> Most visited </label>                
             </div>
+
+            <h3 class="item-tittle">Months</h3>
+            <div class="checkbox-list">
+                <label for="monthSelect">Select Month:</label>
+                <select id="monthSelect" onchange={handleMonthChange} bind:value={selectedMonth}>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>            
         </div>
         <div class="item item-main">
-            <Map />
-            <Piechart datapoints={data.users} title="Age Distribution of Travelers"/>
-            <Piechart datapoints={data.users} title="Age Distribution of Travelers"/>
-            <Piechart datapoints={data.users} title="Age Distribution of Travelers"/>
+            <Map datapoints={data.weather} month={selectedMonth}/>
+            <div class="pies-container">
+                <Piechart groupedData={data.groupedAge} title="Age Distribution"/>
+                <Piechart groupedData={data.groupedAccomodation} title="Accomodation Distribution"/>
+                <Piechart groupedData={data.groupedGender} title="Gender Distribution"/>                            
+            </div>
         </div>
         <div class="item item-tendency">
             <h3>Current Tendency in a Specific Place</h3>
-            <Scatterplot datapoints={data.flights} x="price" y="distance" xLabel="Price (Dolar)" yLabel="Distance (Km)"/>
-            <Barchart datapoints={data.avgSpendingPlaces} x="place" y="total" xLabel="Visited Places" yLabel="Average Spendings (Dolar)"/>
-            
+            <Barchart datapoints={data.avgSpendingPlace} x="cityName" y="total" xLabel="Visited Places" yLabel="Average Spendings (Dolar)"/>
         </div>        
     </div>
 </main>
@@ -74,4 +98,12 @@
         margin-top: 1rem; 
         justify-content: center;
         }
+
+    .pies-container { 
+        display: flex; 
+        flex-direction: row; 
+        gap: 1rem; 
+        margin-top: 1rem; 
+        justify-content: space-evenly;
+        }    
 </style>
