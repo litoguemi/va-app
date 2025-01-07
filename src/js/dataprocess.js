@@ -73,12 +73,14 @@ async function computeGenderGroup(datapoints , month=null) {
  * Computes the average spending on accommodation and transportation by destination.
 
  */
-async function computeAvgSpendingPlace(datapoints) {
+async function computeAvgSpendingPlace(datapoints, month=null) {
 
     let spendingByPlace = {};
 
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+
     // Assuming you have parsed the CSV data into an array of objects called "trips"
-    datapoints.forEach((trip) => {
+    filteredData.forEach((trip) => {
         const place = trip['Destination'];
         if(place){
             const cityName = place.split(',')[0].trim();

@@ -20,11 +20,13 @@
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
     let groupedGender = $state(data.groupedGender);  
-
+    let avgSpendingPlace = $state(data.avgSpendingPlace); 
+    
     async function updateData() {
         groupedAge = await computeAgeGroup(data.trips, selectedMonth);
         groupedAccomodation = await computeAccomodationGroup(data.trips, selectedMonth);
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
+        avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
     }
 
     function handleMonthChange(event) { 
@@ -82,7 +84,7 @@
         </div>
         <div class="item item-tendency">
             <h3>Current Tendency in a Specific Place</h3>
-            <Barchart datapoints={data.avgSpendingPlace} x="cityName" y="total" xLabel="Visited Places" yLabel="Average Spendings (Dolar)"/>
+            <Barchart datapoints={avgSpendingPlace} x="cityName" y="total" xLabel="Visited Places" yLabel="Average Spendings (Dolar)"/>
         </div>        
     </div>
 </main>

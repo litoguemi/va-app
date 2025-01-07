@@ -2,7 +2,7 @@
 
     import { scaleBand  } from 'd3-scale';
     import { extent } from 'd3-array';
-
+    import { onMount } from 'svelte';
 
     let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis' } = $props();
     
@@ -13,15 +13,33 @@
     const height = 400;
     const barWidth = 30;
 
-    const [_, maxTotal] = extent(datapoints, d => d[y]);
+    let [_, maxTotal] = $state (extent(datapoints, d => d[y]));
 
     // Scale functions
-    const scaleX = scaleBand()
+    let scaleX = $state(scaleBand()
         .domain(datapoints.map(d => d[x]))                  
         .range([margins.left, width - margins.right])    
-        .padding(0.1);
+        .padding(0.1));
 
-    const scaleY = (total) => (total / maxTotal) * (height - 50);
+    let scaleY = $state( (total) => (total / maxTotal) * (height - 50));
+
+    onMount(() => {
+        updateData();         
+    });
+    
+    $effect(() => { updateData(); });
+
+    function updateData(){
+        [_, maxTotal] = extent(datapoints, d => d[y]);
+
+        // Scale functions
+        scaleX = scaleBand()
+            .domain(datapoints.map(d => d[x]))                  
+            .range([margins.left, width - margins.right])    
+            .padding(0.1);
+
+        scaleY = (total) => (total / maxTotal) * (height - 50);
+    }
 
 </script>
 
