@@ -40,8 +40,6 @@ async function computeAccomodationGroup(datapoints) {
     if (otherCount > 0) { 
         finalAccommodationGroups['Others'] = otherCount; 
     }
-
-    console.log('computedaccomodation:'+JSON.stringify(finalAccommodationGroups));
     
     return finalAccommodationGroups;    
 }
@@ -58,8 +56,6 @@ async function computeGenderGroup(datapoints) {
         }
         return acc
     }, {});
-
-    console.log('genderGroups:'+JSON.stringify(genderGroups));
     
     return genderGroups;    
 }

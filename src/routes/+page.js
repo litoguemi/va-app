@@ -1,11 +1,11 @@
 import Papa from 'papaparse';
 import { base } from '$app/paths';
 import { onMount } from "svelte";
-import { MostVisitedCity } from '../js/statistics.js';
+import { MostVisitedCity, WeatherExtremes } from '../js/statistics.js';
 import { computeAgeGroup, 
          computeAccomodationGroup,
          computeGenderGroup,
-        computeAvgSpendingPlace } from '../js/dataprocess.js';
+         computeAvgSpendingPlace } from '../js/dataprocess.js';
 
 export const ssr = false;
 
@@ -43,7 +43,8 @@ export async function load({ fetch, params }) {
 
   //Compute statistics
   const resultMostLeast = await new MostVisitedCity().compute(travels); 
-  
+  const resultWeatherExtremes = await new WeatherExtremes().compute(weather);
+
   //Compute PieCharts
   const groupedAge = await computeAgeGroup(travels);
   const groupedAccomodation = await computeAccomodationGroup(travels);
@@ -52,14 +53,11 @@ export async function load({ fetch, params }) {
   //Compute Barcharts
   const avgSpendingPlace = await computeAvgSpendingPlace(travels);
 
-
-  console.log('Computed:'+resultMostLeast.mostVisited+' - '+resultMostLeast.maxVisits+' - '+resultMostLeast.leastVisited+ ' - '+ resultMostLeast.minVisits);
-
-
   return {
     trips:              travelFormat,
     weather:            weatherFormat,
     stMostLeastVisited: resultMostLeast,
+    stWeatherExtremes:  resultWeatherExtremes,
     groupedAge:         groupedAge,
     groupedAccomodation: groupedAccomodation,
     groupedGender:      groupedGender,

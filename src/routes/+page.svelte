@@ -16,7 +16,7 @@
     const mostVisitedPlace3 = "Barcelona"; const visitsToday3 = 3612; // Example number
     const mostVisitedPlace4 = "Guyana"; const visitsToday4 = 60; // Example number
 
-    let selectedMonth = $state("January");  // Default month
+    let selectedMonth = $state(new Date().toLocaleString('default', { month: 'long' }));  // Default month
 
     function handleMonthChange(event) { 
         selectedMonth = event.target.value; 
@@ -30,23 +30,17 @@
             <h1>Travel Research</h1>            
         </div>
         <div class="item item-summary">
-            <h3 class="item-tittle">Summary of Recent Updates</h3> 
+            <h3 class="item-tittle">Global Summary of Recent Updates</h3> 
             <div class="statistics-container"> 
                 <Statistics number={data.stMostLeastVisited.maxVisits} description={'is the most visited place today in '} place={data.stMostLeastVisited.mostVisited} />
                 <Statistics number={data.stMostLeastVisited.minVisits} description={'is the least visited place today in '} place={data.stMostLeastVisited.leastVisited} /> 
-                <Statistics number={visitsToday2} description={`is the most rainy place today in ${mostVisitedPlace2}`} />
-                <Statistics number={visitsToday3} description={`is the most sunny place today in ${mostVisitedPlace3}`} />
-                <Statistics number={visitsToday4} description={`is the lowest visited place today in ${mostVisitedPlace4}`} />                 
+                <Statistics number={data.stWeatherExtremes.mostRainy.totalprecip_mm} measure={'mm'} description={'is the most rainy place today in '} place={data.stWeatherExtremes.mostRainy.destination}/>
+                <Statistics number={data.stWeatherExtremes.mostSunny.avgvis_km} measure={'kms'} description={'is the most sunny place today in '} place={data.stWeatherExtremes.mostSunny.destination} />
+                <Statistics number={data.stWeatherExtremes.hottest.maxtemp_c} measure={'°C'} description={'is the hottest visited place today in '} place = {data.stWeatherExtremes.hottest.destination} />                 
+                <Statistics number={data.stWeatherExtremes.coldest.avgtemp_c} measure={'°C'} description={'is the coldest visited place today in '} place = {data.stWeatherExtremes.coldest.destination} />                 
             </div>            
         </div>
         <div class="item item-controls">
-            <h3 class="item-tittle">Controls</h3>
-            <div class="checkbox-list">
-                <label><input type="checkbox" value="Weather"> Weather</label> 
-                <label><input type="checkbox" value="Population"> Population</label>
-                <label><input type="checkbox" value="Most visited"> Most visited </label>                
-            </div>
-
             <h3 class="item-tittle">Months</h3>
             <div class="checkbox-list">
                 <label for="monthSelect">Select Month:</label>

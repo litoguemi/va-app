@@ -1,6 +1,7 @@
 <!-- Statistics.svelte -->
 <script>
     export let number;
+    export let measure;
     export let description;
     export let place;
 </script>
@@ -17,8 +18,18 @@
         justify-content: center; /* Center content vertically */ 
         align-items: center; /* Center content horizontally */
     }
+    .number-measure { 
+        display: flex; 
+        align-items: baseline;
+    }
+
     .number {
         font-size: 2rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    .measure {
+        font-size: 1rem;
         font-weight: bold;
         color: #2c3e50;
     }
@@ -36,7 +47,10 @@
 </style>
 
 <div class="statistic">
-    <div class="number">{number}</div>
+    <div class="number-measure"> 
+        <div class="number">{number}</div> 
+        <div class="measure">{measure}</div> 
+    </div>    
     <div class="description">{description}</div>  
     <div class="place">{place}</div>    
 </div>
