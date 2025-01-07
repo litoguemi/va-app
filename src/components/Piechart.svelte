@@ -16,8 +16,8 @@
 
     onMount(() => {
 
-        const colors = ['#D8A25E', '#36A2EB', '#344966', '#BFCC94', '#E6AACE']; 
-        
+        const colors = ['#6ABCFD', '#2A6A7A', '#c6f2af', '#d8cc86', '#dea576']; 
+
         //Suffle colors
         colors.sort(() => Math.random() - 0.5);
 
@@ -56,21 +56,51 @@
                     midY: height / 2 + (radius / 2) * Math.sin(midAngle)
                     };
         }); 
-    });                    
+    });
+    
+    
+
+    
+    // Function to split the title into multiple lines
+    function splitTitle(title) {
+        const maxLength = 20;
+        const words = title.split(' ');
+        const lines = [];
+        let currentLine = '';
+
+        words.forEach(word => {
+        if ((currentLine + word).length > maxLength) {
+            lines.push(currentLine.trim());
+            currentLine = word + ' ';
+        } else {
+            currentLine += word + ' ';
+        }
+        });
+
+        if (currentLine.trim().length > 0) {
+        lines.push(currentLine.trim());
+        }
+
+    return lines;
+  }
+
+  const titleLines = splitTitle(title);
 </script>
 
 <svg width={width} height={height}>
-
-    <text   x={width / 2} 
-            y={height - (margins.bottom / 4)} 
+    {#each titleLines as line, index}
+        <text x={width / 2} 
+            y={height - (margins.bottom / 4) + (index * 25)}
             text-anchor="middle" 
-            font-size="24" fill="black"> 
-        {title}
-    </text> 
+            font-size="20" 
+            fill="black">
+        {line}
+        </text>
+    {/each}
     
     {#each slices as { path, label, color,midX, midY }, i} 
         <path d={path} fill={color} stroke="white" stroke-width="2"></path> 
-        <text fill="black" font-size="20" dy="0.35em" text-anchor="middle" 
+        <text fill="black" font-size="16" dy="0.35em" text-anchor="middle" 
             x = {midX}
             y = {midY}>
             {label} 

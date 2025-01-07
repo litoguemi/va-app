@@ -10,10 +10,6 @@
     
 
     onMount(async () => {
-      /*const responseJSON = await fetch(base + "/flights_part.json")
-      const flights = await responseJSON.json()
-      data = flights.slice(0, 5000); // reduce size
-      */
       map = L.map("map", { preferCanvas: true }).setView(
         [50.8476, 4.3572],
         2,
