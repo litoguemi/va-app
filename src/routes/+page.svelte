@@ -6,6 +6,10 @@
     import Piechart from '../components/Piechart.svelte'; 
     import Map from '../components/Map.svelte';
     import Statistics from '../components/Statistics.svelte';
+    import { computeAgeGroup, 
+            computeAccomodationGroup,
+            computeGenderGroup,
+            computeAvgSpendingPlace } from '../js/dataprocess.js';
 
     import { base } from '$app/paths';
 
@@ -13,11 +17,25 @@
 
     let selectedMonth = $state(new Date().toLocaleString('default', { month: 'long' }));  // Default month
 
-    function handleMonthChange(event) { 
-        selectedMonth = event.target.value; 
+    let groupedAge = $state(data.groupedAge); 
+    let groupedAccomodation = $state(data.groupedAccomodation); 
+    let groupedGender = $state(data.groupedGender);  
+
+    async function updateData() {
+        groupedAge = await computeAgeGroup(data.trips, selectedMonth);
+        groupedAccomodation = await computeAccomodationGroup(data.trips, selectedMonth);
+        groupedGender = await computeGenderGroup(data.trips, selectedMonth);
     }
 
+    function handleMonthChange(event) { 
+        selectedMonth = event.target.value;              
+    }
+    
+    $effect(() => { updateData(); });
+
 </script>
+
+
 
 <main>    
     <div class="container">
@@ -57,9 +75,9 @@
         <div class="item item-main">
             <Map datapoints={data.weather} month={selectedMonth}/>
             <div class="pies-container">
-                <Piechart groupedData={data.groupedAge} title="Age Distribution"/>
-                <Piechart groupedData={data.groupedAccomodation} title="Accomodation Distribution"/>
-                <Piechart groupedData={data.groupedGender} title="Gender Distribution"/>                            
+                <Piechart groupedData={groupedAge} title="Age Distribution"/>
+                <Piechart groupedData={groupedAccomodation} title="Accomodation Distribution"/>
+                <Piechart groupedData={groupedGender} title="Gender Distribution"/>                            
             </div>
         </div>
         <div class="item item-tendency">

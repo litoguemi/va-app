@@ -1,8 +1,11 @@
 /**
  * Compute groups by age
  */
-async function computeAgeGroup(datapoints){
-    const ageGroups = datapoints.reduce((acc, person) => {         
+async function computeAgeGroup(datapoints, month=null){   
+
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+    
+    const ageGroups = filteredData.reduce((acc, person) => {         
         const ageGroup = `${Math.floor(person['Traveler age'] / 10) * 10}s`;
         if(ageGroup != 'NaNs'){
             acc[ageGroup] = (acc[ageGroup] || 0) + 1; 
@@ -19,8 +22,11 @@ async function computeAgeGroup(datapoints){
 /**
  * Compute groups by accommodation type
  */
-async function computeAccomodationGroup(datapoints) {
-    const accommodationGroups = datapoints.reduce((acc, person) => {
+async function computeAccomodationGroup(datapoints, month=null) {
+
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+
+    const accommodationGroups = filteredData.reduce((acc, person) => {
         const accommodationGroup = person['Accommodation type'];
         if (accommodationGroup) {
             acc[accommodationGroup] = (acc[accommodationGroup] || 0) + 1;
@@ -48,8 +54,11 @@ async function computeAccomodationGroup(datapoints) {
  * Compute groups by gender
 
  */
-async function computeGenderGroup(datapoints) {
-    const genderGroups = datapoints.reduce((acc, person) => {
+async function computeGenderGroup(datapoints , month=null) {
+
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+
+    const genderGroups = filteredData.reduce((acc, person) => {
         const genderGroup = person['Traveler gender'];
         if (genderGroup) {
             acc[genderGroup] = (acc[genderGroup] || 0) + 1;
@@ -115,9 +124,6 @@ async function computeAvgSpendingPlace(datapoints) {
  *  */ 
 function computeMostFrequentWeather(data, month) {
     const filteredData = data.filter(location => new Date(location.StartDate).toLocaleString('default', { month: 'long' }) === month);
-
-    console.log('computing weather js:'+filteredData.length+' data:'+data.length);
-    
 
     const frequencyMap = filteredData.reduce((acc, location) => {
       const key = `${location.lat},${location.lon}`;

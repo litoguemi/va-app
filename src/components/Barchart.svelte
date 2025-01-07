@@ -13,9 +13,6 @@
     const height = 400;
     const barWidth = 30;
 
-    console.log('lengthB:'+datapoints.length+ 'x:'+x+ ' y:'+y);
-
-
     const [_, maxTotal] = extent(datapoints, d => d[y]);
 
     // Scale functions

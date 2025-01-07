@@ -23,7 +23,14 @@ export async function load({ fetch, params }) {
   const travelFormat = parsedTravelCSV.data.map(d => ({
       ...d,
       AccommodationCost: parseFloat(d['Accommodation cost']),        // Convert to number
-      TransportationCost: parseFloat(d['Transportation cost'])   // Convert to number
+      TransportationCost: parseFloat(d['Transportation cost']),   // Convert to number
+      StartDate: (() => {
+        if (d['Start date']) {
+          const dateParts = d['Start date'].split('/');
+          return new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+        }
+        return null;
+      })()
   }));
 
   const weatherFormat = parsedWeatherCSV.data.map(d => ({

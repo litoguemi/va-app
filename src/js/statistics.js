@@ -35,8 +35,6 @@ class Statistic {
                 minVisits = count;                
             }
         }
-        console.log('inside computing:'+mostVisited+' - '+maxVisits+' - '+leastVisited+' - '+minVisits);
-        
         return {mostVisited, maxVisits, leastVisited, minVisits};
     }
 };
@@ -123,9 +121,7 @@ class WeatherExtremes extends Statistic {
             hottest = data;
           }
         });      
-
-        console.log('inside computing weather extremes:'+mostRainy.totalprecip_mm+' - '+mostSunny.avgvis_km+' - '+coldest.avgtemp_c+' - '+hottest.maxtemp_c);
-
+        
         return { mostRainy, mostSunny, coldest, hottest };
       }
 };

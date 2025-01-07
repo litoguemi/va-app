@@ -12,9 +12,15 @@
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
-    console.log('lengthPiegroupedData:'+groupedData.length);
-
     onMount(() => {
+        updateData();         
+    });
+    
+    $effect(() => { updateData(); });
+
+    function updateData(){
+
+        console.log('lengthPiegroupedData:'+groupedData.length);
 
         const colors = ['#6ABCFD', '#2A6A7A', '#c6f2af', '#d8cc86', '#dea576']; 
 
@@ -55,11 +61,8 @@
                     midX: width / 2 + (radius / 2) * Math.cos(midAngle), 
                     midY: height / 2 + (radius / 2) * Math.sin(midAngle)
                     };
-        }); 
-    });
-    
-    
-
+        });
+    }
     
     // Function to split the title into multiple lines
     function splitTitle(title) {
