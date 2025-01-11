@@ -11,11 +11,11 @@ export const ssr = false;
 
 export async function load({ fetch, params }) {
 
-  const travelCSV = await fetch('/data/travel_dataset_updated.csv', {headers: {'Content-Type': 'text/csv'}})
+  const travelCSV = await fetch(`${base}/data/travel_dataset_updated.csv`, {headers: {'Content-Type': 'text/csv'}})
   let travelTextCSV = await travelCSV.text()
   let parsedTravelCSV = Papa.parse(travelTextCSV, {header: true})
 
-  const weatherCSV = await fetch('/data/weather_data.csv', {headers: {'Content-Type': 'text/csv'}})
+  const weatherCSV = await fetch(`${base}/data/weather_data.csv`, {headers: {'Content-Type': 'text/csv'}})
   let weatherTextCSV = await weatherCSV.text()
   let parsedWeatherCSV = Papa.parse(weatherTextCSV, {header: true})
 
@@ -47,6 +47,9 @@ export async function load({ fetch, params }) {
   
   let travels = travelFormat;
   let weather = weatherFormat;
+
+  console.log('files loaded travels:'+travels.length+', weather:'+weather.length);
+
 
   //Compute statistics
   const resultMostLeast = await new MostVisitedCity().compute(travels); 
