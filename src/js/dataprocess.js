@@ -3,8 +3,9 @@
  */
 async function computeAgeGroup(datapoints, month=null){   
 
-    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
-    
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));
+
     const ageGroups = filteredData.reduce((acc, person) => {         
         const ageGroup = `${Math.floor(person['Traveler age'] / 10) * 10}s`;
         if(ageGroup != 'NaNs'){
@@ -24,7 +25,8 @@ async function computeAgeGroup(datapoints, month=null){
  */
 async function computeAccomodationGroup(datapoints, month=null) {
 
-    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));
 
     const accommodationGroups = filteredData.reduce((acc, person) => {
         const accommodationGroup = person['Accommodation type'];
@@ -56,7 +58,8 @@ async function computeAccomodationGroup(datapoints, month=null) {
  */
 async function computeGenderGroup(datapoints , month=null) {
 
-    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));
 
     const genderGroups = filteredData.reduce((acc, person) => {
         const genderGroup = person['Traveler gender'];
@@ -77,7 +80,9 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
 
     let spendingByPlace = {};
 
-    const filteredData = datapoints.filter(data => new Date(data.StartDate).toLocaleString('default', { month: 'long' }) === month);
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));
+
 
     // Assuming you have parsed the CSV data into an array of objects called "trips"
     filteredData.forEach((trip) => {
@@ -124,8 +129,10 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
 /**
  * Process data to get the most frequent weather condition per location
  *  */ 
-function computeMostFrequentWeather(data, month) {
-    const filteredData = data.filter(location => new Date(location.StartDate).toLocaleString('default', { month: 'long' }) === month);
+function computeMostFrequentWeather(datapoints, month) {
+
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));      
 
     const frequencyMap = filteredData.reduce((acc, location) => {
       const key = `${location.lat},${location.lon}`;

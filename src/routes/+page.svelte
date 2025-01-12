@@ -1,6 +1,7 @@
 <script>
 
     import '../css/style.css';
+    import { onMount } from 'svelte';
 
     import Barchart from '../components/Barchart.svelte'; 
     import Piechart from '../components/Piechart.svelte'; 
@@ -14,23 +15,20 @@
     import { base } from '$app/paths';
 
     let { data } = $props();
-
-    let selectedMonth = $state(new Date().toLocaleString('default', { month: 'long' }));  // Default month
+    let selectedMonth = $state(new Date().getMonth() + 1);  // Current month number (1-12)    
 
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
     let groupedGender = $state(data.groupedGender);  
-    let avgSpendingPlace = $state(data.avgSpendingPlace); 
+    let avgSpendingPlace = $state(data.avgSpendingPlace);    
+    
+    const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     
     async function updateData() {
         groupedAge = await computeAgeGroup(data.trips, selectedMonth);
         groupedAccomodation = await computeAccomodationGroup(data.trips, selectedMonth);
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
-    }
-
-    function handleMonthChange(event) { 
-        selectedMonth = event.target.value;              
     }
     
     $effect(() => { updateData(); });
@@ -58,20 +56,11 @@
         <div class="item item-controls">
             <h3 class="item-tittle">Months</h3>
             <div class="checkbox-list">
-                <select id="monthSelect" onchange={handleMonthChange} bind:value={selectedMonth}>
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
+                <select id="monthSelect" bind:value={selectedMonth}>
+                    {#each months as month, index}
+                      <option value={index + 1}>{month}</option>
+                    {/each}
+                </select>                
             </div>            
         </div>
         <div class="item item-main">

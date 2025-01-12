@@ -44,7 +44,7 @@
 
         mostFrequentData.forEach(location => {
           const icon = L.icon({
-            iconUrl: base + '/data/' + location.icon_location,
+            iconUrl: `${base}/data/${location.icon_location}`,
             iconSize: [50, 50],
             iconAnchor: [25, 25],
             popupAnchor: [0, -25]
