@@ -6,7 +6,8 @@ import { computeAgeGroup,
          computeAccomodationGroup,
          computeGenderGroup,
          computeTransportationGroup,
-         computeAvgSpendingPlace } from '../js/dataprocess.js';
+         computeAvgSpendingPlace
+         } from '../js/dataprocess.js';
 
 export const ssr = false;
 
@@ -65,6 +66,7 @@ export async function load({ fetch, params }) {
   //Compute Barcharts
   const avgSpendingPlace = await computeAvgSpendingPlace(travels);
 
+  
   return {
     trips:              travelFormat,
     weather:            weatherFormat,

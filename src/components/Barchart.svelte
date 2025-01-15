@@ -77,6 +77,11 @@
         handleMouseOut(event);
     }
 
+    function handleClick(event, datapoint) { 
+        const destination = datapoint[x]; 
+        dispatch('updateLineChart', { destination }); 
+    }
+
 </script>
 
 <svg width={width} height={height}>

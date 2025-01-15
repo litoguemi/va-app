@@ -7,22 +7,26 @@
     import Piechart from '../components/Piechart.svelte'; 
     import Map from '../components/Map.svelte';
     import Statistics from '../components/Statistics.svelte';
+    import Linechart from '../components/Linechart.svelte';
     import { computeAgeGroup, 
             computeAccomodationGroup,
             computeGenderGroup,
             computeTransportationGroup,
-            computeAvgSpendingPlace } from '../js/dataprocess.js';
+            computeAvgSpendingPlace,
+            computeAvgSpendingPlaceMonth } from '../js/dataprocess.js';
 
     import { base } from '$app/paths';
 
     let { data } = $props();
     let selectedMonth = $state(new Date().getMonth() + 1);  // Current month number (1-12)    
+    let selectedDestination = $state('New York, USA');  // Current month number (1-12)    
 
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
     let groupedGender = $state(data.groupedGender);  
     let groupedTransportation = $state(data.groupedTransportation); 
-    let avgSpendingPlace = $state(data.avgSpendingPlace);    
+    let avgSpendingPlace = $state(data.avgSpendingPlace);
+    let avgSpendingPlaceMonth = $state([]);    
     
     const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     
@@ -32,6 +36,7 @@
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
         groupedTransportation = await computeTransportationGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
+        avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
     }
     
     $effect(() => { updateData(); });
@@ -81,6 +86,7 @@
                       xLabel="Visited Places" yLabel="Average Spendings (Dolar)"
                       tooltipData={['accommodation','transportation']}
                       tooltipLabel={['Accomodation:','Transportation:']}/>
+            <Linechart datapoints={avgSpendingPlaceMonth} x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
         </div>        
     </div>
 </main>

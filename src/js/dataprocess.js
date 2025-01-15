@@ -108,7 +108,7 @@ async function computeTransportationGroup(datapoints, month=null) {
 }
 
 /**
- * Computes the average spending on accommodation and transportation by destination.
+ * Computes the average spending on accommodation and transportation by month.
 
  */
 async function computeAvgSpendingPlace(datapoints, month=null) {
@@ -160,6 +160,56 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
     return finalChartData;
 }
 
+/**
+ * Computes the average spending per month for a given destination.
+ * @param {*} datapoints 
+ *  
+ * @param {*} month 
+ * @param {*} destination
+ * @returns 
+ */
+
+async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
+    let spendingByMonth = {};
+
+    // Filter data by month
+    datapoints
+        .filter(data => (data['Destination'] === destination))
+        .forEach(data => {
+            const month = new Date(data.StartDate).toLocaleString('default', { month: 'long' });
+            const monthNumber = new Date(data.StartDate).getMonth() + 1;
+            const cityName = data['Destination'];
+            const accommodationCost = parseFloat(data['Accommodation cost']);
+            const transportationCost = parseFloat(data['Transportation cost']);
+
+            if (accommodationCost && transportationCost) {
+                if (!spendingByMonth[month]) {
+                    spendingByMonth[month] = { cityName, monthNumber, accommodation: 0, transportation: 0, total: 0 };
+                }
+
+                spendingByMonth[month].accommodation += accommodationCost;
+                spendingByMonth[month].transportation += transportationCost;
+                spendingByMonth[month].total += (accommodationCost + transportationCost) / 1000;
+            }
+        });
+
+    // Convert the spendingByMonth object into an array for easier charting
+    let chartData = Object.keys(spendingByMonth).map(month => ({
+        month,
+        monthNumber: spendingByMonth[month].monthNumber,
+        cityName: spendingByMonth[month].cityName,
+        accommodation: spendingByMonth[month].accommodation,
+        transportation: spendingByMonth[month].transportation,
+        total: spendingByMonth[month].total
+    }));
+
+    // Sort the chartData by month
+    chartData.sort((a, b) => a.monthNumber - b.monthNumber);
+
+    return chartData;
+}
+
+
 
 /**
  * Process data to get the most frequent weather condition per location
@@ -199,5 +249,6 @@ export {computeAgeGroup,
         computeGenderGroup,
         computeAvgSpendingPlace,
         computeTransportationGroup,
-        computeMostFrequentWeather 
+        computeMostFrequentWeather,
+        computeAvgSpendingPlaceMonth
     }
