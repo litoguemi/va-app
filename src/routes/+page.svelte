@@ -128,10 +128,11 @@
         }
 
     .pies-container { 
-        display: flex; 
         flex-direction: row; 
         gap: 1rem; 
         margin-top: 1rem; 
         justify-content: space-evenly;
+        overflow-x: auto;
+        white-space: nowrap;
         }    
 </style>
