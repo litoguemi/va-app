@@ -5,6 +5,7 @@ import { MostVisitedCity, WeatherExtremes } from '../js/statistics.js';
 import { computeAgeGroup, 
          computeAccomodationGroup,
          computeGenderGroup,
+         computeTransportationGroup,
          computeAvgSpendingPlace } from '../js/dataprocess.js';
 
 export const ssr = false;
@@ -59,6 +60,7 @@ export async function load({ fetch, params }) {
   const groupedAge = await computeAgeGroup(travels);
   const groupedAccomodation = await computeAccomodationGroup(travels);
   const groupedGender = await computeGenderGroup(travels);
+  const groupedTransportation = await computeTransportationGroup(travels);
 
   //Compute Barcharts
   const avgSpendingPlace = await computeAvgSpendingPlace(travels);
@@ -71,6 +73,7 @@ export async function load({ fetch, params }) {
     groupedAge:         groupedAge,
     groupedAccomodation: groupedAccomodation,
     groupedGender:      groupedGender,
+    groupedTransportation: groupedTransportation,
     avgSpendingPlace:   avgSpendingPlace
   }
 

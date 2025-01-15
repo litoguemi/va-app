@@ -73,6 +73,41 @@ async function computeGenderGroup(datapoints , month=null) {
 }
 
 /**
+ * Compute groups by transportation
+ * @param {} datapoints 
+ * @param {*} month 
+ * @returns 
+ */
+async function computeTransportationGroup(datapoints, month=null) {
+
+    // Filter data by month
+    const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));
+
+    const transportationGroups = filteredData.reduce((acc, person) => {
+        const transportationGroup = person['Transportation type'];
+        if (transportationGroup) {
+            acc[transportationGroup] = (acc[transportationGroup] || 0) + 1;
+        }
+        return acc;
+    }, {});   
+
+    const sortedTransportationGroups = Object.entries(transportationGroups) 
+        .sort((a, b) => b[1] - a[1]); // Sort by count, descending
+    
+    const topTransportationGroups = sortedTransportationGroups.slice(0, 4); 
+    const otherTransportationGroups = sortedTransportationGroups.slice(4, sortedTransportationGroups.length);
+
+    const otherCount = otherTransportationGroups.reduce((acc, group) => acc + group[1], 0);
+
+    const finalTransportationGroups = Object.fromEntries(topTransportationGroups); 
+    if (otherCount > 0) { 
+        finalTransportationGroups['Others'] = otherCount; 
+    }
+    
+    return finalTransportationGroups;    
+}
+
+/**
  * Computes the average spending on accommodation and transportation by destination.
 
  */
@@ -163,5 +198,6 @@ export {computeAgeGroup,
         computeAccomodationGroup, 
         computeGenderGroup,
         computeAvgSpendingPlace,
+        computeTransportationGroup,
         computeMostFrequentWeather 
     }

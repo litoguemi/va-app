@@ -10,6 +10,7 @@
     import { computeAgeGroup, 
             computeAccomodationGroup,
             computeGenderGroup,
+            computeTransportationGroup,
             computeAvgSpendingPlace } from '../js/dataprocess.js';
 
     import { base } from '$app/paths';
@@ -20,6 +21,7 @@
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
     let groupedGender = $state(data.groupedGender);  
+    let groupedTransportation = $state(data.groupedTransportation); 
     let avgSpendingPlace = $state(data.avgSpendingPlace);    
     
     const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -28,6 +30,7 @@
         groupedAge = await computeAgeGroup(data.trips, selectedMonth);
         groupedAccomodation = await computeAccomodationGroup(data.trips, selectedMonth);
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
+        groupedTransportation = await computeTransportationGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
     }
     
@@ -67,8 +70,9 @@
             <Map datapoints={data.weather} month={selectedMonth}/>
             <div class="pies-container">
                 <Piechart groupedData={groupedAge} title="Age Distribution"/>
-                <Piechart groupedData={groupedAccomodation} title="Accomodation Distribution"/>
-                <Piechart groupedData={groupedGender} title="Gender Distribution"/>                            
+                <Piechart groupedData={groupedGender} title="Gender Distribution"/>
+                <Piechart groupedData={groupedAccomodation} title="Accomodation Distribution"/>                
+                <Piechart groupedData={groupedTransportation} title="Transportation Distribution"/>                            
             </div>
         </div>
         <div class="item item-tendency">
