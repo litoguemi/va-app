@@ -1,10 +1,11 @@
 <script>
 
     import { onMount } from 'svelte';
+    import Tooltip from './Tooltip.svelte';
 
     let slices = $state([]);
     let { groupedData = [], title='title'} = $props();
-    
+    let tooltip = $state({ x: 0, y: 0, content: '', visible: false });
 
     // Margins and SVG dimensions
     let margins = { left: 30, top: 30, bottom: 40, right: 30 };
@@ -101,16 +102,26 @@
         return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
     }
     
-    function handleMouseOver(event, color) {
+    function handleMouseOver(event, color, value) {
+        let toolTipContent = value; 
+
+        tooltip = {
+            x: event.pageX,
+            y: event.pageY,
+            content: toolTipContent,
+            visible: true
+        };
+
         event.target.style.fill = darkenColor(color);  // Darken the color
     }
 
     function handleMouseOut(event, color) {
+        tooltip.visible = false;
         event.target.style.fill = color;
     }
 
-    function handleFocus(event, color) {
-        handleMouseOver(event, color);
+    function handleFocus(event, color, value) {
+        handleMouseOver(event, color, value);
     }
 
     function handleBlur(event, color) {
@@ -133,12 +144,11 @@
     
     {#each slices as { path, label, value, color,midX, midY }, i} 
         <path d={path} fill={color} stroke="white" stroke-width="2"
-            onfocus={(event) => handleFocus(event, color)}
+            onfocus={(event) => handleFocus(event, color, value)}
             onblur={(event) => handleBlur(event, color)}
-            onmouseover={(event) => handleMouseOver(event, color)} 
+            onmouseover={(event) => handleMouseOver(event, color, value)} 
             onmouseout={(event) => handleMouseOut(event, color)}
-            role="img">
-            <title>{value}</title>
+            role="img">            
         </path> 
         <text fill="black" font-size="16" dy="0.35em" text-anchor="middle" 
             x = {midX}
@@ -148,6 +158,7 @@
     {/each} 
 </svg>
 
+<Tooltip {...tooltip} />
 
 
 

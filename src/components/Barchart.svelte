@@ -3,8 +3,11 @@
     import { scaleBand  } from 'd3-scale';
     import { extent } from 'd3-array';
     import { onMount } from 'svelte';
+    import Tooltip from './Tooltip.svelte';
 
-    let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis' } = $props();
+    let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis',
+        tooltipData = 'tooltipData', tooltipLabel = 'tooltipLabel'
+    } = $props();
     
 
     // Margins and SVG dimensions
@@ -14,7 +17,8 @@
     const barWidth = 30;
 
     let [_, maxTotal] = $state (extent(datapoints, d => d[y]));
-
+    let tooltip = $state({ x: 0, y: 0, content: '', visible: false });
+    
     // Scale functions
     let scaleX = $state(scaleBand()
         .domain(datapoints.map(d => d[x]))                  
@@ -22,9 +26,11 @@
         .padding(0.1));
 
     let scaleY = $state( (total) => (total / maxTotal) * (height - 50));
-
+    
     onMount(() => {
-        updateData();         
+        if(datapoints.length > 0){
+            updateData();
+        }
     });
     
     $effect(() => { updateData(); });
@@ -41,17 +47,52 @@
         scaleY = (total) => (total / maxTotal) * (height - 50);
     }
 
+    function handleMouseOver(event, datapoint) {
+        
+        let toolTipContent = ''; 
+
+        tooltipData.forEach((data, i) => {             
+            toolTipContent += `${tooltipLabel[i]} ${datapoint[data]}<br>`;  
+        });
+
+        tooltip = {
+            x: event.pageX,
+            y: event.pageY,
+            content: toolTipContent,
+            visible: true
+        };
+        event.target.style.fill = '#066cc2';
+    }
+
+    function handleMouseOut(event) {
+        tooltip.visible = false;
+        event.target.style.fill = 'steelblue';
+    }
+
+    function handleFocus(event, datapoint) {
+        handleMouseOver(event, datapoint);
+    }
+
+    function handleBlur(event) {
+        handleMouseOut(event);
+    }
+
 </script>
 
 <svg width={width} height={height}>
     {#each datapoints as datapoint, i}
-        
+       
         <rect
             x={scaleX(datapoint[x]) + scaleX.bandwidth() / 2}        
             y={height - scaleY(datapoint[y]) - 20}
             width={barWidth}
             height={scaleY(datapoint[y])}
-            fill="steelblue"
+            fill="steelblue",
+            onfocus={(event) => handleFocus(event, datapoint)}
+            onblur={(event) => handleBlur(event)}
+            onmouseover={(event) => handleMouseOver(event, datapoint)} 
+            onmouseout={(event) => handleMouseOut(event)}
+            role="img"
         />
         
         <!-- Labels for places below each bar -->
@@ -83,6 +124,7 @@
         >
             ${datapoint[y].toFixed(2)}K
         </text>
+          
     {/each}
 
 
@@ -101,6 +143,8 @@
         {yLabel}
     </text>
 </svg>
+
+<Tooltip {...tooltip} />
 
 <style>
     svg { 

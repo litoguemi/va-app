@@ -72,8 +72,11 @@
             </div>
         </div>
         <div class="item item-tendency">
-            <h3>Current Tendency in a Specific Place</h3>
-            <Barchart datapoints={avgSpendingPlace} x="cityName" y="total" xLabel="Visited Places" yLabel="Average Spendings (Dolar)"/>
+            <h3>Expenses Tendency</h3>
+            <Barchart datapoints={avgSpendingPlace} x="cityName" y="total" 
+                      xLabel="Visited Places" yLabel="Average Spendings (Dolar)"
+                      tooltipData={['accommodation','transportation']}
+                      tooltipLabel={['Accomodation:','Transportation:']}/>
         </div>        
     </div>
 </main>
