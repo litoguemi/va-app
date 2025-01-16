@@ -81,7 +81,7 @@
 
     function handleClick(event, datapoint) { 
         console.log('Clicked on bar',JSON.stringify(datapoint));
-        
+        handleBlur(event);
         updateLineChart(datapoint[lineChartKey]);         
     }
 
