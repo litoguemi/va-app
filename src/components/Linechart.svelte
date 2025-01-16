@@ -2,12 +2,14 @@
   import { scalePoint, scaleLinear, scaleBand } from 'd3-scale';
   import { extent, ticks } from 'd3-array';
   import { onMount } from 'svelte';
+  import Tooltip from './Tooltip.svelte';
 
   export let datapoints = [];
   export let x = 'x';
   export let y = 'y';
   export let xLabel = 'X-Axis';
   export let yLabel = 'Y-Axis';
+  export let tooltip = { x: 0, y: 0, content: '', visible: false };
 
   // Chart dimensions
   let margins = { left: 40, top: 30, bottom: 50, right: 20 };
@@ -16,6 +18,7 @@
 
   let scaleX, scaleY, linePath;
   let xTicks, yTicks;
+  
 
   function updateData() {
     let [minTotal, maxTotal] = extent(datapoints, d => d[y]);
@@ -45,6 +48,33 @@
     }).join(' ');
   }
 
+  function handleMouseOver(event, datapoint) {
+        
+        //let toolTipContent = ''; 
+        let toolTipContent = '$'+ datapoint[y] + 'K';
+        
+        tooltip = {
+            x: event.pageX,
+            y: event.pageY,
+            content: toolTipContent,
+            visible: true
+        };
+        event.target.style.fill = 'red';
+  }
+
+  function handleMouseOut(event) {
+        tooltip.visible = false;
+        event.target.style.fill = 'orange';
+  }
+
+  function handleFocus(event, datapoint) {
+      handleMouseOver(event, datapoint);
+  }
+
+  function handleBlur(event) {
+      handleMouseOut(event);
+  }
+
   onMount(() => {
     if (datapoints.length > 0) {
       updateData();
@@ -68,6 +98,7 @@
     <!-- Y-Axis -->
     <line x1={margins.left} y1={margins.top} x2={margins.left} y2={height - margins.bottom} stroke="black" />
     {#each yTicks as tick}
+      <line x1={margins.left} y1={scaleY(tick)} x2={width - margins.right} y2={scaleY(tick)} stroke="#e0e0e0" stroke-dasharray="2,2" />
       <line x1={margins.left - 5} y1={scaleY(tick)} x2={margins.left} y2={scaleY(tick)} stroke="black" />
       <text x={margins.left - 10} y={scaleY(tick) + 5} text-anchor="end" font-size="12">{tick}</text>
     {/each}
@@ -81,11 +112,17 @@
       <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
               cy={scaleY(data[y])} 
               r="4" 
-              fill="orange" />
+              fill="orange" 
+              onfocus={(event) => handleFocus(event, data)}
+              onblur={(event) => handleBlur(event)}
+              onmouseover={(event) => handleMouseOver(event, data)} 
+              onmouseout={(event) => handleMouseOut(event)}
+              role="img"/>
     {/each}
   </svg>
 {/if}
 
+<Tooltip {...tooltip} />
 
 <style>
   svg { 

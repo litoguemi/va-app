@@ -125,7 +125,7 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
         if(place){
             const cityName = place.split(',')[0].trim();
             if (!spendingByPlace[place]) {
-                spendingByPlace[place] = { cityName: cityName, accommodation: 0, transportation: 0, total: 0 };
+                spendingByPlace[place] = { cityName: cityName, place: place, accommodation: 0, transportation: 0, total: 0 };
             }
             const accommodationCost = parseFloat(trip['Accommodation cost']);
             const transportationCost = parseFloat(trip['Transportation cost']);

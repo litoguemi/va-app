@@ -19,7 +19,7 @@
 
     let { data } = $props();
     let selectedMonth = $state(new Date().getMonth() + 1);  // Current month number (1-12)    
-    let selectedDestination = $state('New York, USA');  // Current month number (1-12)    
+    let selectedDestination = $state(''); 
 
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
@@ -37,6 +37,13 @@
         groupedTransportation = await computeTransportationGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
+        selectedDestination = '';
+    }
+
+    async function updateLineChart(destination) { 
+        selectedDestination = destination; 
+        console.log('selectedDestination:'+selectedDestination);        
+        avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination); 
     }
     
     $effect(() => { updateData(); });
@@ -84,8 +91,13 @@
             <Barchart datapoints={avgSpendingPlace} x="cityName" y="total" 
                       xLabel="Visited Places" yLabel="Average Spendings (Dolar)"
                       tooltipData={['accommodation','transportation']}
-                      tooltipLabel={['Accomodation:','Transportation:']}/>
-            <Linechart datapoints={avgSpendingPlaceMonth} x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
+                      tooltipLabel={['Accomodation:','Transportation:']}
+                      updateLineChart={updateLineChart}
+                      lineChartKey="place"/>
+            {#if selectedDestination}                      
+                <Linechart datapoints={avgSpendingPlaceMonth}
+                        x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
+            {/if}
         </div>        
     </div>
 </main>

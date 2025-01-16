@@ -5,8 +5,10 @@
     import { onMount } from 'svelte';
     import Tooltip from './Tooltip.svelte';
 
+   
     let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis',
-        tooltipData = 'tooltipData', tooltipLabel = 'tooltipLabel'
+        tooltipData = 'tooltipData', tooltipLabel = 'tooltipLabel',
+        updateLineChart='updateLineChart', lineChartKey='lineChartKey',
     } = $props();
     
 
@@ -78,8 +80,9 @@
     }
 
     function handleClick(event, datapoint) { 
-        const destination = datapoint[x]; 
-        dispatch('updateLineChart', { destination }); 
+        console.log('Clicked on bar',JSON.stringify(datapoint));
+        
+        updateLineChart(datapoint[lineChartKey]);         
     }
 
 </script>
@@ -98,6 +101,7 @@
             onmouseover={(event) => handleMouseOver(event, datapoint)} 
             onmouseout={(event) => handleMouseOut(event)}
             role="img"
+            onclick={event => handleClick(event, datapoint)}
         />
         
         <!-- Labels for places below each bar -->
