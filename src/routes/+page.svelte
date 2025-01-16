@@ -61,17 +61,16 @@
                 <Statistics number={data.stWeatherExtremes.coldest.avgtemp_c} measure={'°C'} description={'is the coldest visited place today in '} place = {data.stWeatherExtremes.coldest.destination} />                 
             </div>            
         </div>
-        <div class="item item-controls">
-            <h3 class="item-tittle">Months</h3>
-            <div class="checkbox-list">
-                <select id="monthSelect" bind:value={selectedMonth}>
-                    {#each months as month, index}
-                      <option value={index + 1}>{month}</option>
-                    {/each}
-                </select>                
-            </div>            
-        </div>
         <div class="item item-main">
+            <div class="item-controls">                
+                <div class="checkbox-list">
+                    <select id="monthSelect" bind:value={selectedMonth}>
+                        {#each months as month, index}
+                          <option value={index + 1}>{month}</option>
+                        {/each}
+                    </select>                
+                </div>            
+            </div>
             <Map datapoints={data.weather} month={selectedMonth}/>
             <div class="pies-container">
                 <Piechart groupedData={groupedAge} title="Age Distribution"/>
@@ -94,7 +93,7 @@
 <style>
     .checkbox-list { 
         display: flex;         
-        flex-direction: column; 
+        flex-direction: row; 
         gap: 0.5rem; 
         margin-top: 1rem; 
         align-items: start;
@@ -104,7 +103,7 @@
         padding: 0.5rem;
         font-size: 1rem;
         border-radius: 8px;
-        border: 1px solid #ccc;
+        border: 2px solid rgba(0,0,0,0.2);
         background-color: #f9f9f9;
         color: #2c3e50;
         box-shadow: 0 4px 8px rgba(1, 5, 14, 0.1);
@@ -112,12 +111,15 @@
         -moz-appearance: none;
         appearance: none;
         cursor: pointer;
-        width: 100%;
     }
     .checkbox-list select:focus {
         outline: none;
         border-color: #3498db;
         box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    .checkbox-list select:hover { 
+        background-color: #eaeaea;         
     }
 
     .statistics-container { 
