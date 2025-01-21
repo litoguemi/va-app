@@ -151,8 +151,8 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
     chartData.sort((a, b) => b.total - a.total);
 
     // Extract top five and bottom five places 
-    const topers = chartData.slice(0, 5); 
-    const bottoms = chartData.slice(-9);
+    const topers = chartData.slice(0, 8); 
+    const bottoms = chartData.slice(-10);
 
     // Combine top five and bottom five 
     const finalChartData = [...topers, ...bottoms];
@@ -176,7 +176,7 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
     datapoints
         .filter(data => (data['Destination'] === destination))
         .forEach(data => {
-            const month = new Date(data.StartDate).toLocaleString('default', { month: 'long' });
+            const month = new Date(data.StartDate).toLocaleString('default', { month: 'short' });
             const monthNumber = new Date(data.StartDate).getMonth() + 1;
             const cityName = data['Destination'];
             const accommodationCost = parseFloat(data['Accommodation cost']);

@@ -30,6 +30,8 @@ header {
     grid-template-columns: repeat(12, 1fr); 
     grid-template-rows: auto; /* Auto-height rows */ 
     gap: 10px; /* Space between grid items */ 
+    margin-left: 20px;
+    margin-right: 20px;
 } 
 
 .item-summary { 

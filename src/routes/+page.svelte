@@ -8,6 +8,7 @@
     import Map from '../components/Map.svelte';
     import Statistics from '../components/Statistics.svelte';
     import Linechart from '../components/Linechart.svelte';
+    import Indicator from '../components/Indicator.svelte';
     import { computeAgeGroup, 
             computeAccomodationGroup,
             computeGenderGroup,
@@ -36,8 +37,9 @@
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
         groupedTransportation = await computeTransportationGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
+        selectedDestination = avgSpendingPlace[0].place;
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
-        selectedDestination = '';
+        
     }
 
     async function updateLineChart(destination) { 
@@ -81,7 +83,7 @@
             </div>
             <Map datapoints={data.weather} month={selectedMonth}/>
             <div class="pies-container">
-                <h3 style="text-align: left; margin-bottom: auto;">Visitors {months[selectedMonth - 1]} Distribution</h3>
+                <h3 style="text-align: left; margin-bottom: auto;">{months[selectedMonth - 1]} Visitors Global Distribution</h3>
                 <hr style="border: none; border-top: 2px solid #e0e0e0;">
                 <Piechart groupedData={groupedAge} title="Age"/>
                 <Piechart groupedData={groupedGender} title="Gender"/>
@@ -90,17 +92,22 @@
             </div>
         </div>
         <div class="item item-tendency">
-            <h3>Expenses Tendency</h3>
-            <Barchart datapoints={avgSpendingPlace} x="cityName" y="total" 
-                      xLabel="Visited Places" yLabel="Average Spendings (Dolar)"
+            <h3>{months[selectedMonth - 1]} Expenses Tendency by Trip</h3>
+            <Barchart datapoints={avgSpendingPlace} x="cityName" y={['accommodation','transportation']} 
+                      xLabel="Visited Places" yLabel="Average Spendings (USD)"
                       tooltipData={['accommodation','transportation']}
                       tooltipLabel={['Accomodation:','Transportation:']}
                       updateLineChart={updateLineChart}
                       lineChartKey="place"/>
-            {#if selectedDestination}                      
+            <div class="indicator-container">
+                <Indicator message="Click on the bar to  change current destination!" />
+            </div>                                
+            <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
-                        x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
-            {/if}
+                    x="month" y="total" xLabel="Year Expenses for {selectedDestination}" yLabel=""/>
+                <Linechart datapoints={avgSpendingPlaceMonth}
+                    x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
+            </div>                      
         </div>        
     </div>
 </main>
@@ -150,5 +157,20 @@
         justify-content: space-evenly;
         overflow-x: auto;
         white-space: nowrap;
-        }    
+        }  
+    .linechart-container { 
+        display: flex;
+        flex-direction: row; 
+        gap: 1rem;  
+        justify-content: space-evenly;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 10px;
+        }  
+        
+    .indicator-container {
+        position: absolute; /* You can adjust this to fit your layout */
+        top: 85%; /* Position it as needed */
+        left: 80%; /* Position it as needed */
+    }
 </style>

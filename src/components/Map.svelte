@@ -78,6 +78,6 @@
   
   <style>
     #map {
-        height: 480px;
+        height: 400px;
     }
   </style>

@@ -13,19 +13,19 @@
     
 
     // Margins and SVG dimensions
-    let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 600;
-    const height = 400;
+    let margins = { left: 0, top: 30, bottom: 40, right: 20 };
+    const width = 750;
+    const height = 350;
     const barWidth = 30;
 
-    let [_, maxTotal] = $state (extent(datapoints, d => d[y]));
+    let [_, maxTotal] = $state (extent(datapoints, d => getTotalValues(d, y)));
     let tooltip = $state({ x: 0, y: 0, content: '', visible: false });
     
     // Scale functions
     let scaleX = $state(scaleBand()
         .domain(datapoints.map(d => d[x]))                  
         .range([margins.left, width - margins.right])    
-        .padding(0.1));
+        .padding(0.05));
 
     let scaleY = $state( (total) => (total / maxTotal) * (height - 50));
     
@@ -38,41 +38,47 @@
     $effect(() => { updateData(); });
 
     function updateData(){
-        [_, maxTotal] = extent(datapoints, d => d[y]);
+        [_, maxTotal] = extent(datapoints, d => getTotalValues(d, y));
 
         // Scale functions
         scaleX = scaleBand()
             .domain(datapoints.map(d => d[x]))                  
             .range([margins.left, width - margins.right])    
-            .padding(0.1);
+            .padding(0.05);
 
         scaleY = (total) => (total / maxTotal) * (height - 50);
     }
 
-    function handleMouseOver(event, datapoint) {
+    function getTotalValues(datapoint, keys) {
+        let total = 0;
+        keys.forEach((key) => {
+            total += datapoint[key];
+        });
+        return total;
+    }
+
+    function handleMouseOver(event, value, label) {
         
         let toolTipContent = ''; 
 
-        tooltipData.forEach((data, i) => {             
-            toolTipContent += `${tooltipLabel[i]} ${datapoint[data]}<br>`;  
-        });
-
+        toolTipContent += `${label} $${value}<br>`;  
+      
         tooltip = {
             x: event.pageX,
             y: event.pageY,
             content: toolTipContent,
             visible: true
         };
-        event.target.style.fill = '#066cc2';
+        event.target.style.opacity = '70%';
     }
 
     function handleMouseOut(event) {
         tooltip.visible = false;
-        event.target.style.fill = 'steelblue';
+        event.target.style.opacity = '100%';
     }
 
-    function handleFocus(event, datapoint) {
-        handleMouseOver(event, datapoint);
+    function handleFocus(event, value, label) {
+        handleMouseOver(event, value, label);
     }
 
     function handleBlur(event) {
@@ -89,23 +95,26 @@
 
 <svg width={width} height={height}>
     {#each datapoints as datapoint, i}
+
+        {#each y as key, index}
+            <rect
+                x={scaleX(datapoint[x]) + scaleX.bandwidth() / 2}
+                y={height - scaleY(getTotalValues(datapoint, y.slice(0, index + 1))) - 20}
+                width={barWidth}
+                height={scaleY(datapoint[key])}
+                fill={"hsl(" + ((index + 1) * 200) + ", 50%, 50%)"}
+                data-default-color={"hsl(" + ((index + 1) * 200) + ", 50%, 50%)"}
+                onfocus={(event) => handleFocus(event,datapoint[key],tooltipLabel[index])}
+                onblur={(event) => handleBlur(event)}
+                onmouseover={(event) => handleMouseOver(event,datapoint[key],tooltipLabel[index])}
+                onmouseout={(event) => handleMouseOut(event)}
+                role="img"
+                onclick={(event) => handleClick(event, datapoint,datapoint[key],tooltipLabel[index])}
+            />
+        {/each}
        
-        <rect
-            x={scaleX(datapoint[x]) + scaleX.bandwidth() / 2}        
-            y={height - scaleY(datapoint[y]) - 20}
-            width={barWidth}
-            height={scaleY(datapoint[y])}
-            fill="steelblue",
-            onfocus={(event) => handleFocus(event, datapoint)}
-            onblur={(event) => handleBlur(event)}
-            onmouseover={(event) => handleMouseOver(event, datapoint)} 
-            onmouseout={(event) => handleMouseOut(event)}
-            role="img"
-            onclick={event => handleClick(event, datapoint)}
-        />
-        
         <!-- Labels for places below each bar -->
-        {#if scaleY(datapoint[y]) >= height / 2}
+        {#if scaleY(getTotalValues(datapoint, y)) >= height / 2}
             <text
                 x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}
                 y={height - 30}
@@ -116,8 +125,8 @@
         {:else}
             <text
                 x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}
-                y={height - scaleY(datapoint[y]) - 50}
-                transform={`rotate(-90, ${scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}, ${height - scaleY(datapoint[y]) - 50})`}
+                y={height - scaleY(getTotalValues(datapoint, y)) - 50}
+                transform={`rotate(-90, ${scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)}, ${height - scaleY(getTotalValues(datapoint, y)) - 50})`}
                 font-size="15">
                 {datapoint[x]}
             </text>
@@ -126,12 +135,12 @@
         <!-- Labels for total amount at the top of each bar -->
         <text
             x={scaleX(datapoint[x]) + (scaleX.bandwidth() / 2) + (barWidth / 2)  }
-            y={height - scaleY(datapoint[y]) - 30}
+            y={height - scaleY(getTotalValues(datapoint, y)) - 30}
             text-anchor="middle"
             font-size="12"
             fill="black"
         >
-            ${datapoint[y].toFixed(2)}K
+            ${(getTotalValues(datapoint, y) / 1000).toFixed(2)}K
         </text>
           
     {/each}
@@ -144,21 +153,20 @@
         {xLabel}
     </text>
 
-   
+   <!--
     <text x={-height / 2} 
           y={40}
           transform="rotate(-90)" 
           class="y-label">
         {yLabel}
-    </text>
+    </text>-->
 </svg>
 
 <Tooltip {...tooltip} />
 
 <style>
     svg { 
-        border: 1px solid black; 
-        box-shadow: 0 10px 10px rgba(1, 5, 14, 0.1);
+        border: 1px solid #ccc; 
     }
     
     /* Axis label styles */

@@ -13,7 +13,7 @@
 
   // Chart dimensions
   let margins = { left: 40, top: 30, bottom: 50, right: 20 };
-  const width = 600;
+  const width = 350;
   const height = 220;
 
   let scaleX, scaleY, linePath;
@@ -51,7 +51,7 @@
   function handleMouseOver(event, datapoint) {
         
         //let toolTipContent = ''; 
-        let toolTipContent = '$'+ datapoint[y] + 'K';
+        let toolTipContent = '$'+ (datapoint[y]).toFixed(2) + 'K';
         
         tooltip = {
             x: event.pageX,
@@ -86,8 +86,8 @@
   }
 </script>
 
-{#if datapoints.length > 0}
-  <svg {width} {height} style="border: 1px solid #ccc;">
+
+  <svg {width} {height}>
     <!-- X-Axis -->
     <line x1={margins.left} y1={height - margins.bottom} x2={width - margins.right} y2={height - margins.bottom} stroke="black" />
     {#each datapoints as data, i}
@@ -120,13 +120,13 @@
               role="img"/>
     {/each}
   </svg>
-{/if}
+
 
 <Tooltip {...tooltip} />
 
 <style>
   svg { 
-      border: 1px solid black; 
+      border: 1px solid #ccc;
       box-shadow: 0 10px 10px rgba(1, 5, 14, 0.1);
   }
   
