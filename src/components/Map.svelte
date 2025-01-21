@@ -11,7 +11,7 @@
 
     onMount(async () => {
       map = L.map("map", { preferCanvas: true }).setView(
-        [50.8476, 4.3572],
+        [20, 0],
         2,
       );
       L.tileLayer(
@@ -20,6 +20,7 @@
           attribution:
             'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
           maxZoom: 18,
+          minZoom: 2
         },
       ).addTo(map);
       

@@ -38,7 +38,6 @@ header {
     display: flex; 
     flex-direction: column; 
     align-items: center; /* Center items horizontally (optional) */ 
-    gap: 1rem;
 } 
     
 .item-controls { 
@@ -57,11 +56,15 @@ header {
 .item-main { 
     grid-column: span 6; /* Span 6 columns */ 
     padding: 10px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
 } 
 
 .item-tendency { 
     grid-column: span 6; 
     padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
 } 
 
 .item-raw { 

@@ -58,7 +58,8 @@
             <h1>Travel Research</h1>            
         </div>
         <div class="item item-summary">
-            <h3 class="item-tittle">Global Summary of Recent Updates</h3> 
+            <h3 style="margin-bottom: auto;">Global Summary of Trips</h3> 
+            <hr style="border: none; border-top: 3px solid #e0e0e0;width: 100%;">
             <div class="statistics-container"> 
                 <Statistics number={data.stMostLeastVisited.maxVisits} description={'is the most visited place today in '} place={data.stMostLeastVisited.mostVisited} />
                 <Statistics number={data.stMostLeastVisited.minVisits} description={'is the least visited place today in '} place={data.stMostLeastVisited.leastVisited} /> 
@@ -80,10 +81,12 @@
             </div>
             <Map datapoints={data.weather} month={selectedMonth}/>
             <div class="pies-container">
-                <Piechart groupedData={groupedAge} title="Age Distribution"/>
-                <Piechart groupedData={groupedGender} title="Gender Distribution"/>
-                <Piechart groupedData={groupedAccomodation} title="Accomodation Distribution"/>                
-                <Piechart groupedData={groupedTransportation} title="Transportation Distribution"/>                            
+                <h3 style="text-align: left; margin-bottom: auto;">Visitors {months[selectedMonth - 1]} Distribution</h3>
+                <hr style="border: none; border-top: 2px solid #e0e0e0;">
+                <Piechart groupedData={groupedAge} title="Age"/>
+                <Piechart groupedData={groupedGender} title="Gender"/>
+                <Piechart groupedData={groupedAccomodation} title="Accomodation"/>                
+                <Piechart groupedData={groupedTransportation} title="Transportation"/>                            
             </div>
         </div>
         <div class="item item-tendency">
@@ -143,8 +146,7 @@
 
     .pies-container { 
         flex-direction: row; 
-        gap: 1rem; 
-        margin-top: 1rem; 
+        gap: 1rem;  
         justify-content: space-evenly;
         overflow-x: auto;
         white-space: nowrap;
