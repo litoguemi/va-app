@@ -8,8 +8,8 @@
     let tooltip = $state({ x: 0, y: 0, content: '', visible: false });
 
     // Margins and SVG dimensions
-    let margins = { left: 30, top: 30, bottom: 40, right: 30 };
-    const width = 200;
+    let margins = { left: 10, top: 5, bottom: 20, right: 10 };
+    const width = 180;
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     

@@ -100,7 +100,7 @@
                       updateLineChart={updateLineChart}
                       lineChartKey="place"/>
             <div class="indicator-container">
-                <Indicator message="Click on the bar to  change current destination!" />
+                <Indicator message="Click on the bar to  change current destination!"/>
             </div>                                
             <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
@@ -149,6 +149,7 @@
         flex-direction: row; 
         gap: 1rem; 
         justify-content: center;
+        margin-top: 10px; 
         }
 
     .pies-container { 
@@ -170,7 +171,7 @@
         
     .indicator-container {
         position: absolute; /* You can adjust this to fit your layout */
-        top: 85%; /* Position it as needed */
+        top: 45%; /* Position it as needed */
         left: 80%; /* Position it as needed */
     }
 </style>

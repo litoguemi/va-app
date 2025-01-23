@@ -151,7 +151,7 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
     chartData.sort((a, b) => b.total - a.total);
 
     // Extract top five and bottom five places 
-    const topers = chartData.slice(0, 8); 
+    const topers = chartData.slice(0, 6); 
     const bottoms = chartData.slice(-10);
 
     // Combine top five and bottom five 
