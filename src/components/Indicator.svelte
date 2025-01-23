@@ -4,6 +4,8 @@
 
     export let message = 'Click here';
     let showIndicator = true;
+    // Construct the full path to your SVG file
+    const iconPath = `${base}/data/icons/hand-point-down-regular.svg`;
 
     onMount(() => {
         setTimeout(() => {
@@ -22,7 +24,7 @@
         font-size: 20px;
         animation: blink 1s infinite;
         position: relative;
-        width: 250px;
+        width: 200px;
     }
 
     .indicator img {
@@ -45,6 +47,5 @@
 
 <div class="{showIndicator ? 'indicator' : 'hidden'}">
     <span>{message}</span>
-    <img src="/data/icons/hand-point-down-regular.svg" alt="Hand Pointing Icon">
-        
+    <img src={iconPath} alt="Hand Pointing Icon">        
 </div>

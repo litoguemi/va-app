@@ -14,7 +14,7 @@
 
     // Margins and SVG dimensions
     let margins = { left: 0, top: 30, bottom: 40, right: 20 };
-    const width = 750;
+    const width = 700;
     const height = 350;
     const barWidth = 30;
 

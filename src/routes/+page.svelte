@@ -171,7 +171,8 @@
         
     .indicator-container {
         position: absolute; /* You can adjust this to fit your layout */
-        top: 45%; /* Position it as needed */
+        top: 50%; /* Position it as needed */
         left: 80%; /* Position it as needed */
+        width: 200px;
     }
 </style>

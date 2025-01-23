@@ -9,7 +9,7 @@
 
     // Margins and SVG dimensions
     let margins = { left: 10, top: 5, bottom: 20, right: 10 };
-    const width = 180;
+    const width = 170;
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
