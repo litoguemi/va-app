@@ -13,7 +13,7 @@
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
-    const colors = ['#6ABCFD', '#2A6A7A', '#c6f2af', '#d8cc86', '#dea576']; 
+    const colors = ['#6ABCFD', '#4C7B8B', '#c6f2af', '#d8cc86', '#dea576']; 
 
     //Suffle colors
     colors.sort(() => Math.random() - 0.5);

@@ -152,14 +152,6 @@
           class="x-label">
         {xLabel}
     </text>
-
-   <!--
-    <text x={-height / 2} 
-          y={40}
-          transform="rotate(-90)" 
-          class="y-label">
-        {yLabel}
-    </text>-->
 </svg>
 
 <Tooltip {...tooltip} />

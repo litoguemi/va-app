@@ -81,10 +81,11 @@
                     </select>                
                 </div>            
             </div>
-            <Map datapoints={data.weather} month={selectedMonth}/>
+            <div class="map-container">
+                <Map datapoints={data.weather} month={selectedMonth}/>
+            </div>
             <div class="pies-container">
-                <h3 style="text-align: left; margin-bottom: auto;">{months[selectedMonth - 1]} Visitors Global Distribution</h3>
-                <hr style="border: none; border-top: 2px solid #e0e0e0;">
+                <h3>Global Distribution of Visitors on {months[selectedMonth - 1]}</h3>
                 <Piechart groupedData={groupedAge} title="Age"/>
                 <Piechart groupedData={groupedGender} title="Gender"/>
                 <Piechart groupedData={groupedAccomodation} title="Accomodation"/>                
@@ -92,9 +93,9 @@
             </div>
         </div>
         <div class="item item-tendency">
-            <h3>{months[selectedMonth - 1]} Expenses Tendency by Trip</h3>
+            <h3>Average expenses of Trips on {months[selectedMonth - 1]}</h3>
             <Barchart datapoints={avgSpendingPlace} x="cityName" y={['accommodation','transportation']} 
-                      xLabel="Visited Places" yLabel="Average Spendings (USD)"
+                      xLabel="" yLabel=""
                       tooltipData={['accommodation','transportation']}
                       tooltipLabel={['Accomodation:','Transportation:']}
                       updateLineChart={updateLineChart}
@@ -104,7 +105,7 @@
             </div>                                
             <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
-                    x="month" y="total" xLabel="Year Expenses for {selectedDestination}" yLabel=""/>
+                    x="month" y="total" xLabel="Average Expenses for {selectedDestination}" yLabel=""/>
                 <Linechart datapoints={avgSpendingPlaceMonth}
                     x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
             </div>                      
@@ -158,6 +159,13 @@
         justify-content: space-evenly;
         overflow-x: auto;
         white-space: nowrap;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
+        }  
+    .map-container { 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
+        margin-bottom: 10px;
         }  
     .linechart-container { 
         display: flex;

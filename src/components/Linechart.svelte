@@ -59,12 +59,12 @@
             content: toolTipContent,
             visible: true
         };
-        event.target.style.fill = 'red';
+        event.target.style.opacity = '70%';
   }
 
   function handleMouseOut(event) {
         tooltip.visible = false;
-        event.target.style.fill = 'orange';
+        event.target.style.opacity = '100%';
   }
 
   function handleFocus(event, datapoint) {
@@ -112,7 +112,7 @@
       <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
               cy={scaleY(data[y])} 
               r="4" 
-              fill="orange" 
+              fill="steelblue" 
               onfocus={(event) => handleFocus(event, data)}
               onblur={(event) => handleBlur(event)}
               onmouseover={(event) => handleMouseOver(event, data)} 
