@@ -8,13 +8,13 @@
     import Map from '../components/Map.svelte';
     import Statistics from '../components/Statistics.svelte';
     import Linechart from '../components/Linechart.svelte';
-    import Indicator from '../components/Indicator.svelte';
     import { computeAgeGroup, 
             computeAccomodationGroup,
             computeGenderGroup,
             computeTransportationGroup,
             computeAvgSpendingPlace,
-            computeAvgSpendingPlaceMonth } from '../js/dataprocess.js';
+            computeAvgSpendingPlaceMonth,
+            computeAvgWeatherPlaceMonth } from '../js/dataprocess.js';
 
     import { base } from '$app/paths';
 
@@ -28,7 +28,8 @@
     let groupedTransportation = $state(data.groupedTransportation); 
     let avgSpendingPlace = $state(data.avgSpendingPlace);
     let avgSpendingPlaceMonth = $state([]);    
-    
+    let avgWeatherPlaceMonth = $state([]);
+
     const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     
     async function updateData() {
@@ -39,13 +40,14 @@
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
         selectedDestination = avgSpendingPlace[0].place;
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
-        
+        avgWeatherPlaceMonth = computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
     }
 
     async function updateLineChart(destination) { 
         selectedDestination = destination; 
         console.log('selectedDestination:'+selectedDestination);        
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination); 
+        avgWeatherPlaceMonth = computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
     }
     
     $effect(() => { updateData(); });
@@ -95,19 +97,24 @@
         <div class="item item-tendency">
             <h3>Average expenses of Trips on {months[selectedMonth - 1]}</h3>
             <Barchart datapoints={avgSpendingPlace} x="cityName" y={['accommodation','transportation']} 
-                      xLabel="" yLabel=""
+                      xLabel="Click on bars to see the details for each Destination" yLabel=""
                       tooltipData={['accommodation','transportation']}
                       tooltipLabel={['Accomodation:','Transportation:']}
                       updateLineChart={updateLineChart}
-                      lineChartKey="place"/>
-            <div class="indicator-container">
-                <Indicator message="Click on the bar to  change current destination!"/>
-            </div>                                
+                      lineChartKey="place"
+                      barcolor={['#5A9FC5', '#B0D6B7']}
+                      legends={['Acommodation', 'Transportation']}/>                               
             <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
-                    x="month" y="total" xLabel="Average Expenses for {selectedDestination}" yLabel=""/>
-                <Linechart datapoints={avgSpendingPlaceMonth}
-                    x="month" y="total" xLabel="Montly Expenses for {selectedDestination}" yLabel=""/>                                
+                    x="month" y={['total']} xLabel="Average Expenses for {selectedDestination}" yLabel=""
+                    tooltiplabel={['$', 'K']}
+                    linecolor={['#5A9FC5']}/>
+                <Linechart datapoints={avgWeatherPlaceMonth}
+                    x="month" y={['MaxTemp_Max', 'MinTemp_Min']} xLabel="Average Weather for {selectedDestination}" yLabel=""
+                    tooltiplabel={['', '°C']}
+                    linecolor={['orange','#7EC8E3']}
+                    legends={['Max Temp', 'Min Temp']}
+                    width="400"/>                                
             </div>                      
         </div>        
     </div>
@@ -176,11 +183,4 @@
         white-space: nowrap;
         margin-top: 10px;
         }  
-        
-    .indicator-container {
-        position: absolute; /* You can adjust this to fit your layout */
-        top: 50%; /* Position it as needed */
-        left: 80%; /* Position it as needed */
-        width: 200px;
-    }
 </style>

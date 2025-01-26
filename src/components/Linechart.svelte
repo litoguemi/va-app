@@ -6,22 +6,28 @@
 
   export let datapoints = [];
   export let x = 'x';
-  export let y = 'y';
+  export let y = [];
   export let xLabel = 'X-Axis';
   export let yLabel = 'Y-Axis';
   export let tooltip = { x: 0, y: 0, content: '', visible: false };
+  export let tooltiplabel = [];
+  export let linecolor=[];
+  export let width = 350;
+  export let height = 220;
 
   // Chart dimensions
   let margins = { left: 40, top: 30, bottom: 50, right: 20 };
-  const width = 350;
-  const height = 220;
+  
+  
 
-  let scaleX, scaleY, linePath;
+  let scaleX, scaleY, paths;
   let xTicks, yTicks;
   
 
   function updateData() {
-    let [minTotal, maxTotal] = extent(datapoints, d => d[y]);
+    // Flatten the array to get all values for y-axis
+    let yValues = datapoints.flatMap(d => y.map(prop => d[prop]));
+    let [minTotal, maxTotal] = extent(yValues);
     const yBuffer = (maxTotal - minTotal) * 0.2; // 20% buffer
     const yDomain = [minTotal - yBuffer, maxTotal + yBuffer];
     const xDomain = extent(datapoints, d => d[x]);
@@ -40,18 +46,21 @@
     xTicks = ticks(xDomain[0], xDomain[1], 5);
     yTicks = ticks(yDomain[0], yDomain[1], 5);
 
-    // Path data for the line
-    linePath = datapoints.map((d, i) => {
-      const xVal = scaleX(d[x]) + scaleX.bandwidth() / 2;
-      const yVal = scaleY(d[y]);
-      return `${i === 0 ? 'M' : 'L'}${xVal},${yVal}`;
-    }).join(' ');
+    // Path data for the lines
+    paths = y.map(prop => 
+      datapoints.map((d, i) => {
+        const xVal = scaleX(d[x]) + scaleX.bandwidth() / 2;
+        const yVal = scaleY(d[prop]);
+        return `${i === 0 ? 'M' : 'L'}${xVal},${yVal}`;
+      }).join(' ')
+    );
+
   }
 
   function handleMouseOver(event, datapoint) {
         
         //let toolTipContent = ''; 
-        let toolTipContent = '$'+ (datapoint[y]).toFixed(2) + 'K';
+        let toolTipContent = tooltiplabel[0] + (datapoint).toFixed(1) + tooltiplabel[1];
         
         tooltip = {
             x: event.pageX,
@@ -59,7 +68,7 @@
             content: toolTipContent,
             visible: true
         };
-        event.target.style.opacity = '70%';
+        event.target.style.opacity = '50%';
   }
 
   function handleMouseOut(event) {
@@ -93,7 +102,7 @@
     {#each datapoints as data, i}
       <text x={scaleX(data[x]) + scaleX.bandwidth() / 2} y={height - margins.bottom + 15} text-anchor="middle" font-size="12">{data[x]}</text>
     {/each}
-    <text x={width / 2} y={height - 5} text-anchor="middle" font-size="15">{xLabel}</text>
+    <text x={width / 2} y={height - 5} text-anchor="middle" font-size="16">{xLabel}</text>
 
     <!-- Y-Axis -->
     <line x1={margins.left} y1={margins.top} x2={margins.left} y2={height - margins.bottom} stroke="black" />
@@ -104,31 +113,33 @@
     {/each}
     <text x={-height / 2} y={15} transform="rotate(-90)" text-anchor="middle" font-size="15">{yLabel}</text>
 
-    <!-- Line Path -->
-    <path d={linePath} fill="none" stroke="steelblue" stroke-width="2" />
+    
+    <!-- Line Paths -->
+    {#each paths as path, index}
+      <path d={path} fill="none" stroke={linecolor[index]} stroke-width="2" />
+    {/each}
 
     <!-- Data Points -->
     {#each datapoints as data}
-      <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
-              cy={scaleY(data[y])} 
-              r="4" 
-              fill="steelblue" 
-              onfocus={(event) => handleFocus(event, data)}
-              onblur={(event) => handleBlur(event)}
-              onmouseover={(event) => handleMouseOver(event, data)} 
-              onmouseout={(event) => handleMouseOut(event)}
-              role="img"/>
-    {/each}
+      {#each y as prop, index}
+        <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
+                cy={scaleY(data[prop])} 
+                r="4" 
+                fill={linecolor[index]} 
+                onfocus={(event) => handleFocus(event, data[prop])}
+                onblur={(event) => handleBlur(event)}
+                onmouseover={(event) => handleMouseOver(event, data[prop])} 
+                onmouseout={(event) => handleMouseOut(event)}
+                role="img"/>
+      {/each}
+    {/each} 
+
   </svg>
 
 
 <Tooltip {...tooltip} />
 
 <style>
-  svg { 
-      border: 1px solid #ccc;
-      box-shadow: 0 10px 10px rgba(1, 5, 14, 0.1);
-  }
   
   /* Axis label styles */
   .x-label {

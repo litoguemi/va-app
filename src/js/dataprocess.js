@@ -214,15 +214,61 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
 /**
  * Process data to get the most frequent weather condition per location
  *  */ 
-function computeMostFrequentWeather(datapoints, month) {
+function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
+    let weatherByMonth = {};
 
+    // Filter data by destination if provided
+    const filteredData = destination ? datapoints.filter(data => data['Destination'] === destination) : datapoints;
+
+    // Group data by month
+    filteredData.forEach(data => {
+        const month = new Date(data['Start date']).toLocaleString('default', { month: 'short' });
+        const monthNumber = new Date(data['Start date']).getMonth() + 1;
+        const mintemp = parseFloat(data['mintemp_c']);
+        const maxtemp = parseFloat(data['maxtemp_c']);
+        const avgtemp = parseFloat(data['avgtemp_c']);
+
+        if (!weatherByMonth[month]) {
+            weatherByMonth[month] = { monthNumber, mintemp: [], maxtemp: [], avgtemp: [] };
+        }
+
+        weatherByMonth[month].mintemp.push(mintemp);
+        weatherByMonth[month].maxtemp.push(maxtemp);
+        weatherByMonth[month].avgtemp.push(avgtemp);
+    });
+
+    // Calculate averages, max, and min for each month
+    let chartData = Object.keys(weatherByMonth).map(month => ({
+        month,
+        monthNumber: weatherByMonth[month].monthNumber,
+        AvgTemp_Mean: weatherByMonth[month].avgtemp.reduce((a, b) => a + b, 0) / weatherByMonth[month].avgtemp.length,
+        AvgTemp_Max: Math.max(...weatherByMonth[month].avgtemp),
+        AvgTemp_Min: Math.min(...weatherByMonth[month].avgtemp),
+        MaxTemp_Max: Math.max(...weatherByMonth[month].maxtemp),
+        MinTemp_Min: Math.min(...weatherByMonth[month].mintemp)
+    }));
+
+    // Sort the chartData by month number
+    chartData.sort((a, b) => a.monthNumber - b.monthNumber);
+
+    return chartData;
+  }  
+
+
+  /**
+ * Process data to get the most frequent weather condition per location
+ *  */ 
+function computeMostFrequentWeather(datapoints, month) {
     // Filter data by month
     const filteredData = datapoints.filter(data => new Date(data.StartDate).getMonth() + 1 === Number(month));      
-
+  
     const frequencyMap = filteredData.reduce((acc, location) => {
       const key = `${location.lat},${location.lon}`;
       if (!acc[key]) {
-        acc[key] = {};
+        acc[key] = {
+          mintemp_c: [],
+          maxtemp_c: []
+        };
       }
       const condition = location.condition_text;
       if (!acc[key][condition]) {
@@ -232,16 +278,21 @@ function computeMostFrequentWeather(datapoints, month) {
         };
       }
       acc[key][condition].count++;
+      acc[key].mintemp_c.push(location.mintemp_c);
+      acc[key].maxtemp_c.push(location.maxtemp_c);
       return acc;
     }, {});
-
+  
     const mostFrequentData = Object.values(frequencyMap).map(conditionMap => {
       const mostFrequentCondition = Object.keys(conditionMap).reduce((a, b) => conditionMap[a].count > conditionMap[b].count ? a : b);
-      return conditionMap[mostFrequentCondition].data;
+      const locationData = conditionMap[mostFrequentCondition].data;
+      locationData.mintemp_c = Math.min(...conditionMap.mintemp_c);
+      locationData.maxtemp_c = Math.max(...conditionMap.maxtemp_c);
+      return locationData;
     });
-
+  
     return mostFrequentData;
-  }
+  }  
 
 
 export {computeAgeGroup, 
@@ -250,5 +301,6 @@ export {computeAgeGroup,
         computeAvgSpendingPlace,
         computeTransportationGroup,
         computeMostFrequentWeather,
-        computeAvgSpendingPlaceMonth
+        computeAvgSpendingPlaceMonth,
+        computeAvgWeatherPlaceMonth
     }

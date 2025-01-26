@@ -9,11 +9,12 @@
     let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis',
         tooltipData = 'tooltipData', tooltipLabel = 'tooltipLabel',
         updateLineChart='updateLineChart', lineChartKey='lineChartKey',
+        barcolor=[], legends=[]
     } = $props();
     
 
     // Margins and SVG dimensions
-    let margins = { left: 0, top: 30, bottom: 40, right: 20 };
+    let margins = { left: 0, top: 30, bottom: 50, right: 20 };
     const width = 700;
     const height = 350;
     const barWidth = 30;
@@ -27,7 +28,7 @@
         .range([margins.left, width - margins.right])    
         .padding(0.05));
 
-    let scaleY = $state( (total) => (total / maxTotal) * (height - 50));
+    let scaleY = $state( (total) => (total / maxTotal) * (height - margins.bottom));
     
     onMount(() => {
         if(datapoints.length > 0){
@@ -46,7 +47,7 @@
             .range([margins.left, width - margins.right])    
             .padding(0.05);
 
-        scaleY = (total) => (total / maxTotal) * (height - 50);
+        scaleY = (total) => (total / maxTotal) * (height - margins.bottom);
     }
 
     function getTotalValues(datapoint, keys) {
@@ -99,11 +100,10 @@
         {#each y as key, index}
             <rect
                 x={scaleX(datapoint[x]) + scaleX.bandwidth() / 2}
-                y={height - scaleY(getTotalValues(datapoint, y.slice(0, index + 1))) - 20}
+                y={height - scaleY(getTotalValues(datapoint, y.slice(0, index + 1))) - 28}
                 width={barWidth}
                 height={scaleY(datapoint[key])}
-                fill={"hsl(" + ((index + 1) * 200) + ", 50%, 50%)"}
-                data-default-color={"hsl(" + ((index + 1) * 200) + ", 50%, 50%)"}
+                fill={barcolor[index]}
                 onfocus={(event) => handleFocus(event,datapoint[key],tooltipLabel[index])}
                 onblur={(event) => handleBlur(event)}
                 onmouseover={(event) => handleMouseOver(event,datapoint[key],tooltipLabel[index])}
@@ -142,16 +142,21 @@
         >
             ${(getTotalValues(datapoint, y) / 1000).toFixed(2)}K
         </text>
-          
     {/each}
-
 
     <!-- Add axis labels -->
     <text x={(width - margins.left - margins.right) / 2 + margins.left} 
-          y={height - 2}  
+          y={height - 10}  
           class="x-label">
         {xLabel}
     </text>
+
+    {#each legends as legend, index}
+        <g transform={`translate(${margins.left + 20}, ${margins.top + index * 20})`}>
+            <rect width="15" height="15" fill={barcolor[(legends.length - 1) - index]} />
+            <text x="20" y="12" font-size="12">{legend}</text>
+        </g>
+    {/each}
 </svg>
 
 <Tooltip {...tooltip} />
