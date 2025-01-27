@@ -174,7 +174,7 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
 
     // Filter data by month
     datapoints
-        .filter(data => (data['Destination'] === destination))
+        .filter(data => (destination === null || data['Destination'] === destination))
         .forEach(data => {
             const month = new Date(data.StartDate).toLocaleString('default', { month: 'short' });
             const monthNumber = new Date(data.StartDate).getMonth() + 1;
@@ -214,7 +214,7 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
 /**
  * Process data to get the most frequent weather condition per location
  *  */ 
-function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
+async function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
     let weatherByMonth = {};
 
     // Filter data by destination if provided

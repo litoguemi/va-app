@@ -36,8 +36,7 @@ class Statistic {
             }
             if (count < minVisits) {                              
                 leastVisited = destination; 
-                minVisits = count;    
-                console.log("leastVisited:",leastVisited, minVisits);            
+                minVisits = count;               
             }
         }
         return {mostVisited, maxVisits, leastVisited, minVisits};

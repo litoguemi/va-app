@@ -20,7 +20,7 @@
 
     let { data } = $props();
     let selectedMonth = $state(new Date().getMonth() + 1);  // Current month number (1-12)    
-    let selectedDestination = $state(''); 
+    let selectedDestination = $state(null); 
 
     let groupedAge = $state(data.groupedAge); 
     let groupedAccomodation = $state(data.groupedAccomodation); 
@@ -38,16 +38,16 @@
         groupedGender = await computeGenderGroup(data.trips, selectedMonth);
         groupedTransportation = await computeTransportationGroup(data.trips, selectedMonth);
         avgSpendingPlace = await computeAvgSpendingPlace(data.trips, selectedMonth);
-        selectedDestination = avgSpendingPlace[0].place;
+        selectedDestination = null;
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
-        avgWeatherPlaceMonth = computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
+        avgWeatherPlaceMonth = await computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
     }
 
     async function updateLineChart(destination) { 
         selectedDestination = destination; 
         console.log('selectedDestination:'+selectedDestination);        
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination); 
-        avgWeatherPlaceMonth = computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
+        avgWeatherPlaceMonth = await computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
     }
     
     $effect(() => { updateData(); });
@@ -106,11 +106,15 @@
                       legends={['Acommodation', 'Transportation']}/>                               
             <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
-                    x="month" y={['total']} xLabel="Average Expenses for {selectedDestination}" yLabel=""
+                    x="month" y={['total']} 
+                    xLabel={selectedDestination ? `Average Expenses for ${selectedDestination}` : 'Average Expenses for All Destinations'}
+                    yLabel=""
                     tooltiplabel={['$', 'K']}
                     linecolor={['#5A9FC5']}/>
                 <Linechart datapoints={avgWeatherPlaceMonth}
-                    x="month" y={['MaxTemp_Max', 'MinTemp_Min']} xLabel="Average Weather for {selectedDestination}" yLabel=""
+                    x="month" y={['MaxTemp_Max', 'MinTemp_Min']} 
+                    xLabel={selectedDestination ? `Average Weather for ${selectedDestination}` : 'Average Weather for All Destinations'}
+                    yLabel=""
                     tooltiplabel={['', '°C']}
                     linecolor={['orange','#7EC8E3']}
                     legends={['Max Temp', 'Min Temp']}
