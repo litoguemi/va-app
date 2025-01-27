@@ -15,7 +15,11 @@ class Statistic {
     async compute(trips){
         // Count visits for each destination
         const destinationCount = trips.reduce((acc, trip) => {
-            acc[trip['Destination']] = (acc[trip['Destination']] || 0) + 1;
+            if (trip['Destination'] !== null) {
+                acc[trip['Destination']] = (acc[trip['Destination']] || 0) + 1;
+                console.log("added destination", trip['Destination']);
+                
+            }
             return acc;
         }, {});
         
@@ -30,9 +34,10 @@ class Statistic {
                 mostVisited = destination;
                 maxVisits = count;
             }
-            if (count < minVisits) {               
+            if (count < minVisits) {                              
                 leastVisited = destination; 
-                minVisits = count;                
+                minVisits = count;    
+                console.log("leastVisited:",leastVisited, minVisits);            
             }
         }
         return {mostVisited, maxVisits, leastVisited, minVisits};
@@ -44,7 +49,7 @@ class WeatherExtremes extends Statistic {
       
     async computeMonthlyAverages(weatherData, months = null) {
         const monthlyData = {};
-    
+        
         weatherData.forEach(data => {
             const date = data.StartDate; // Assuming the date is in the format "DD/MM/YYYY"
             
@@ -62,7 +67,7 @@ class WeatherExtremes extends Statistic {
                 monthlyData[data.Destination] = {};
             }
         
-            if (!monthlyData[data.Destination][monthKey]) {
+            if (!monthlyData[data.Destination][monthKey]) {                
                 monthlyData[data.Destination][monthKey] = {
                     totalprecip_mm: 0,
                     maxtemp_c: 0,
@@ -71,14 +76,15 @@ class WeatherExtremes extends Statistic {
                     avgvis_km: 0
                 };
             }
-        
-            monthlyData[data.Destination][monthKey].totalprecip_mm += data.totalprecip_mm;
-            monthlyData[data.Destination][monthKey].maxtemp_c += data.maxtemp_c;
-            monthlyData[data.Destination][monthKey].avgtemp_c += data.avgtemp_c;
-            monthlyData[data.Destination][monthKey].avgvis_km += data.avgvis_km;
+
+            monthlyData[data.Destination][monthKey].totalprecip_mm += parseFloat(data.totalprecip_mm);
+            monthlyData[data.Destination][monthKey].maxtemp_c += parseFloat(data.maxtemp_c);
+            monthlyData[data.Destination][monthKey].avgtemp_c += parseFloat(data.avgtemp_c);
+            monthlyData[data.Destination][monthKey].avgvis_km += parseFloat(data.avgvis_km);
             monthlyData[data.Destination][monthKey].count += 1;
+
         });
-    
+        
         const monthlyAverages = [];
     
         for (const destination in monthlyData) {
@@ -94,7 +100,6 @@ class WeatherExtremes extends Statistic {
             });
             }
         }
-    
         return monthlyAverages;
     }
       
