@@ -17,6 +17,7 @@
         flex-direction: column; 
         justify-content: center; /* Center content vertically */ 
         align-items: center; /* Center content horizontally */
+        background-color: white;
     }
     .number-measure { 
         display: flex; 
@@ -24,12 +25,12 @@
     }
 
     .number {
-        font-size: 2rem;
+        font-size: 1.3rem;
         font-weight: bold;
         color: #2c3e50;
     }
     .measure {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: bold;
         color: #2c3e50;
     }
@@ -39,7 +40,7 @@
         margin-top: 0.5rem;
     }
     .place {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: bold;
         color: #2c3e50;
     }
@@ -47,10 +48,10 @@
 </style>
 
 <div class="statistic">
+    <div class="place">{place}</div>        
+    <div class="description">{description}</div>  
     <div class="number-measure"> 
         <div class="number">{number}</div> 
         <div class="measure">{measure}</div> 
     </div>    
-    <div class="description">{description}</div>  
-    <div class="place">{place}</div>    
 </div>

@@ -5,6 +5,12 @@ header {
     margin-bottom: 20px;
 }
 
+body {
+    background-color: rgba(213, 232, 235, 0.11);
+    font-family: sans-serif;
+}
+
+
 .title {    
     font-size: 30px;
     text-align: center;
@@ -64,6 +70,7 @@ header {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
+    background-color: white;
 } 
 
 .item-raw { 

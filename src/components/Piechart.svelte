@@ -1,22 +1,21 @@
 <script>
 
     import { onMount } from 'svelte';
-    import Tooltip from './Tooltip.svelte';
 
     let slices = $state([]);
-    let { groupedData = [], title='title'} = $props();
-    let tooltip = $state({ x: 0, y: 0, content: '', visible: false });
-
+    let { groupedData = [], title='title', palette='palette'} = $props();
+    
     // Margins and SVG dimensions
     let margins = { left: 10, top: 5, bottom: 20, right: 10 };
     const width = 170;
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
-    const colors = ['#6ABCFD', '#4C7B8B', '#c6f2af', '#d8cc86', '#dea576']; 
-
-    //Suffle colors
-    colors.sort(() => Math.random() - 0.5);
+    let colors = ['#86A69D', '#7ea8be', '#98b0a9', '#d8cc86', '#c2948a', '#71BBB2'];
+    const colorage = ['#9C4137','#E2D8A6', '#A68438', '#ABAA38', '#D5907B'];
+    const colorgen = ['#D5907B', '#86A69D', '#98b0a9', '#d8cc86', '#c2948a', '#71BBB2'];    
+    const coloraco = ['#B09E3F' , '#C6B55C', '#D4C781', '#E2D8A6', '#EFE9CC'];
+    const colortra = ['#86A69D', '#D5907B', '#77B6D1', '#7A9ED3', '#7D86D5'];
 
     onMount(() => {
         updateData();         
@@ -25,6 +24,19 @@
     $effect(() => { updateData(); });
 
     function updateData(){
+
+        //Paletter definition
+        if (palette == 'age') {
+            colors = colorage;        
+        } else if (palette == 'gender') {
+            colors = colorgen;        
+        } else if (palette == 'accommodation') {
+            colors = coloraco;                
+        } else if (palette == 'transportation') {
+            colors = colortra;        
+        }else {
+            colors = colors;        
+        }
 
         console.log('lengthPiegroupedData:'+groupedData.length);
 
@@ -59,11 +71,11 @@
             return { path: pathData, 
                     label: d.label,
                     value: d.value, 
-                    color: colors[i % colors.length],
+                    color: colors[i],
                     midX: width / 2 + (radius / 2) * Math.cos(midAngle), 
                     midY: height / 2 + (radius / 2) * Math.sin(midAngle)
                     };
-        });
+        });        
     }
     
     // Function to split the title into multiple lines
@@ -89,45 +101,6 @@
     return lines;
   }
 
-    function darkenColor(color) {
-        const amount = -20; // Adjust this value to control the amount of darkening
-        let r = parseInt(color.slice(1, 3), 16) + amount;
-        let g = parseInt(color.slice(3, 5), 16) + amount;
-        let b = parseInt(color.slice(5, 7), 16) + amount;
-
-        r = Math.max(0, Math.min(255, r));
-        g = Math.max(0, Math.min(255, g));
-        b = Math.max(0, Math.min(255, b));
-
-        return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
-    }
-    
-    function handleMouseOver(event, color, value) {
-        let toolTipContent = value; 
-
-        tooltip = {
-            x: event.pageX,
-            y: event.pageY,
-            content: toolTipContent,
-            visible: true
-        };
-
-        event.target.style.fill = darkenColor(color);  // Darken the color
-    }
-
-    function handleMouseOut(event, color) {
-        tooltip.visible = false;
-        event.target.style.fill = color;
-    }
-
-    function handleFocus(event, color, value) {
-        handleMouseOver(event, color, value);
-    }
-
-    function handleBlur(event, color) {
-        handleMouseOut(event, color);
-    }
-
   const titleLines = splitTitle(title);
 </script>
 
@@ -143,12 +116,7 @@
     {/each}
     
     {#each slices as { path, label, value, color,midX, midY }, i} 
-        <path d={path} fill={color} stroke="white" stroke-width="2"
-            onfocus={(event) => handleFocus(event, color, value)}
-            onblur={(event) => handleBlur(event, color)}
-            onmouseover={(event) => handleMouseOver(event, color, value)} 
-            onmouseout={(event) => handleMouseOut(event, color)}
-            role="img">            
+        <path d={path} fill={color} stroke="white" stroke-width="1">            
         </path> 
         <text fill="black" font-size="16" dy="0.35em" text-anchor="middle" 
             x = {midX}
@@ -157,8 +125,6 @@
         </text> 
     {/each} 
 </svg>
-
-<Tooltip {...tooltip} />
 
 
 

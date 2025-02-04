@@ -16,9 +16,7 @@ class Statistic {
         // Count visits for each destination
         const destinationCount = trips.reduce((acc, trip) => {
             if (trip['Destination'] !== null) {
-                acc[trip['Destination']] = (acc[trip['Destination']] || 0) + 1;
-                console.log("added destination", trip['Destination']);
-                
+                acc[trip['Destination']] = (acc[trip['Destination']] || 0) + 1;                
             }
             return acc;
         }, {});

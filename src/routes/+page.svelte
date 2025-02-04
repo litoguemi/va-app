@@ -65,12 +65,12 @@
             <h3 style="margin-bottom: auto;">Global Summary of Trips</h3> 
             <hr style="border: none; border-top: 3px solid #e0e0e0;width: 100%;">
             <div class="statistics-container"> 
-                <Statistics number={data.stMostLeastVisited.maxVisits} description={'is the most visited place today in '} place={data.stMostLeastVisited.mostVisited} />
-                <Statistics number={data.stMostLeastVisited.minVisits} description={'is the least visited place today in '} place={data.stMostLeastVisited.leastVisited} /> 
-                <Statistics number={data.stWeatherExtremes.mostRainy.totalprecip_mm} measure={'mm'} description={'is the most rainy place today in '} place={data.stWeatherExtremes.mostRainy.destination}/>
-                <Statistics number={data.stWeatherExtremes.mostSunny.avgvis_km} measure={'kms'} description={' of visibility is the most sunny place today in '} place={data.stWeatherExtremes.mostSunny.destination} />
-                <Statistics number={data.stWeatherExtremes.hottest.maxtemp_c} measure={'°C'} description={'is the hottest visited place today in '} place = {data.stWeatherExtremes.hottest.destination} />                 
-                <Statistics number={data.stWeatherExtremes.coldest.avgtemp_c} measure={'°C'} description={'is the coldest visited place today in '} place = {data.stWeatherExtremes.coldest.destination} />                 
+                <Statistics number={data.stMostLeastVisited.maxVisits} measure={'trips'} description={'most visited'} place={data.stMostLeastVisited.mostVisited}/>
+                <Statistics number={data.stMostLeastVisited.minVisits} measure={'trips'} description={'least visited'} place={data.stMostLeastVisited.leastVisited} /> 
+                <Statistics number={data.stWeatherExtremes.mostRainy.totalprecip_mm} measure={'mm'} description={'most rainy'} place={data.stWeatherExtremes.mostRainy.destination}/>
+                <Statistics number={data.stWeatherExtremes.mostSunny.avgvis_km} measure={'kms'} description={'most sunny with visibility in'} place={data.stWeatherExtremes.mostSunny.destination} />
+                <Statistics number={data.stWeatherExtremes.hottest.maxtemp_c} measure={'°C'} description={'hottest place'} place = {data.stWeatherExtremes.hottest.destination} />                 
+                <Statistics number={data.stWeatherExtremes.coldest.avgtemp_c} measure={'°C'} description={'coldest place'} place = {data.stWeatherExtremes.coldest.destination} />                 
             </div>            
         </div>
         <div class="item item-main">
@@ -88,10 +88,10 @@
             </div>
             <div class="pies-container">
                 <h3>Global Distribution of Visitors on {months[selectedMonth - 1]}</h3>
-                <Piechart groupedData={groupedAge} title="Age"/>
-                <Piechart groupedData={groupedGender} title="Gender"/>
-                <Piechart groupedData={groupedAccomodation} title="Accomodation"/>                
-                <Piechart groupedData={groupedTransportation} title="Transportation"/>                            
+                <Piechart groupedData={groupedAge} title="Age" palette="age"/>
+                <Piechart groupedData={groupedGender} title="Gender" palette="gender"/>
+                <Piechart groupedData={groupedAccomodation} title="Accomodation" palette= "accommodation"/>                
+                <Piechart groupedData={groupedTransportation} title="Transportation" palette="transportation"/>                            
             </div>
         </div>
         <div class="item item-tendency">
@@ -116,7 +116,7 @@
                     xLabel={selectedDestination ? `Average Weather for ${selectedDestination}` : 'Average Weather for All Destinations'}
                     yLabel=""
                     tooltiplabel={['', '°C']}
-                    linecolor={['orange','#7EC8E3']}
+                    linecolor={['#E52020','#7EC8E3']}
                     legends={['Max Temp', 'Min Temp']}
                     width="400"/>                                
             </div>                      
@@ -172,6 +172,7 @@
         white-space: nowrap;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(1, 5, 14, 0.2);
+        background-color: white;
         }  
     .map-container { 
         border-radius: 8px;
