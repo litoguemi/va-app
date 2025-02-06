@@ -22,13 +22,15 @@
 
   let scaleX, scaleY, paths;
   let xTicks, yTicks;
+  let yValues = datapoints.flatMap(d => y.map(prop => d[prop]));
+  let [minTotal, maxTotal] = extent(yValues);
+  let yBuffer = (maxTotal - minTotal) * 0.2; 
   
-
   function updateData() {
     // Flatten the array to get all values for y-axis
-    let yValues = datapoints.flatMap(d => y.map(prop => d[prop]));
-    let [minTotal, maxTotal] = extent(yValues);
-    const yBuffer = (maxTotal - minTotal) * 0.2; // 20% buffer
+    yValues = datapoints.flatMap(d => y.map(prop => d[prop]));
+    [minTotal, maxTotal] = extent(yValues);
+    yBuffer = (maxTotal - minTotal) * 0.2; // 20% buffer
     const yDomain = [minTotal - yBuffer, maxTotal + yBuffer];
     const xDomain = extent(datapoints, d => d[x]);
 
@@ -113,6 +115,8 @@
     {/each}
     <text x={-height / 2} y={15} transform="rotate(-90)" text-anchor="middle" font-size="15">{yLabel}</text>
 
+    <!-- Line labels -->
+    <text x={40} y={24} text-anchor="middle" font-size="13">{tooltiplabel[0] + (maxTotal + (yBuffer + 0.1)).toFixed(1) + tooltiplabel[1]}</text>
     
     <!-- Line Paths -->
     {#each paths as path, index}

@@ -6,13 +6,13 @@
     let { groupedData = [], title='title', palette='palette'} = $props();
     
     // Margins and SVG dimensions
-    let margins = { left: 10, top: 5, bottom: 20, right: 10 };
+    let margins = { left: 10, top: 5, bottom: 30, right: 10 };
     const width = 170;
     const height = 200;
     const radius = Math.min(width, height) / 2 - Math.max(margins.left, margins.right);
     
     let colors = ['#86A69D', '#7ea8be', '#98b0a9', '#d8cc86', '#c2948a', '#71BBB2'];
-    const colorage = ['#9C4137','#E2D8A6', '#A68438', '#ABAA38', '#D5907B'];
+    const colorage = ['#86A69D','#E2D8A6', '#A68438', '#ABAA38', '#D5907B'];
     const colorgen = ['#D5907B', '#86A69D', '#98b0a9', '#d8cc86', '#c2948a', '#71BBB2'];    
     const coloraco = ['#B09E3F' , '#C6B55C', '#D4C781', '#E2D8A6', '#EFE9CC'];
     const colortra = ['#86A69D', '#D5907B', '#77B6D1', '#7A9ED3', '#7D86D5'];
@@ -53,13 +53,13 @@
             const endAngle = startAngle + sliceAngle; 
             
             const x1 = width / 2 + radius * Math.cos(startAngle); 
-            const y1 = height / 2 + radius * Math.sin(startAngle); 
+            const y1 = (height - margins.bottom) / 2 + radius * Math.sin(startAngle); 
             const x2 = width / 2 + radius * Math.cos(endAngle); 
-            const y2 = height / 2 + radius * Math.sin(endAngle);
+            const y2 = (height - margins.bottom) / 2 + radius * Math.sin(endAngle);
 
             const largeArcFlag = sliceAngle > Math.PI ? 1 : 0; 
             
-            const pathData = `  M ${width / 2} ${height / 2} 
+            const pathData = `  M ${width / 2} ${(height - margins.bottom) / 2} 
                                 L ${x1} ${y1} 
                                 A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} 
                                 Z `;
@@ -73,7 +73,7 @@
                     value: d.value, 
                     color: colors[i],
                     midX: width / 2 + (radius / 2) * Math.cos(midAngle), 
-                    midY: height / 2 + (radius / 2) * Math.sin(midAngle)
+                    midY: (height - margins.bottom) / 2 + (radius / 2) * Math.sin(midAngle)
                     };
         });        
     }
@@ -107,9 +107,9 @@
 <svg width={width} height={height}>
     {#each titleLines as line, index}
         <text x={width / 2} 
-            y={height - (margins.bottom / 4) + (index * 25)}
+            y={height - (margins.bottom / 2)}
             text-anchor="middle" 
-            font-size="20" 
+            font-size="19" 
             fill="black">
         {line}
         </text>

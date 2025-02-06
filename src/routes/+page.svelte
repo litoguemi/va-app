@@ -26,7 +26,7 @@
     let groupedAccomodation = $state(data.groupedAccomodation); 
     let groupedGender = $state(data.groupedGender);  
     let groupedTransportation = $state(data.groupedTransportation); 
-    let avgSpendingPlace = $state(data.avgSpendingPlace);
+    let avgSpendingPlace = $state([]);
     let avgSpendingPlaceMonth = $state([]);    
     let avgWeatherPlaceMonth = $state([]);
 
@@ -41,6 +41,8 @@
         selectedDestination = null;
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
         avgWeatherPlaceMonth = await computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
+        const bars = document.querySelectorAll('rect');
+        bars.forEach(bar => bar.classList.remove('selected'));
     }
 
     async function updateLineChart(destination) { 
@@ -48,6 +50,14 @@
         console.log('selectedDestination:'+selectedDestination);        
         avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination); 
         avgWeatherPlaceMonth = await computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
+    }
+
+    async function updateSelectedPlace() { 
+        selectedDestination = null;
+        avgSpendingPlaceMonth = await computeAvgSpendingPlaceMonth(data.trips, selectedDestination);
+        avgWeatherPlaceMonth = await computeAvgWeatherPlaceMonth(data.weather, selectedDestination);
+        const bars = document.querySelectorAll('rect');
+        bars.forEach(bar => bar.classList.remove('selected'));
     }
     
     $effect(() => { updateData(); });
@@ -73,16 +83,7 @@
                 <Statistics number={data.stWeatherExtremes.coldest.avgtemp_c} measure={'°C'} description={'coldest place'} place = {data.stWeatherExtremes.coldest.destination} />                 
             </div>            
         </div>
-        <div class="item item-main">
-            <div class="item-controls">                
-                <div class="checkbox-list">
-                    <select id="monthSelect" bind:value={selectedMonth}>
-                        {#each months as month, index}
-                          <option value={index + 1}>{month}</option>
-                        {/each}
-                    </select>                
-                </div>            
-            </div>
+        <div class="item item-main">            
             <div class="map-container">
                 <Map datapoints={data.weather} month={selectedMonth}/>
             </div>
@@ -94,8 +95,19 @@
                 <Piechart groupedData={groupedTransportation} title="Transportation" palette="transportation"/>                            
             </div>
         </div>
-        <div class="item item-tendency">
-            <h3>Average expenses of Trips on {months[selectedMonth - 1]}</h3>
+        <div class="item item-tendency">            
+            <div class="item-controls">
+                <div class="control-title">
+                    <h3>Average expenses of Trips on</h3>
+                </div>                
+                <div class="checkbox-list">
+                    <select id="monthSelect" bind:value={selectedMonth}>
+                        {#each months as month, index}
+                          <option value={index + 1}>{month}</option>
+                        {/each}
+                    </select>                
+                </div>            
+            </div>
             <Barchart datapoints={avgSpendingPlace} x="cityName" y={['accommodation','transportation']} 
                       xLabel="Click on bars to see the details for each Destination" yLabel=""
                       tooltipData={['accommodation','transportation']}
@@ -103,17 +115,26 @@
                       updateLineChart={updateLineChart}
                       lineChartKey="place"
                       barcolor={['#5A9FC5', '#B0D6B7']}
-                      legends={['Acommodation', 'Transportation']}/>                               
+                      legends={['Acommodation', 'Transportation']}/>  
+            
+            <h4 style="margin: 20px 5px -15px 0px; display: inline-flex;  align-items: center;">
+                {selectedDestination ? `Annual values for ${selectedDestination}` : 'Annual values for All Destinations'}                                        
+                <button class="icon-button" id="refreshButton" onclick="{updateSelectedPlace}">
+                    <img src="{base}/data/icons/refresh_24.png" alt="Refresh Icon">
+                </button>
+            </h4>
+            
+            
             <div class="linechart-container">
                 <Linechart datapoints={avgSpendingPlaceMonth}
                     x="month" y={['total']} 
-                    xLabel={selectedDestination ? `Average Expenses for ${selectedDestination}` : 'Average Expenses for All Destinations'}
+                    xLabel="Average Expenses"
                     yLabel=""
                     tooltiplabel={['$', 'K']}
                     linecolor={['#5A9FC5']}/>
                 <Linechart datapoints={avgWeatherPlaceMonth}
                     x="month" y={['MaxTemp_Max', 'MinTemp_Min']} 
-                    xLabel={selectedDestination ? `Average Weather for ${selectedDestination}` : 'Average Weather for All Destinations'}
+                    xLabel="Average Weather"
                     yLabel=""
                     tooltiplabel={['', '°C']}
                     linecolor={['#E52020','#7EC8E3']}
@@ -125,19 +146,15 @@
 </main>
 
 <style>
-    .checkbox-list { 
-        display: flex;         
-        flex-direction: row; 
-        gap: 0.5rem; 
-        margin-top: 1rem; 
-        align-items: start;
+    .checkbox-list {         
+        margin-top: 10px;        
     } 
 
     .checkbox-list select {
         padding: 0.5rem;
-        font-size: 1rem;
-        border-radius: 8px;
-        border: 2px solid rgba(0,0,0,0.2);
+        font-size: 17px;
+        border-radius: 5px;
+        border: 2.5px solid rgb(90, 159, 197);        
         background-color: #f9f9f9;
         color: #2c3e50;
         box-shadow: 0 4px 8px rgba(1, 5, 14, 0.1);
@@ -148,12 +165,39 @@
     }
     .checkbox-list select:focus {
         outline: none;
-        border-color: #3498db;
-        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        border-color: #b1db34;
+        box-shadow: 0 0 5px rgba(183, 219, 52, 0.5);
     }
 
     .checkbox-list select:hover { 
         background-color: #eaeaea;         
+    }
+
+    .icon-button {        
+        align-items: center;
+        justify-content: center;
+        border: 2.5px solid rgb(90, 159, 197);        
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s;
+    }
+    .icon-button img {
+        width: 24px;  /* Adjust the size of the icon */
+        height: 24px;
+    }
+    .icon-button:hover {
+        background-color: #eaeaea;  /* Change background color on hover */
+    }
+    .icon-button:active {
+        border-color: #b1db34;
+        box-shadow: 0 0 5px rgba(183, 219, 52, 0.5);
+    }
+
+    .control-title{
+        grid-column: span 4;
+        text-align: end;
     }
 
     .statistics-container { 

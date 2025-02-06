@@ -172,26 +172,57 @@ async function computeAvgSpendingPlace(datapoints, month=null) {
 async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
     let spendingByMonth = {};
 
-    // Filter data by month
+    // Initialize all months with default values
+    const months = [
+        { month: 'Jan', monthNumber: 1 },
+        { month: 'Feb', monthNumber: 2 },
+        { month: 'Mar', monthNumber: 3 },
+        { month: 'Apr', monthNumber: 4 },
+        { month: 'May', monthNumber: 5 },
+        { month: 'Jun', monthNumber: 6 },
+        { month: 'Jul', monthNumber: 7 },
+        { month: 'Aug', monthNumber: 8 },
+        { month: 'Sep', monthNumber: 9 },
+        { month: 'Oct', monthNumber: 10 },
+        { month: 'Nov', monthNumber: 11 },
+        { month: 'Dec', monthNumber: 12 }
+        ];
+
+    months.forEach(({ month, monthNumber }) => {
+        spendingByMonth[month] = {
+            cityName: null,
+            monthNumber: monthNumber,
+            accommodation: 0,
+            transportation: 0,
+            total: 0
+        };
+    });
+
+    // Filter data by month and update spendingByMonth
     datapoints
-        .filter(data => (destination === null || data['Destination'] === destination))
-        .forEach(data => {
-            const month = new Date(data.StartDate).toLocaleString('default', { month: 'short' });
-            const monthNumber = new Date(data.StartDate).getMonth() + 1;
-            const cityName = data['Destination'];
-            const accommodationCost = parseFloat(data['Accommodation cost']);
-            const transportationCost = parseFloat(data['Transportation cost']);
+    .filter(data => (destination === null || data['Destination'] === destination))
+    .forEach(data => {
+        const month = new Date(data.StartDate).toLocaleString('en-US', { month: 'short' });
+        const cityName = data['Destination'];
+        const accommodationCost = parseFloat(data['Accommodation cost']);
+        const transportationCost = parseFloat(data['Transportation cost']);
 
-            if (accommodationCost && transportationCost) {
-                if (!spendingByMonth[month]) {
-                    spendingByMonth[month] = { cityName, monthNumber, accommodation: 0, transportation: 0, total: 0 };
-                }
+        if (!spendingByMonth[month]) {
+            console.warn(`Month ${month} is not initialized in spendingByMonth.`);
+          } else {
+            spendingByMonth[month].cityName = cityName;
+            spendingByMonth[month].accommodation += accommodationCost;
+            spendingByMonth[month].transportation += transportationCost;
+            spendingByMonth[month].total += (accommodationCost + transportationCost) / 1000;
+          }
+    });
 
-                spendingByMonth[month].accommodation += accommodationCost;
-                spendingByMonth[month].transportation += transportationCost;
-                spendingByMonth[month].total += (accommodationCost + transportationCost) / 1000;
-            }
-        });
+    // Check for missing months and add with the provided destination if needed
+    months.forEach(({ month }) => {
+        if (spendingByMonth[month].cityName === null && destination !== null) {
+            spendingByMonth[month].cityName = destination;
+        }
+    });
 
     // Convert the spendingByMonth object into an array for easier charting
     let chartData = Object.keys(spendingByMonth).map(month => ({
@@ -217,12 +248,37 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
 async function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
     let weatherByMonth = {};
 
+    // Initialize all months with default values
+    const months = [
+    { month: 'Jan', monthNumber: 1 },
+    { month: 'Feb', monthNumber: 2 },
+    { month: 'Mar', monthNumber: 3 },
+    { month: 'Apr', monthNumber: 4 },
+    { month: 'May', monthNumber: 5 },
+    { month: 'Jun', monthNumber: 6 },
+    { month: 'Jul', monthNumber: 7 },
+    { month: 'Aug', monthNumber: 8 },
+    { month: 'Sep', monthNumber: 9 },
+    { month: 'Oct', monthNumber: 10 },
+    { month: 'Nov', monthNumber: 11 },
+    { month: 'Dec', monthNumber: 12 }
+    ];
+
+    months.forEach(({ month, monthNumber }) => {
+        weatherByMonth[month] = {
+            monthNumber: monthNumber,
+            mintemp: [],
+            maxtemp: [],
+            avgtemp: []
+        };
+    });
+
     // Filter data by destination if provided
     const filteredData = destination ? datapoints.filter(data => data['Destination'] === destination) : datapoints;
 
-    // Group data by month
+    // Group data by month and update weatherByMonth
     filteredData.forEach(data => {
-        const month = new Date(data['Start date']).toLocaleString('default', { month: 'short' });
+        const month = new Date(data['Start date']).toLocaleString('en-US', { month: 'short' });
         const monthNumber = new Date(data['Start date']).getMonth() + 1;
         const mintemp = parseFloat(data['mintemp_c']);
         const maxtemp = parseFloat(data['maxtemp_c']);
@@ -235,6 +291,19 @@ async function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
         weatherByMonth[month].mintemp.push(mintemp);
         weatherByMonth[month].maxtemp.push(maxtemp);
         weatherByMonth[month].avgtemp.push(avgtemp);
+    });
+
+    // Check for missing months and add default values if needed
+    months.forEach(({ month }) => {
+    if (!weatherByMonth[month].mintemp.length) {
+        weatherByMonth[month].mintemp.push(null);
+    }
+    if (!weatherByMonth[month].maxtemp.length) {
+        weatherByMonth[month].maxtemp.push(null);
+    }
+    if (!weatherByMonth[month].avgtemp.length) {
+        weatherByMonth[month].avgtemp.push(null);
+    }
     });
 
     // Calculate averages, max, and min for each month

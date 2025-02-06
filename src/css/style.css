@@ -49,16 +49,8 @@ body {
 } 
     
 .item-controls { 
-    display: flex;
-    padding: 10px; 
-    align-items: center;
-    text-align: left;
-    flex-direction: row; 
-    gap: 1rem;
-    position: absolute;
-    top: 272px;
-    left: 80px;
-    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 } 
 
 .item-main { 

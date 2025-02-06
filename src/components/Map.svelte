@@ -40,8 +40,6 @@
         // Process data and add markers
         const mostFrequentData = computeMostFrequentWeather(datapoints, month);
 
-        console.log('computedMostWeather'+month+' data:'+mostFrequentData.length);
-        
 
         mostFrequentData.forEach(location => {
           const icon = L.icon({
@@ -78,6 +76,6 @@
   
   <style>
     #map {
-        height: 400px;
+        height: 438px;
     }
   </style>

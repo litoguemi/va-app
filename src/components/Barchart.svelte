@@ -71,6 +71,7 @@
             visible: true
         };
         event.target.style.opacity = '70%';
+        event.target.style.cursor = 'pointer';
     }
 
     function handleMouseOut(event) {
@@ -86,19 +87,25 @@
         handleMouseOut(event);
     }
 
-    function handleClick(event, datapoint) { 
+    function handleClick(event, datapoint, index) { 
         console.log('Clicked on bar',JSON.stringify(datapoint));
         handleBlur(event);
-        updateLineChart(datapoint[lineChartKey]);         
+        updateLineChart(datapoint[lineChartKey]);             
+
+        const bars = document.querySelectorAll('rect');
+        bars.forEach(bar => bar.classList.remove('selected'));
+
+        const relatedBars = document.querySelectorAll(`.datapoint-${index}`);
+        relatedBars.forEach(bar => bar.classList.add('selected'));
+        
     }
 
 </script>
 
 <svg width={width} height={height}>
     {#each datapoints as datapoint, i}
-
         {#each y as key, index}
-            <rect
+            <rect class={`datapoint-${i}`}
                 x={scaleX(datapoint[x]) + scaleX.bandwidth() / 2}
                 y={height - scaleY(getTotalValues(datapoint, y.slice(0, index + 1))) - 28}
                 width={barWidth}
@@ -109,7 +116,7 @@
                 onmouseover={(event) => handleMouseOver(event,datapoint[key],tooltipLabel[index])}
                 onmouseout={(event) => handleMouseOut(event)}
                 role="img"
-                onclick={(event) => handleClick(event, datapoint,datapoint[key],tooltipLabel[index])}
+                onclick={(event) => handleClick(event, datapoint, i)}
             />
         {/each}
        
@@ -169,7 +176,7 @@
     /* Axis label styles */
     .x-label {
         text-anchor: middle;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
     }
 
@@ -177,6 +184,11 @@
         text-anchor: middle;
         font-size: 16px;
         font-weight: bold;
+    }
+   
+    .selected {
+        stroke: #17296b; /* Border color */
+        stroke-width: 2px; /* Border thickness */
     }
 </style>
 
