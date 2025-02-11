@@ -4,11 +4,12 @@
     import { extent } from 'd3-array';
     import { onMount } from 'svelte';
     import Tooltip from './Tooltip.svelte';
-
+   
    
     let { datapoints = [], x = 'x', y = 'y', xLabel = 'X-Axis', yLabel = 'Y-Axis',
         tooltipData = 'tooltipData', tooltipLabel = 'tooltipLabel',
-        updateLineChart='updateLineChart', lineChartKey='lineChartKey',
+        updateLineChart='updateLineChart', zoomToSpecificLocation='zoomToSpecificLocation', 
+        lineChartKey='lineChartKey',        
         barcolor=[], legends=[]
     } = $props();
     
@@ -90,7 +91,9 @@
     function handleClick(event, datapoint, index) { 
         console.log('Clicked on bar',JSON.stringify(datapoint));
         handleBlur(event);
-        updateLineChart(datapoint[lineChartKey]);             
+        updateLineChart(datapoint[lineChartKey]);      
+
+        zoomToSpecificLocation(datapoint);
 
         const bars = document.querySelectorAll('rect');
         bars.forEach(bar => bar.classList.remove('selected'));

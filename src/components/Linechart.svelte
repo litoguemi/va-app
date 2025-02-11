@@ -50,12 +50,15 @@
 
     // Path data for the lines
     paths = y.map(prop => 
-      datapoints.map((d, i) => {
-        const xVal = scaleX(d[x]) + scaleX.bandwidth() / 2;
-        const yVal = scaleY(d[prop]);
-        return `${i === 0 ? 'M' : 'L'}${xVal},${yVal}`;
-      }).join(' ')
-    );
+                        datapoints
+                          .filter(d => d[prop] !== null)
+                          .map((d, i, filteredData) => {
+                            const xVal = scaleX(d[x]) + scaleX.bandwidth() / 2;
+                            const yVal = scaleY(d[prop]);
+                            return `${i === 0 ? 'M' : 'L'}${xVal},${yVal}`;
+                          })
+                          .join(' ')
+                      );       
 
   }
 
@@ -126,15 +129,17 @@
     <!-- Data Points -->
     {#each datapoints as data}
       {#each y as prop, index}
-        <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
-                cy={scaleY(data[prop])} 
-                r="4" 
-                fill={linecolor[index]} 
-                onfocus={(event) => handleFocus(event, data[prop])}
-                onblur={(event) => handleBlur(event)}
-                onmouseover={(event) => handleMouseOver(event, data[prop])} 
-                onmouseout={(event) => handleMouseOut(event)}
-                role="img"/>
+        {#if data[prop] !== null}
+          <circle cx={scaleX(data[x]) + scaleX.bandwidth() / 2} 
+                  cy={scaleY(data[prop])} 
+                  r="4" 
+                  fill={linecolor[index]} 
+                  onfocus={(event) => handleFocus(event, data[prop])}
+                  onblur={(event) => handleBlur(event)}
+                  onmouseover={(event) => handleMouseOver(event, data[prop])} 
+                  onmouseout={(event) => handleMouseOut(event)}
+                  role="img"/>
+        {/if}          
       {/each}
     {/each} 
 

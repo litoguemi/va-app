@@ -5,9 +5,10 @@
     import L from "leaflet";
     import { computeMostFrequentWeather } from '../js/dataprocess.js';
     
-    let map;
+        
     let { datapoints = [], month='month'} = $props();
-    
+    let map;
+    let mostFrequentData = [];
 
     onMount(async () => {
       map = L.map("map", { preferCanvas: true }).setView(
@@ -25,37 +26,45 @@
       ).addTo(map);
       
       updateMarkers();
+
     });
 
     $effect(() => { updateMarkers(); });
 
     function updateMarkers() {
-        // Clear existing markers
-        map.eachLayer(layer => {
-          if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
-          }
+      // Clear existing markers
+      map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+
+      // Process data and add markers
+      mostFrequentData = computeMostFrequentWeather(datapoints, month);
+
+
+      mostFrequentData.forEach(location => {
+        const icon = L.icon({
+          iconUrl: `${base}/data/${location.icon_location}`,
+          iconSize: [50, 50],
+          iconAnchor: [25, 25],
+          popupAnchor: [0, -25]
         });
+        if(location.lat && location.lat){
+          const marker = L.marker([location.lat, location.lon], { icon }).addTo(map);
+          marker.bindPopup(`<b>${location.Destination}</b><br>${location.condition_text}`);
+        }
+      });
+    }
 
-        // Process data and add markers
-        const mostFrequentData = computeMostFrequentWeather(datapoints, month);
-
-
-        mostFrequentData.forEach(location => {
-          const icon = L.icon({
-            iconUrl: `${base}/data/${location.icon_location}`,
-            iconSize: [50, 50],
-            iconAnchor: [25, 25],
-            popupAnchor: [0, -25]
-          });
-          if(location.lat && location.lat){
-            const marker = L.marker([location.lat, location.lon], { icon }).addTo(map);
-            marker.bindPopup(`<b>${location.Destination}</b><br>${location.condition_text}`);
-          }
-        });
+    export function zoomToPoint(selectedDestination, zoomLevel=5) {     
+      let pointLocation = mostFrequentData.find(location => location.Destination === selectedDestination);          
+      if (map && pointLocation) {
+        map.setView([pointLocation.lat, pointLocation.lon], zoomLevel);
+      }else{
+        map.setView([0, 0], 2);
       }
-
-
+    }
   </script>
   
   <svelte:head>

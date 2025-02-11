@@ -192,9 +192,9 @@ async function computeAvgSpendingPlaceMonth(datapoints, destination = null) {
         spendingByMonth[month] = {
             cityName: null,
             monthNumber: monthNumber,
-            accommodation: 0,
-            transportation: 0,
-            total: 0
+            accommodation: null,
+            transportation: null,
+            total: null
         };
     });
 
@@ -295,26 +295,26 @@ async function computeAvgWeatherPlaceMonth(datapoints, destination = null) {
 
     // Check for missing months and add default values if needed
     months.forEach(({ month }) => {
-    if (!weatherByMonth[month].mintemp.length) {
-        weatherByMonth[month].mintemp.push(null);
-    }
-    if (!weatherByMonth[month].maxtemp.length) {
-        weatherByMonth[month].maxtemp.push(null);
-    }
-    if (!weatherByMonth[month].avgtemp.length) {
-        weatherByMonth[month].avgtemp.push(null);
-    }
+        if (!weatherByMonth[month].mintemp.length) {
+            weatherByMonth[month].mintemp.push(null);
+        }
+        if (!weatherByMonth[month].maxtemp.length) {
+            weatherByMonth[month].maxtemp.push(null);
+        }
+        if (!weatherByMonth[month].avgtemp.length) {
+            weatherByMonth[month].avgtemp.push(null);
+        }
     });
 
     // Calculate averages, max, and min for each month
     let chartData = Object.keys(weatherByMonth).map(month => ({
         month,
         monthNumber: weatherByMonth[month].monthNumber,
-        AvgTemp_Mean: weatherByMonth[month].avgtemp.reduce((a, b) => a + b, 0) / weatherByMonth[month].avgtemp.length,
-        AvgTemp_Max: Math.max(...weatherByMonth[month].avgtemp),
-        AvgTemp_Min: Math.min(...weatherByMonth[month].avgtemp),
-        MaxTemp_Max: Math.max(...weatherByMonth[month].maxtemp),
-        MinTemp_Min: Math.min(...weatherByMonth[month].mintemp)
+        AvgTemp_Mean: weatherByMonth[month].avgtemp.some(val => val !== null) ? weatherByMonth[month].avgtemp.reduce((a, b) => a + b, 0) / weatherByMonth[month].avgtemp.filter(val => val !== null).length : null,
+        AvgTemp_Max: weatherByMonth[month].avgtemp.some(val => val !== null) ? Math.max(...weatherByMonth[month].avgtemp) : null,
+        AvgTemp_Min: weatherByMonth[month].avgtemp.some(val => val !== null) ? Math.min(...weatherByMonth[month].avgtemp) : null,
+        MaxTemp_Max: weatherByMonth[month].maxtemp.some(val => val !== null) ? Math.max(...weatherByMonth[month].maxtemp) : null,
+        MinTemp_Min: weatherByMonth[month].mintemp.some(val => val !== null) ? Math.min(...weatherByMonth[month].mintemp) : null
     }));
 
     // Sort the chartData by month number
