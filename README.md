@@ -1,38 +1,68 @@
-# sv
+# Visual Analytics – Interactive Travel Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+An interactive visual analytics application exploring global travel patterns through demographic, geographic, financial, and weather data.
 
-## Creating a project
+The project demonstrates how interactive visualizations can help users explore travel-related datasets and identify patterns across destinations.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Key Features
+
+- **Geospatial exploration:** Interactive world map displaying destination information.
+- **Demographic analysis:** Visitor distributions by age and gender.
+- **Travel preferences:** Accommodation and transportation patterns.
+- **Expense analysis:** Comparison of travel-related expenses across destinations.
+- **Weather trends:** Exploration of monthly weather patterns.
+- **Interactive filtering:** Dynamic visualizations based on selected destinations and months.
+
+## Tech Stack
+
+Svelte · SvelteKit · JavaScript · D3.js · Leaflet · PapaParse · Vite
+
+## Live Demo
+
+**[Explore the Visual Analytics Dashboard](https://litoguemi.github.io/va-app/)**
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (LTS recommended)
+- npm
+
+### Installation
+
+Clone the repository and install its dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone https://github.com/litoguemi/va-app.git
+cd va-app
+npm install
 ```
 
-## Developing
+### Run locally
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Open the local URL displayed in your terminal (typically `http://localhost:5173`).
 
-To create a production version of your app:
+### Production build
+
+To create and preview a production build:
 
 ```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Project Focus
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+This project demonstrates practical experience in:
+
+- Visual analytics and exploratory data analysis
+- Interactive data visualization
+- Geospatial data visualization
+- Frontend application development
+- Data processing and presentation
